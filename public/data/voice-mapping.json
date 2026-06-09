@@ -15143,81 +15143,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_456_ash/cn_001.wav",
+          "url": "voice/char_456_ash/cn_001.wav",
           "text": "做好准备。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_456_ash/cn_002.wav",
+          "url": "voice/char_456_ash/cn_002.wav",
           "text": "我从祖母常年的评判里学到了一件事：“生活本不应有太多禁忌。”"
         },
         {
-          "url": "voice_cn/char_456_ash/cn_003.wav",
+          "url": "voice/char_456_ash/cn_003.wav",
           "text": "先完成手上的工作，别急着下结论。"
         },
         {
-          "url": "voice_cn/char_456_ash/cn_004.wav",
+          "url": "voice/char_456_ash/cn_004.wav",
           "text": "在如何构筑阵地防御上，战车给了我许多实用的建议。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_456_ash/cn_005.wav",
+          "url": "voice/char_456_ash/cn_005.wav",
           "text": "我有一些问题，博士，希望您可以为我解答。"
         },
         {
-          "url": "voice_cn/char_456_ash/cn_006.wav",
+          "url": "voice/char_456_ash/cn_006.wav",
           "text": "破开障碍，很多事就会变得很容易。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_456_ash/cn_007.wav",
+          "url": "voice/char_456_ash/cn_007.wav",
           "text": "只要回报足够高，我都愿意尝试。"
         },
         {
-          "url": "voice_cn/char_456_ash/cn_008.wav",
+          "url": "voice/char_456_ash/cn_008.wav",
           "text": "您是觉得我很严格吗？嗯，我喜欢这个评价。"
         },
         {
-          "url": "voice_cn/char_456_ash/cn_009.wav",
+          "url": "voice/char_456_ash/cn_009.wav",
           "text": "帮我一个忙，战略上由您把握，战术上请交由我来判断。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_456_ash/cn_010.wav",
+          "url": "voice/char_456_ash/cn_010.wav",
           "text": "时间到了，博士。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_456_ash/cn_011.wav",
+          "url": "voice/char_456_ash/cn_011.wav",
           "text": "彩虹小队成员，代号灰烬，已获得行动授权，请开始部署任务。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_456_ash/cn_034.wav",
+          "url": "voice/char_456_ash/cn_034.wav",
           "text": "哦？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_456_ash/cn_036.wav",
+          "url": "voice/char_456_ash/cn_036.wav",
           "text": "我们需要交流一下。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_456_ash/cn_037.wav",
+          "url": "voice/char_456_ash/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_456_ash/cn_042.wav",
+          "url": "voice/char_456_ash/cn_042.wav",
           "text": "我跟着你呢。"
         }
       ]
@@ -15227,81 +15227,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_457_blitz/cn_001.wav",
+          "url": "voice/char_457_blitz/cn_001.wav",
           "text": "我们应该一起去外面逛逛，在这里坐着干啥？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_457_blitz/cn_002.wav",
+          "url": "voice/char_457_blitz/cn_002.wav",
           "text": "下周的足球赛我可是首发，你一定要来看啊。"
         },
         {
-          "url": "voice_cn/char_457_blitz/cn_003.wav",
+          "url": "voice/char_457_blitz/cn_003.wav",
           "text": "要是你们那儿有改进闪光护盾的好办法，尽管提测试申请，我随时就位。"
         },
         {
-          "url": "voice_cn/char_457_blitz/cn_004.wav",
+          "url": "voice/char_457_blitz/cn_004.wav",
           "text": "放轻松，你太紧张了，需不需要我请战车来给你跳个芭蕾？"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_457_blitz/cn_005.wav",
+          "url": "voice/char_457_blitz/cn_005.wav",
           "text": "医生们测试我不是因为病症，而是因为我足够强壮。还好我并不害怕针头。"
         },
         {
-          "url": "voice_cn/char_457_blitz/cn_006.wav",
+          "url": "voice/char_457_blitz/cn_006.wav",
           "text": "闪一下，捶一下，砰！搞定！"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_457_blitz/cn_007.wav",
+          "url": "voice/char_457_blitz/cn_007.wav",
           "text": "是，我就是很欢乐，而且很幽默。"
         },
         {
-          "url": "voice_cn/char_457_blitz/cn_008.wav",
+          "url": "voice/char_457_blitz/cn_008.wav",
           "text": "要是有好事，记得带我一起玩。"
         },
         {
-          "url": "voice_cn/char_457_blitz/cn_009.wav",
+          "url": "voice/char_457_blitz/cn_009.wav",
           "text": "我们大家有责任照顾好彼此，这件事情我绝对不开玩笑。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_457_blitz/cn_010.wav",
+          "url": "voice/char_457_blitz/cn_010.wav",
           "text": "这个挺有趣，但对我来说还缺点意思。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_457_blitz/cn_011.wav",
+          "url": "voice/char_457_blitz/cn_011.wav",
           "text": "彩虹小队成员，代号闪击。你下令，我就把盾拍在目标脸上！"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_457_blitz/cn_034.wav",
+          "url": "voice/char_457_blitz/cn_034.wav",
           "text": "喔！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_457_blitz/cn_036.wav",
+          "url": "voice/char_457_blitz/cn_036.wav",
           "text": "快请我吃个饭，毕竟我们是朋友嘛。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_457_blitz/cn_037.wav",
+          "url": "voice/char_457_blitz/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_457_blitz/cn_042.wav",
+          "url": "voice/char_457_blitz/cn_042.wav",
           "text": "要出发了？"
         }
       ]
@@ -15311,81 +15311,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_001.wav",
+          "url": "voice/char_458_rfrost/cn_001.wav",
           "text": "这是日程表，还有周报、开支表、议程表等待审阅......您想先看哪份？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_002.wav",
+          "url": "voice/char_458_rfrost/cn_002.wav",
           "text": "通力合作，我们必将披荆斩棘。"
         },
         {
-          "url": "voice_cn/char_458_rfrost/cn_003.wav",
+          "url": "voice/char_458_rfrost/cn_003.wav",
           "text": "不介意我整理一下书架吧，长官。"
         },
         {
-          "url": "voice_cn/char_458_rfrost/cn_004.wav",
+          "url": "voice/char_458_rfrost/cn_004.wav",
           "text": "人表现出的行为有时和野兽并无区别，了解这份相似性，能够令我更好的履行职责。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_005.wav",
+          "url": "voice/char_458_rfrost/cn_005.wav",
           "text": "为了欣赏值得观看的东西，我们总要远离城市，这就是我经常远行的原因。"
         },
         {
-          "url": "voice_cn/char_458_rfrost/cn_006.wav",
+          "url": "voice/char_458_rfrost/cn_006.wav",
           "text": "放置迎宾踏垫只是第一步，如何把猎物引向踏垫才是值得考虑的事。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_007.wav",
+          "url": "voice/char_458_rfrost/cn_007.wav",
           "text": "不不不，这样不对，我再思考一下......"
         },
         {
-          "url": "voice_cn/char_458_rfrost/cn_008.wav",
+          "url": "voice/char_458_rfrost/cn_008.wav",
           "text": "有什么我能帮忙的吗？"
         },
         {
-          "url": "voice_cn/char_458_rfrost/cn_009.wav",
+          "url": "voice/char_458_rfrost/cn_009.wav",
           "text": "只有自然和战场才能决定谁是猎人，谁是猎物。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_010.wav",
+          "url": "voice/char_458_rfrost/cn_010.wav",
           "text": "只要在这里拉根细绳，还有一个迎宾踏垫......"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_011.wav",
+          "url": "voice/char_458_rfrost/cn_011.wav",
           "text": "彩虹小队所属，代号霜华，请下命令吧，长官。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_034.wav",
+          "url": "voice/char_458_rfrost/cn_034.wav",
           "text": "嘿，小心点！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_036.wav",
+          "url": "voice/char_458_rfrost/cn_036.wav",
           "text": "来，加入我们的狩猎。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_037.wav",
+          "url": "voice/char_458_rfrost/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_458_rfrost/cn_042.wav",
+          "url": "voice/char_458_rfrost/cn_042.wav",
           "text": "想生个火吗？"
         }
       ]
@@ -15395,81 +15395,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_459_tachak/cn_001.wav",
+          "url": "voice/char_459_tachak/cn_001.wav",
           "text": "你这里并不需要战术人员......我知道了，你是请我来聊天的。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_459_tachak/cn_002.wav",
+          "url": "voice/char_459_tachak/cn_002.wav",
           "text": "我热爱我的国家，以及它所给我带来的一切——无论那是好是坏。"
         },
         {
-          "url": "voice_cn/char_459_tachak/cn_003.wav",
+          "url": "voice/char_459_tachak/cn_003.wav",
           "text": "你还没见过我妹妹吧，看，照片上穿白大褂的就是她，旁边是她家的孩子。"
         },
         {
-          "url": "voice_cn/char_459_tachak/cn_004.wav",
+          "url": "voice/char_459_tachak/cn_004.wav",
           "text": "好好活着，这样你才能当大家的领袖，千万别让爱你的人只能去墓地见你一面，明白吗？"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_459_tachak/cn_005.wav",
+          "url": "voice/char_459_tachak/cn_005.wav",
           "text": "我不希望我的孩子追随我的脚步，成为军人要吃的苦不是他们能够接受的。"
         },
         {
-          "url": "voice_cn/char_459_tachak/cn_006.wav",
+          "url": "voice/char_459_tachak/cn_006.wav",
           "text": "倾泻火力简单而又有效，我们国家的人就喜欢这种方法。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_459_tachak/cn_007.wav",
+          "url": "voice/char_459_tachak/cn_007.wav",
           "text": "我喜欢你的思考模式。"
         },
         {
-          "url": "voice_cn/char_459_tachak/cn_008.wav",
+          "url": "voice/char_459_tachak/cn_008.wav",
           "text": "我个人比较喜欢敌人自己冲过来找死，你呢？"
         },
         {
-          "url": "voice_cn/char_459_tachak/cn_009.wav",
+          "url": "voice/char_459_tachak/cn_009.wav",
           "text": "放松点亲爱的，等完事了我请你喝伏特加。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_459_tachak/cn_010.wav",
+          "url": "voice/char_459_tachak/cn_010.wav",
           "text": "你很无聊吗，为什么不保养你的武器？"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_459_tachak/cn_011.wav",
+          "url": "voice/char_459_tachak/cn_011.wav",
           "text": "彩虹小队成员，代号战车。我准备好了，你将把我派去何方？"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_459_tachak/cn_034.wav",
+          "url": "voice/char_459_tachak/cn_034.wav",
           "text": "当心点，同志。"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_459_tachak/cn_036.wav",
+          "url": "voice/char_459_tachak/cn_036.wav",
           "text": "如果你有需要，就叫我来帮忙。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_459_tachak/cn_037.wav",
+          "url": "voice/char_459_tachak/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_459_tachak/cn_042.wav",
+          "url": "voice/char_459_tachak/cn_042.wav",
           "text": "有事？"
         }
       ]
@@ -22609,71 +22609,71 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4077_palico/cn_001.wav",
+          "url": "voice/char_4077_palico/cn_001.wav",
           "text": "你们两个记好了喵，既然当了这个人的助理，就要打起精神来。要是有怪物突然冲进来，我们就赶紧把他扔到车上推走喵！"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4077_palico/cn_002.wav",
+          "url": "voice/char_4077_palico/cn_002.wav",
           "text": "最近研究的课题喵？《艾露与泰拉菲林的种族差异研究》，明明已经进行到一半了，但是突然又发现了名为阿斯兰的种族，前功尽弃了......泰拉人的种族真伤脑筋喵！"
         },
         {
-          "url": "voice_cn/char_4077_palico/cn_003.wav",
+          "url": "voice/char_4077_palico/cn_003.wav",
           "text": "阁下，出发狩猎前记得务必填饱肚子喵。精力满满地去战斗，说不定能爆发出超乎想象的能量......喵！"
         },
         {
-          "url": "voice_cn/char_4077_palico/cn_004.wav",
+          "url": "voice/char_4077_palico/cn_004.wav",
           "text": "敲，敲，没有燕雀石了喵......作为替代，岩蛛背上的石头，钳兽的壳......都加进去试试喵。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4077_palico/cn_007.wav",
+          "url": "voice/char_4077_palico/cn_007.wav",
           "text": "每次见到山的时候，老夫总会想起一位故人喵。他拥有同样高大健壮的身材，自某一次武器折断后就决定不做随从了喵，但后来他似乎跟随调查团去新大陆当了料理长......真是世事难料喵。"
         },
         {
-          "url": "voice_cn/char_4077_palico/cn_008.wav",
+          "url": "voice/char_4077_palico/cn_008.wav",
           "text": "博士喵，看在我们交情的分上，就告诉你一个秘诀好了。要是在作战中受伤了，喝药的时候记得在身后点燃一个爆弹喵。你问为什么？这样就可以毫发无损地躲开敌人的偷袭了喵！"
         },
         {
-          "url": "voice_cn/char_4077_palico/cn_009.wav",
+          "url": "voice/char_4077_palico/cn_009.wav",
           "text": "泰拉的新素材喵，许多新的石头，喜欢喵......也许能做出和家乡冰窟里的那把大剑一样的武器喵！送给博士喵！"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4077_palico/cn_010.wav",
+          "url": "voice/char_4077_palico/cn_010.wav",
           "text": "喵喵，博士的房间里......好多奇怪的东西喵，趁博士在睡觉，想要搬走......小工匠！快住手喵！"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4077_palico/cn_011.wav",
+          "url": "voice/char_4077_palico/cn_011.wav",
           "text": "听从阁下的召唤喵，艾露猫特别行动小组......最优秀的第一期泰拉大陆调查团来也！喵！不要踩我的脑袋喵！"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4077_palico/cn_034.wav",
+          "url": "voice/char_4077_palico/cn_034.wav",
           "text": "喵~"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4077_palico/cn_036.wav",
+          "url": "voice/char_4077_palico/cn_036.wav",
           "text": "你在干什么喵？喵......请再摸摸这里......啊，老夫也要被摸喵！"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4077_palico/cn_037.wav",
+          "url": "voice/char_4077_palico/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4077_palico/cn_042.wav",
+          "url": "voice/char_4077_palico/cn_042.wav",
           "text": "喵，是博士！你好喵！"
         }
       ]
@@ -26359,81 +26359,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4123_ela/cn_001.wav",
+          "url": "voice/char_4123_ela/cn_001.wav",
           "text": "既然你必须坐在这儿处理文件，我可以去帮你应付一些需要当场解决的问题。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4123_ela/cn_002.wav",
+          "url": "voice/char_4123_ela/cn_002.wav",
           "text": "打击补给线比压制人员造成的伤害更大。"
         },
         {
-          "url": "voice_cn/char_4123_ela/cn_003.wav",
+          "url": "voice/char_4123_ela/cn_003.wav",
           "text": "我觉得你的办公室内饰有些乏味了。要是想换个风格，可以随时来找我。"
         },
         {
-          "url": "voice_cn/char_4123_ela/cn_004.wav",
+          "url": "voice/char_4123_ela/cn_004.wav",
           "text": "温情脉脉的家庭关系不适合我。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4123_ela/cn_005.wav",
+          "url": "voice/char_4123_ela/cn_005.wav",
           "text": "相比所谓的“自我提升”，和陌生人聊聊能让我受益更多。"
         },
         {
-          "url": "voice_cn/char_4123_ela/cn_006.wav",
+          "url": "voice/char_4123_ela/cn_006.wav",
           "text": "我们用符号定义自己，但这些符号会被扭曲，被加工，被重述——一句话，会失去原有的意义。而在符号失去意义之后，你自己又是谁？"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4123_ela/cn_007.wav",
+          "url": "voice/char_4123_ela/cn_007.wav",
           "text": "我不介意在战斗之外帮你做些琐事，但在战场上，我需要足够的决策权。"
         },
         {
-          "url": "voice_cn/char_4123_ela/cn_008.wav",
+          "url": "voice/char_4123_ela/cn_008.wav",
           "text": "当一个人没法对你的成果挑刺，转而开始批评你的态度，你就知道他究竟有几斤几两了。"
         },
         {
-          "url": "voice_cn/char_4123_ela/cn_009.wav",
+          "url": "voice/char_4123_ela/cn_009.wav",
           "text": "发号施令的前提是你得证明自己足够出色，而你显然够格。好了，接下来要派我去哪？"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4123_ela/cn_010.wav",
+          "url": "voice/char_4123_ela/cn_010.wav",
           "text": "即使按照最高标准，你的工作也过量了。好好睡吧。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4123_ela/cn_011.wav",
+          "url": "voice/char_4123_ela/cn_011.wav",
           "text": "彩虹小队成员，代号艾拉。把目标告诉我，然后静等任务完成就好。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4123_ela/cn_034.wav",
+          "url": "voice/char_4123_ela/cn_034.wav",
           "text": "拜托，我现在不想说话。"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4123_ela/cn_036.wav",
+          "url": "voice/char_4123_ela/cn_036.wav",
           "text": "和我聊聊你自己的故事吧。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4123_ela/cn_037.wav",
+          "url": "voice/char_4123_ela/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4123_ela/cn_042.wav",
+          "url": "voice/char_4123_ela/cn_042.wav",
           "text": "我在这里。"
         }
       ]
@@ -26443,81 +26443,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4124_iana/cn_001.wav",
+          "url": "voice/char_4124_iana/cn_001.wav",
           "text": "怀疑我不在你面前？拜托，双子分身可不会说话。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4124_iana/cn_002.wav",
+          "url": "voice/char_4124_iana/cn_002.wav",
           "text": "对我来说，一心多用从来都不是难事。"
         },
         {
-          "url": "voice_cn/char_4124_iana/cn_003.wav",
+          "url": "voice/char_4124_iana/cn_003.wav",
           "text": "多花些心思在情报上，有的仗可以打得更轻松。"
         },
         {
-          "url": "voice_cn/char_4124_iana/cn_004.wav",
+          "url": "voice/char_4124_iana/cn_004.wav",
           "text": "最好处理一下你热水壶底的水垢，不然咖啡的味道好不了。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4124_iana/cn_005.wav",
+          "url": "voice/char_4124_iana/cn_005.wav",
           "text": "亲眼所见并不一定可靠，借助设备才能发现隐藏的真相。"
         },
         {
-          "url": "voice_cn/char_4124_iana/cn_006.wav",
+          "url": "voice/char_4124_iana/cn_006.wav",
           "text": "异于常人的外表的确给我制造了一些困难，但也仅仅是“一些困难”而已。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4124_iana/cn_007.wav",
+          "url": "voice/char_4124_iana/cn_007.wav",
           "text": "我听从你的指挥。"
         },
         {
-          "url": "voice_cn/char_4124_iana/cn_008.wav",
+          "url": "voice/char_4124_iana/cn_008.wav",
           "text": "我信任你的判断。"
         },
         {
-          "url": "voice_cn/char_4124_iana/cn_009.wav",
+          "url": "voice/char_4124_iana/cn_009.wav",
           "text": "我想我正在一场难忘的旅途之中，不知道最终会带什么样的纪念品回家。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4124_iana/cn_010.wav",
+          "url": "voice/char_4124_iana/cn_010.wav",
           "text": "稍等，我马上回来。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4124_iana/cn_011.wav",
+          "url": "voice/char_4124_iana/cn_011.wav",
           "text": "彩虹小队成员，代号双月。我想我们有很多信息可以相互分享。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4124_iana/cn_034.wav",
+          "url": "voice/char_4124_iana/cn_034.wav",
           "text": "拜托。"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4124_iana/cn_036.wav",
+          "url": "voice/char_4124_iana/cn_036.wav",
           "text": "撑住，我来帮忙了。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4124_iana/cn_037.wav",
+          "url": "voice/char_4124_iana/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4124_iana/cn_042.wav",
+          "url": "voice/char_4124_iana/cn_042.wav",
           "text": "准备好行动了吗？"
         }
       ]
@@ -26527,81 +26527,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_001.wav",
+          "url": "voice/char_4125_rdoc/cn_001.wav",
           "text": "这是你需要的文件，这是给你带的咖啡，不用谢。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_002.wav",
+          "url": "voice/char_4125_rdoc/cn_002.wav",
           "text": "有什么事情吗......哦！抱歉，博士，我还以为刚刚那位干员是喊我来着。"
         },
         {
-          "url": "voice_cn/char_4125_rdoc/cn_003.wav",
+          "url": "voice/char_4125_rdoc/cn_003.wav",
           "text": "能拿得起柳叶刀就能端得起枪，永远别怀疑一个医生的手有多稳。"
         },
         {
-          "url": "voice_cn/char_4125_rdoc/cn_004.wav",
+          "url": "voice/char_4125_rdoc/cn_004.wav",
           "text": "我会竭尽全力拯救目标，不论是伤病还是敌人，都不能将他们从我手中夺走。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_005.wav",
+          "url": "voice/char_4125_rdoc/cn_005.wav",
           "text": "人步入战场，与死亡同行，便会明白生命的宝贵。"
         },
         {
-          "url": "voice_cn/char_4125_rdoc/cn_006.wav",
+          "url": "voice/char_4125_rdoc/cn_006.wav",
           "text": "过去的经验告诉我，想要救死扶伤就该亲临现场，而不是坐在办公室里。而有时候，拯救生命的唯一手段，是夺走另外一个生命。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_007.wav",
+          "url": "voice/char_4125_rdoc/cn_007.wav",
           "text": "我的工作是保护你的人身安全，我不介意你给我来点挑战。"
         },
         {
-          "url": "voice_cn/char_4125_rdoc/cn_008.wav",
+          "url": "voice/char_4125_rdoc/cn_008.wav",
           "text": "发生什么了？我可不喜欢看人们愁眉不展的样子。"
         },
         {
-          "url": "voice_cn/char_4125_rdoc/cn_009.wav",
+          "url": "voice/char_4125_rdoc/cn_009.wav",
           "text": "博士，我很庆幸我们找到了你。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_010.wav",
+          "url": "voice/char_4125_rdoc/cn_010.wav",
           "text": "快停下手头的工作吧，你上次休息是什么时候？"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_011.wav",
+          "url": "voice/char_4125_rdoc/cn_011.wav",
           "text": "彩虹小队成员，代号医生。放心，我会保护你的安全。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_034.wav",
+          "url": "voice/char_4125_rdoc/cn_034.wav",
           "text": "小心，我刚拿了一堆瓶瓶罐罐。"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_036.wav",
+          "url": "voice/char_4125_rdoc/cn_036.wav",
           "text": "没什么，有情况我会及时告知你。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_037.wav",
+          "url": "voice/char_4125_rdoc/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4125_rdoc/cn_042.wav",
+          "url": "voice/char_4125_rdoc/cn_042.wav",
           "text": "你好。"
         }
       ]
@@ -26611,81 +26611,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_001.wav",
+          "url": "voice/char_4126_fuze/cn_001.wav",
           "text": "嗯......有事你说。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_002.wav",
+          "url": "voice/char_4126_fuze/cn_002.wav",
           "text": "工作间里危险物品很多，留神。"
         },
         {
-          "url": "voice_cn/char_4126_fuze/cn_003.wav",
+          "url": "voice/char_4126_fuze/cn_003.wav",
           "text": "工程部......还不错，就是那里的头儿......有点太能说了。"
         },
         {
-          "url": "voice_cn/char_4126_fuze/cn_004.wav",
+          "url": "voice/char_4126_fuze/cn_004.wav",
           "text": "我喜欢机器，它们不说话，但上面的读数总是很坦诚。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_005.wav",
+          "url": "voice/char_4126_fuze/cn_005.wav",
           "text": "只有在你无法适应的时候，混乱才会成为敌人。"
         },
         {
-          "url": "voice_cn/char_4126_fuze/cn_006.wav",
+          "url": "voice/char_4126_fuze/cn_006.wav",
           "text": "当你面临的混乱危及你所爱的人，你该做的不是保护他们，而是......让他们远离你。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_007.wav",
+          "url": "voice/char_4126_fuze/cn_007.wav",
           "text": "不，我的通讯设备没有损坏，你多虑了。"
         },
         {
-          "url": "voice_cn/char_4126_fuze/cn_008.wav",
+          "url": "voice/char_4126_fuze/cn_008.wav",
           "text": "让我随便说点什么？呃，这才是最困难的事。"
         },
         {
-          "url": "voice_cn/char_4126_fuze/cn_009.wav",
+          "url": "voice/char_4126_fuze/cn_009.wav",
           "text": "你问我的家乡？那里......天空是蓝色的，天空下的建筑也是蓝色的。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_010.wav",
+          "url": "voice/char_4126_fuze/cn_010.wav",
           "text": "好......我会自己找事做的。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_011.wav",
+          "url": "voice/char_4126_fuze/cn_011.wav",
           "text": "彩虹小队成员，代号导火索。该说的已经说了，行动吧。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_034.wav",
+          "url": "voice/char_4126_fuze/cn_034.wav",
           "text": "别这样......"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_036.wav",
+          "url": "voice/char_4126_fuze/cn_036.wav",
           "text": "我做了抓饭，你要来点吗？"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_037.wav",
+          "url": "voice/char_4126_fuze/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4126_fuze/cn_042.wav",
+          "url": "voice/char_4126_fuze/cn_042.wav",
           "text": "嗨......"
         }
       ]
@@ -28365,81 +28365,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4142_laios/cn_001.wav",
+          "url": "voice/char_4142_laios/cn_001.wav",
           "text": "哦！这机器能把人的声音直接传过来，我还能和那边的人对话；那个“复印机”能把纸上的图画一模一样地印出来——我的工作就是使用这些机器吗？好想知道它们是怎么做到的！"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4142_laios/cn_002.wav",
+          "url": "voice/char_4142_laios/cn_002.wav",
           "text": "小刻，这个生腌沙虫好吃吗？那这个钳兽蘑菇酱呢？也好吃？还有蒜拌鳞肠，你也喜欢？能在这里遇到你真好！走吧，我们再去找新的魔——呃啊啊？火神小姐？干什么，你要带我去哪儿？！"
         },
         {
-          "url": "voice_cn/char_4142_laios/cn_003.wav",
+          "url": "voice/char_4142_laios/cn_003.wav",
           "text": "博士！我在这个小房间里！帮帮我，Mon3tr肯定病了，我给它什么它都不吃，你有什么办法吗？嗯？凯尔希医生让我待在这里，不许出去，不是看我和它关系好让我照顾它吗？不是吗？"
         },
         {
-          "url": "voice_cn/char_4142_laios/cn_004.wav",
+          "url": "voice/char_4142_laios/cn_004.wav",
           "text": "梓兰小姐说管理队友就是给不听话的狠狠来一下，芬小姐则很认真地告诉我管理队友是要承担起队长的责任。她们还拉着我讨论做队长最重要的是什么，我其实觉得，大家互相信任，就是最重要的。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4142_laios/cn_005.wav",
+          "url": "voice/char_4142_laios/cn_005.wav",
           "text": "魔物为了捕猎会长出利爪，为了迷惑冒险者会生出可爱的外表。观察魔物的行为就能了解它们，它们总是会坦诚地呈现自己的全部，但人类完全不一样......我还是更喜欢魔物。"
         },
         {
-          "url": "voice_cn/char_4142_laios/cn_006.wav",
+          "url": "voice/char_4142_laios/cn_006.wav",
           "text": "小时候我被灵附身，是法琳把它赶走的，她却因此被村里人排挤，被赶去远方的学校。后来她从学校离开，跟着我去迷宫，我却没能保护好她，害她被炎龙吃掉了......我一定会把她救回来的。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4142_laios/cn_007.wav",
+          "url": "voice/char_4142_laios/cn_007.wav",
           "text": "小心，这是极境拜托我孵化的黎博利的蛋，他说这几天就会破壳了——哦哦，真的裂开了，孵出了一只湿漉漉的小鸟！黎博利小时候长这样吗？博士你笑什么？......你说极境他骗我？"
         },
         {
-          "url": "voice_cn/char_4142_laios/cn_008.wav",
+          "url": "voice/char_4142_laios/cn_008.wav",
           "text": "玛露西尔根本不喜欢吃魔物，齐尔查克不会出于同情而接工作......本来我已经决定一个人去救法琳了，他们却还是愿意陪我一起，我很感谢他们。"
         },
         {
-          "url": "voice_cn/char_4142_laios/cn_009.wav",
+          "url": "voice/char_4142_laios/cn_009.wav",
           "text": "我没想到除了森西外还会有那么多干员对魔物感兴趣，他们还想跟着我们去迷宫里看看。要是真的能够在这里和迷宫间来回，法琳肯定也想过来，认识你们这群朋友，然后我们一起走遍泰拉！"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4142_laios/cn_010.wav",
+          "url": "voice/char_4142_laios/cn_010.wav",
           "text": "唔，剑助好像也睡着了......我也该睡一睡了......"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4142_laios/cn_011.wav",
+          "url": "voice/char_4142_laios/cn_011.wav",
           "text": "我刚才注意到了，你其实对魔物料理也挺感兴趣的，对吧？这是用沙虫和针蚤做的肉丸，你尝尝？"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4142_laios/cn_034.wav",
+          "url": "voice/char_4142_laios/cn_034.wav",
           "text": "......剑助？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4142_laios/cn_036.wav",
+          "url": "voice/char_4142_laios/cn_036.wav",
           "text": "小磐蟹没办法自己翻身，真好玩。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4142_laios/cn_037.wav",
+          "url": "voice/char_4142_laios/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4142_laios/cn_042.wav",
+          "url": "voice/char_4142_laios/cn_042.wav",
           "text": "我的嘴在发光......？嗯，我刚才吃了荧壳源石虫软糖。"
         }
       ]
@@ -28449,81 +28449,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_001.wav",
+          "url": "voice/char_4141_marcil/cn_001.wav",
           "text": "和我在魔法学校时要做的事差不多嘛，你这里的魔法器具我也都学会怎么用了，放心交给我好了！......把源石手电筒用炸了的人？咳，那不是我！"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_002.wav",
+          "url": "voice/char_4141_marcil/cn_002.wav",
           "text": "沙虫罐头？柠檬折耳根晌午茶？恐鱼干？......不要——！不要不要，绝对不要！绝对不要！"
         },
         {
-          "url": "voice_cn/char_4141_marcil/cn_003.wav",
+          "url": "voice/char_4141_marcil/cn_003.wav",
           "text": "给，治愈术和恢复疗愈系法术的对比总结。嗯？没想到我能这么快做完？哼哼，我在学校开发新治愈术时，每天要看的材料也有这么多。下次要是有这种工作，也都交给我吧！"
         },
         {
-          "url": "voice_cn/char_4141_marcil/cn_004.wav",
+          "url": "voice/char_4141_marcil/cn_004.wav",
           "text": "“第七夜苏醒魔君”“东夜魔王”？你们这里真的有这种传说中的人物吗？在血与黑暗的盛宴中苏醒，一轮孤月照亮他血红的眸子，身边围绕着无数......欸？那个被揪住耳朵带走的男人是谁？"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_005.wav",
+          "url": "voice/char_4141_marcil/cn_005.wav",
           "text": "唔，好新鲜的蔬菜！没有土只有水，没想到这种装置真的能种出菜来，要是迷宫里也有就好了！......需要电力支持......？我愿意一直蹬发电机给它供电！"
         },
         {
-          "url": "voice_cn/char_4141_marcil/cn_006.wav",
+          "url": "voice/char_4141_marcil/cn_006.wav",
           "text": "制造使魔确实是危险魔法......但是医疗部的孩子们很少能够看到这样的景象。我能召唤出这种小东西陪他们玩，你看，他们多喜欢啊。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_007.wav",
+          "url": "voice/char_4141_marcil/cn_007.wav",
           "text": "......我刚刚看到莱欧斯又在吃一个我没见过的魔物，半人高，浑身带刺，还会喷毒液。博士，食物中毒的症状多久会表现出来？算了，我还是去医疗部问问吧......"
         },
         {
-          "url": "voice_cn/char_4141_marcil/cn_008.wav",
+          "url": "voice/char_4141_marcil/cn_008.wav",
           "text": "这是我在手工课上学的草编蚂蚱，我要把它带回去送给法琳。我们第一次一起玩时她就捉了蚂蚱，还带我去看了真正的迷宫，吃了木莓......那是我们成为朋友的第一天，我一直记得的。"
         },
         {
-          "url": "voice_cn/char_4141_marcil/cn_009.wav",
+          "url": "voice/char_4141_marcil/cn_009.wav",
           "text": "博士，你能教我用那个叫作照相机的东西吗？我想和你们还有莱欧斯他们拍一张照片，等哪天我们回去了，就用这张照片向法琳介绍你们。是、是这样用吗？莱欧斯你再凑近点，三、二、一——笑~"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_010.wav",
+          "url": "voice/char_4141_marcil/cn_010.wav",
           "text": "......不知道我的睡袋还在不在地下五层......还有那块很贵的肥皂......呼......呼......"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_011.wav",
+          "url": "voice/char_4141_marcil/cn_011.wav",
           "text": "谢谢你们愿意帮我们找回去的方法！对了，我的队友其实都是很好的人来着，要是他们做了一些奇怪的事情，呃，拜托你们包涵一下......"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_034.wav",
+          "url": "voice/char_4141_marcil/cn_034.wav",
           "text": "呜哇！......吓死我了，我还以为是食人植物！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_036.wav",
+          "url": "voice/char_4141_marcil/cn_036.wav",
           "text": "你也要去图书室吗？好啊，一起走吧！"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_037.wav",
+          "url": "voice/char_4141_marcil/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4141_marcil/cn_042.wav",
+          "url": "voice/char_4141_marcil/cn_042.wav",
           "text": "博士，昨晚睡得怎么样？要是一直做噩梦的话，就去检查一下枕头里有没有梦魔吧——在迷宫里我们就是这么做的！"
         }
       ]
@@ -28533,81 +28533,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_001.wav",
+          "url": "voice/char_4144_chilc/cn_001.wav",
           "text": "嗯......我明白了，这些文件就交给我来处理吧。真了不起？别把我当小孩！"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_002.wav",
+          "url": "voice/char_4144_chilc/cn_002.wav",
           "text": "啧......虽然已经有预感了，不过体检的时候，听医生跟我分析某项身体指标还是被吓到了。接下来一段时间必须避免和森西还有莱欧斯一起出任务，不能再跟着他们一直吃了。"
         },
         {
-          "url": "voice_cn/char_4144_chilc/cn_003.wav",
+          "url": "voice/char_4144_chilc/cn_003.wav",
           "text": "看你的表情我就知道了，你肯定在想——“我都不知道原来这个还能吃！”之类的事情吧。一开始我也经常这么想，后来就习惯了，跟他们相处久了你也会习惯的。呃，当然，不习惯也没关系。"
         },
         {
-          "url": "voice_cn/char_4144_chilc/cn_004.wav",
+          "url": "voice/char_4144_chilc/cn_004.wav",
           "text": "唉，都怪莱欧斯和森西，现在我也被当成对魔物有奇怪癖好的怪人了。博士，你拿的是什么？森西的全新力作？......你怎么还挺高兴的，该不会你也是他们那一派的吧？"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_005.wav",
+          "url": "voice/char_4144_chilc/cn_005.wav",
           "text": "我算是明白了，外表年轻的杜林人是真的年轻——尤其是桃金娘，根本就是小孩子啊。之前和她聊了两句，居然被她当成谎报年龄的同龄人——别笑了！"
         },
         {
-          "url": "voice_cn/char_4144_chilc/cn_006.wav",
+          "url": "voice/char_4144_chilc/cn_006.wav",
           "text": "博士，泰拉的宝箱怪比迷宫里的要好分辨多了，你看，只需要用诱饵去引诱它，等它被吸引后就可以——嘿！搞定......啧，居然还有一只！"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_007.wav",
+          "url": "voice/char_4144_chilc/cn_007.wav",
           "text": "我原本也管理着一个公会，每天都要东奔西走，有时还得不到同胞的理解，罗德岛这么大，你得学会排解压力。所以说，要不要一起去喝一杯？反正该做的事跑不了，不如先放松一下。"
         },
         {
-          "url": "voice_cn/char_4144_chilc/cn_008.wav",
+          "url": "voice/char_4144_chilc/cn_008.wav",
           "text": "莱欧斯他们总觉得只要拼了命就能够取得好结果，世上哪有这么简单的事，真是几个笨蛋。博士，你这样的聪明人肯定是明白这个道理的吧？......哈？我可没有担心他们！"
         },
         {
-          "url": "voice_cn/char_4144_chilc/cn_009.wav",
+          "url": "voice/char_4144_chilc/cn_009.wav",
           "text": "你想去迷宫冒险？就凭你的身手，有几条命都不够你死的。好吧，如果你真要去，那么，在路线和行动方面就得全听我的，我可是专家。至于其他的，你和莱欧斯看着办吧。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_010.wav",
+          "url": "voice/char_4144_chilc/cn_010.wav",
           "text": "森西老把健康生活挂在嘴边，虽说听着挺腻的，但你可能挺需要被他念叨。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_011.wav",
+          "url": "voice/char_4144_chilc/cn_011.wav",
           "text": "合同我读完了，规章制度相当完善，待遇也挺好，如果你们能提前支付报酬，我愿意和你们合作。别怪我说话不客气，事先把这些事情说清楚对大家都好，对吧？"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_034.wav",
+          "url": "voice/char_4144_chilc/cn_034.wav",
           "text": "喂！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_036.wav",
+          "url": "voice/char_4144_chilc/cn_036.wav",
           "text": "博士，喝一杯吗？"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_037.wav",
+          "url": "voice/char_4144_chilc/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4144_chilc/cn_042.wav",
+          "url": "voice/char_4144_chilc/cn_042.wav",
           "text": "博士，你应该不是特意来找我的吧？"
         }
       ]
@@ -28617,81 +28617,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_001.wav",
+          "url": "voice/char_4143_sensi/cn_001.wav",
           "text": "......你的工作老夫看不懂，你有什么想吃的料理吗？蛋包饭，鲜蔬汤锅，还是炭火烤肉？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_002.wav",
+          "url": "voice/char_4143_sensi/cn_002.wav",
           "text": "深呼吸！天火姑娘，你的体温再上升的话油锅里的炸物就要煳了！古米姑娘，你做的饼干很棒——澄闪姑娘，你做的爆米花怎么全都吸在头发上了？唔，让老夫好好想想怎么解决这个问题......"
         },
         {
-          "url": "voice_cn/char_4143_sensi/cn_003.wav",
+          "url": "voice/char_4143_sensi/cn_003.wav",
           "text": "阿嚏！老夫本来想去饲养磐蟹的温室看看，没想到玛露西尔和调香师姑娘在里面聊天，老夫刚想回避就被玛露西尔拽了回来，往胡子上喷了不少很香的东西，老夫现在连洋葱味都闻不到了！阿嚏！"
         },
         {
-          "url": "voice_cn/char_4143_sensi/cn_004.wav",
+          "url": "voice/char_4143_sensi/cn_004.wav",
           "text": "这里就是你们的厨房吗？有源石电饭锅、全自动烤箱，还有控温八头灶......！嗯，看来可以做一些相当不错的食物了。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_005.wav",
+          "url": "voice/char_4143_sensi/cn_005.wav",
           "text": "想要拥有强健的身体，饮食是绝对不能忽视的。生理变化系源石技艺能够直接增肌？......总是图省事的话，身体就会变得迟钝。便利和偷懒是不一样的，对吧？"
         },
         {
-          "url": "voice_cn/char_4143_sensi/cn_006.wav",
+          "url": "voice/char_4143_sensi/cn_006.wav",
           "text": "老夫刚清理了净水系统，还去浇灌了作物，清出来的废料也送去了回收仓。吃着这里培育出的食物，同时也在为这个世界付出，这样的生活让老夫觉得自己成了这个世界的一部分，老夫很满意。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_007.wav",
+          "url": "voice/char_4143_sensi/cn_007.wav",
           "text": "第一次去那个叫“健身房”的地方，里面的人说没见过力气这么大的杜林人，还问老夫怎么练的。老夫回答只是每天做菜而已。什么？他们现在都在厨房颠锅？这么多人对做菜感兴趣，老夫很欣慰啊。"
         },
         {
-          "url": "voice_cn/char_4143_sensi/cn_008.wav",
+          "url": "voice/char_4143_sensi/cn_008.wav",
           "text": "莱欧斯他们现在每天都有好好吃饭，老夫很高兴。不过博士，老夫听说你会因为忙碌而吃速食食品，这实在是太不健康了！为了营养均衡，你要多吃新鲜蔬菜和优质蛋白质才行！"
         },
         {
-          "url": "voice_cn/char_4143_sensi/cn_009.wav",
+          "url": "voice/char_4143_sensi/cn_009.wav",
           "text": "老夫虽然不太懂你们每天都在做什么，但愿意照顾这么多病人，老夫很敬佩你们。病房里那些人很喜欢吃老夫做的饭，老夫心里也高兴。要是能找到在这里和迷宫间来回的方法，老夫会回来看你们的。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_010.wav",
+          "url": "voice/char_4143_sensi/cn_010.wav",
           "text": "嗯，睡眠质量很好，不错，不错。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_011.wav",
+          "url": "voice/char_4143_sensi/cn_011.wav",
           "text": "嗯，灶台干净，器具齐全，火力又旺又足，食材储备也做得很好......看来你们也很看重健康饮食，老夫很满意你们这里！"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_034.wav",
+          "url": "voice/char_4143_sensi/cn_034.wav",
           "text": "......你在戳老夫吗？嗯......老夫不觉得你在胡子里戳来戳去能戳出什么来。"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_036.wav",
+          "url": "voice/char_4143_sensi/cn_036.wav",
           "text": "好吃吗？那老夫再给你盛一碗？"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_037.wav",
+          "url": "voice/char_4143_sensi/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4143_sensi/cn_042.wav",
+          "url": "voice/char_4143_sensi/cn_042.wav",
           "text": "料理已经做好了，过来尝尝老夫的手艺吧。"
         }
       ]
@@ -31883,81 +31883,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_001.wav",
+          "url": "voice/char_4182_oblvns/cn_001.wav",
           "text": "你的决策思路很值得参考，我想在你身边多观察你的言行举止。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_002.wav",
+          "url": "voice/char_4182_oblvns/cn_002.wav",
           "text": "罗德岛的工作制度的确值得称赞，灵活的日程安排、合理的考核标准、明晰的上升渠道，真是让人羡慕啊......为什么我会了解这么多？没、没什么，我从家人那里学到过一些罢了。"
         },
         {
-          "url": "voice_cn/char_4182_oblvns/cn_003.wav",
+          "url": "voice/char_4182_oblvns/cn_003.wav",
           "text": "我知道——这个叫“自助饮料机”，对吧？把各种饮品混合起来，会变得意外地美味呢。"
         },
         {
-          "url": "voice_cn/char_4182_oblvns/cn_004.wav",
+          "url": "voice/char_4182_oblvns/cn_004.wav",
           "text": "Ave Mujica是支坚如磐石的乐队，的确，我们之间会偶有争论，但这都是为了让我们的乐队更加优秀。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_005.wav",
+          "url": "voice/char_4182_oblvns/cn_005.wav",
           "text": "那个梦的记忆在逐渐变淡，终有一天，我会彻底忘记它......不，博士，我并不觉得可惜。我很明白，那是我不可能拥有的人生......那样的美梦，只要做过一次就好。"
         },
         {
-          "url": "voice_cn/char_4182_oblvns/cn_006.wav",
+          "url": "voice/char_4182_oblvns/cn_006.wav",
           "text": "在罗德岛的这段时间，让我对泰拉有了新的认识......这片大地上许多人的遭遇远比我们看到的更为艰难。博士，我会带着这份感悟，创作出更加直击人心的乐曲。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_007.wav",
+          "url": "voice/char_4182_oblvns/cn_007.wav",
           "text": "来罗德岛之前，我就做过一个在这里生活和工作的梦，现在回想起来，梦里的一切仍旧很清晰。到这里后，跟红豆小姐初次打招呼时，我还感到了一丝落寞。呵呵，博士，可以帮我保守这个秘密吗？"
         },
         {
-          "url": "voice_cn/char_4182_oblvns/cn_008.wav",
+          "url": "voice/char_4182_oblvns/cn_008.wav",
           "text": "博士，这就是我跟你说过的甲板上的那个位置！在这里放声大喊会让人的心情格外舒畅！我先做个示范，待会博士要不要一起试试看？那我就开始了——"
         },
         {
-          "url": "voice_cn/char_4182_oblvns/cn_009.wav",
+          "url": "voice/char_4182_oblvns/cn_009.wav",
           "text": "这个洋娃娃？这是贝娜小姐送给我的。嘿嘿，只要有它在身边，心里就会感到温暖，就好像一直有人陪在我旁边一样。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_010.wav",
+          "url": "voice/char_4182_oblvns/cn_010.wav",
           "text": "适当地休息才能更好地达成目标。在Ave Mujica成立初期，我也常熬夜工作到很晚，直到被初华提醒，我才明白了这个道理。“这样有害健康！”——她当时是这么对我说的。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_011.wav",
+          "url": "voice/char_4182_oblvns/cn_011.wav",
           "text": "我是Ave Mujica的oblivionis，丰川祥子。在我们找到回去的方法前，还请多多关照。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_034.wav",
+          "url": "voice/char_4182_oblvns/cn_034.wav",
           "text": "啊？！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_036.wav",
+          "url": "voice/char_4182_oblvns/cn_036.wav",
           "text": "有什么我能帮到你的？"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_037.wav",
+          "url": "voice/char_4182_oblvns/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4182_oblvns/cn_042.wav",
+          "url": "voice/char_4182_oblvns/cn_042.wav",
           "text": "贵安，博士。今晚我们会举办一场化装舞会，为您预留了贵宾席位。如果您方便的话，欢迎前来参加。"
         }
       ]
@@ -31967,81 +31967,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_001.wav",
+          "url": "voice/char_4186_tmoris/cn_001.wav",
           "text": "这部分的工作应该已经处理好了，博士，有什么问题吗？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_002.wav",
+          "url": "voice/char_4186_tmoris/cn_002.wav",
           "text": "罗德岛的干员们看起来都十分强大且个性十足，但是干员之间却少有冲突，都能彼此真诚相待，真是让人意想不到。"
         },
         {
-          "url": "voice_cn/char_4186_tmoris/cn_003.wav",
+          "url": "voice/char_4186_tmoris/cn_003.wav",
           "text": "红豆的吉他也弹得不错啊，她还邀请我去参观她的乐队表演。嗯，我很有兴趣。"
         },
         {
-          "url": "voice_cn/char_4186_tmoris/cn_004.wav",
+          "url": "voice/char_4186_tmoris/cn_004.wav",
           "text": "博士请放心，我不会因为忙于工作而让自己的身体状态变差。我的休息时间和锻炼时间都已经规划好了，我也给工作留好了足够的缓冲时间。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_005.wav",
+          "url": "voice/char_4186_tmoris/cn_005.wav",
           "text": "我只是做了我理所应当做的事情，既然暂居罗德岛，帮助罗德岛上的大家也无可厚非。"
         },
         {
-          "url": "voice_cn/char_4186_tmoris/cn_006.wav",
+          "url": "voice/char_4186_tmoris/cn_006.wav",
           "text": "不愧是罗德岛，一定是阿米娅和博士的真诚感染了大家。我现在相信这里的大家都是真的把彼此当作家人看待了，能为这里出一份力是我的荣幸。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_007.wav",
+          "url": "voice/char_4186_tmoris/cn_007.wav",
           "text": "小刻喜欢吃的蜜饼果然很好吃，吃多少都没问题。"
         },
         {
-          "url": "voice_cn/char_4186_tmoris/cn_008.wav",
+          "url": "voice/char_4186_tmoris/cn_008.wav",
           "text": "明明罗德岛上的大家也都有自己的困扰，但还是会毫无保留地帮助彼此，我们因此受了很多人的照顾，尤其是博士你，十分感谢。"
         },
         {
-          "url": "voice_cn/char_4186_tmoris/cn_009.wav",
+          "url": "voice/char_4186_tmoris/cn_009.wav",
           "text": "不知不觉好像又有十多个小队需要我去帮忙。不过，我很珍惜在罗德岛的这每一份工作。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_010.wav",
+          "url": "voice/char_4186_tmoris/cn_010.wav",
           "text": "嗯......博士还在忙吗，这盒巧克力奶冻就给博士吧。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_011.wav",
+          "url": "voice/char_4186_tmoris/cn_011.wav",
           "text": "我是八幡海铃，有什么需要我做的吗？"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_034.wav",
+          "url": "voice/char_4186_tmoris/cn_034.wav",
           "text": "嗯？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_036.wav",
+          "url": "voice/char_4186_tmoris/cn_036.wav",
           "text": "嗯，我在。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_037.wav",
+          "url": "voice/char_4186_tmoris/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4186_tmoris/cn_042.wav",
+          "url": "voice/char_4186_tmoris/cn_042.wav",
           "text": "你好，博士，要一起去练习吗？"
         }
       ]
@@ -32051,81 +32051,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_001.wav",
+          "url": "voice/char_4184_dolris/cn_001.wav",
           "text": "在Ave Mujica时，一直都是海铃帮我们做这些工作。现在我也该学会自己安排行程了。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_002.wav",
+          "url": "voice/char_4184_dolris/cn_002.wav",
           "text": "最近，我会和星极小姐约在甲板上观察星空。泰拉的星空和我熟悉的很不一样，我尝试向她介绍我所知的星象理论，她也十分感兴趣。"
         },
         {
-          "url": "voice_cn/char_4184_dolris/cn_003.wav",
+          "url": "voice/char_4184_dolris/cn_003.wav",
           "text": "作词的方法吗......？博士，请不要看我的终端！"
         },
         {
-          "url": "voice_cn/char_4184_dolris/cn_004.wav",
+          "url": "voice/char_4184_dolris/cn_004.wav",
           "text": "我有时会戴墨镜和帽子？是以前养成的习惯啦——人出名以后，要注意的事情也变多了......这么说起来，博士你在泰拉应该也很出名？呵呵，不然为什么你走到哪都戴着兜帽呢？"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_005.wav",
+          "url": "voice/char_4184_dolris/cn_005.wav",
           "text": "空小姐本人就和她的演出一样，始终让人感到温暖和坚强。我也希望大家能从我的歌声中听到这些。"
         },
         {
-          "url": "voice_cn/char_4184_dolris/cn_006.wav",
+          "url": "voice/char_4184_dolris/cn_006.wav",
           "text": "比起战斗，我还是更希望用音乐去治愈大家。但是我也知道，只有足够强大，才能更好地站在祥子身边。不论是在泰拉，还是在我的世界，我都会继续努力。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_007.wav",
+          "url": "voice/char_4184_dolris/cn_007.wav",
           "text": "自从来到这里，与大家在一起的时间就变多了。每天处理完工作，约上其他成员一起去排练室练习——真的就像参加社团活动一样呢。"
         },
         {
-          "url": "voice_cn/char_4184_dolris/cn_008.wav",
+          "url": "voice/char_4184_dolris/cn_008.wav",
           "text": "小祥一直把Ave Mujica视若珍宝，我想要守护好她创造的世界观。之后，我也会作为主唱，为展现Ave Mujica的世界观而努力。"
         },
         {
-          "url": "voice_cn/char_4184_dolris/cn_009.wav",
+          "url": "voice/char_4184_dolris/cn_009.wav",
           "text": "去到一个陌生的地方，重新认识一群人，我有过类似经历，也深知这并非易事。但现在，尽管我对这艘舰船还知之甚少，我依然想要和大家建立更多联系。博士，这就是你说的“信任”吧。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_010.wav",
+          "url": "voice/char_4184_dolris/cn_010.wav",
           "text": "等博士醒来的时间里，帮博士泡杯咖啡吧。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_011.wav",
+          "url": "voice/char_4184_dolris/cn_011.wav",
           "text": "你好，我叫三角......初华。欸，小祥已经和你介绍过了？！她、她是怎么介绍我的？"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_034.wav",
+          "url": "voice/char_4184_dolris/cn_034.wav",
           "text": "稍等，我先把吉他放好......久等了，你找我有什么事，博士？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_036.wav",
+          "url": "voice/char_4184_dolris/cn_036.wav",
           "text": "博士，想一起去看看星空吗？"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_037.wav",
+          "url": "voice/char_4184_dolris/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4184_dolris/cn_042.wav",
+          "url": "voice/char_4184_dolris/cn_042.wav",
           "text": "博士，我正好在泡咖啡，你也来一杯吗？"
         }
       ]
@@ -32135,81 +32135,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_001.wav",
+          "url": "voice/char_4185_amoris/cn_001.wav",
           "text": "啊，博士，有什么需要我来做的？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_002.wav",
+          "url": "voice/char_4185_amoris/cn_002.wav",
           "text": "呜哇，真厉害！在这里拍摄Vlog的话，播放量肯定能猛涨吧！不不不，我不会真的这样做的。"
         },
         {
-          "url": "voice_cn/char_4185_amoris/cn_003.wav",
+          "url": "voice/char_4185_amoris/cn_003.wav",
           "text": "我现在有~一点~点忙呢，有什么事的话稍后再说吧~"
         },
         {
-          "url": "voice_cn/char_4185_amoris/cn_004.wav",
+          "url": "voice/char_4185_amoris/cn_004.wav",
           "text": "罗德岛上也有形形色色的干员呢~大家都有着各自的理想和厉害的地方，真有意思，迫不及待想要跟大家多聊聊呢。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_005.wav",
+          "url": "voice/char_4185_amoris/cn_005.wav",
           "text": "嗯？喵姆亲每天的自主练习？对啊，为了梦想付出一切努力，这不是理所当然的吗？"
         },
         {
-          "url": "voice_cn/char_4185_amoris/cn_006.wav",
+          "url": "voice/char_4185_amoris/cn_006.wav",
           "text": "想让喵姆亲做更多的工作，需要另外支付报酬哟。呀，开玩笑的开玩笑的，为了报答博士和小阿米娅的信任，喵姆亲当然会努力工作啦~"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_007.wav",
+          "url": "voice/char_4185_amoris/cn_007.wav",
           "text": "哦哦~罗德岛上有好多可爱的干员，真想拍一期给她们化妆的Vlog，肯定能收获大量的热度！"
         },
         {
-          "url": "voice_cn/char_4185_amoris/cn_008.wav",
+          "url": "voice/char_4185_amoris/cn_008.wav",
           "text": "医疗部有好多孩子已经成了喵姆亲的粉丝~这样喵姆亲不去给他们一些回馈都不行了。"
         },
         {
-          "url": "voice_cn/char_4185_amoris/cn_009.wav",
+          "url": "voice/char_4185_amoris/cn_009.wav",
           "text": "我最近也开始觉得，与其不择手段地朝着目标孤军奋战，偶尔稍稍绕绕远路也不是什么坏事。大概是受到了罗德岛的大家的影响吧？"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_010.wav",
+          "url": "voice/char_4185_amoris/cn_010.wav",
           "text": "嗯，博士睡着了吗？机会难得，我来恶作剧了哦？开个玩笑~"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_011.wav",
+          "url": "voice/char_4185_amoris/cn_011.wav",
           "text": "你好~喵姆喵姆~喵姆亲来报到啦。请多指教~"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_034.wav",
+          "url": "voice/char_4185_amoris/cn_034.wav",
           "text": "喵姆？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_036.wav",
+          "url": "voice/char_4185_amoris/cn_036.wav",
           "text": "先别急嘛~"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_037.wav",
+          "url": "voice/char_4185_amoris/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4185_amoris/cn_042.wav",
+          "url": "voice/char_4185_amoris/cn_042.wav",
           "text": "博士，辛苦了~！"
         }
       ]
@@ -32219,81 +32219,81 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_001.wav",
+          "url": "voice/char_4183_mortis/cn_001.wav",
           "text": "没什么事的话……我会在这里安静待着。"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_002.wav",
+          "url": "voice/char_4183_mortis/cn_002.wav",
           "text": "我是什么时候出现的？在你进入活动室之前，我就在了......"
         },
         {
-          "url": "voice_cn/char_4183_mortis/cn_003.wav",
+          "url": "voice/char_4183_mortis/cn_003.wav",
           "text": "这里……很适合种蔬菜。"
         },
         {
-          "url": "voice_cn/char_4183_mortis/cn_004.wav",
+          "url": "voice/char_4183_mortis/cn_004.wav",
           "text": "希望我弹吉他吗？知道了。"
         }
       ],
       "晋升交谈": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_005.wav",
+          "url": "voice/char_4183_mortis/cn_005.wav",
           "text": "这是调香师小姐给我的香水。葛罗莉亚也在用的。"
         },
         {
-          "url": "voice_cn/char_4183_mortis/cn_006.wav",
+          "url": "voice/char_4183_mortis/cn_006.wav",
           "text": "嘿嘿……回应了大家的期待的感觉，还不坏。"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_007.wav",
+          "url": "voice/char_4183_mortis/cn_007.wav",
           "text": "即使是博士你，也会有犹豫不决的时候吗？我也经常这样......"
         },
         {
-          "url": "voice_cn/char_4183_mortis/cn_008.wav",
+          "url": "voice/char_4183_mortis/cn_008.wav",
           "text": "祥说过，我们都是“一丘之貉”……"
         },
         {
-          "url": "voice_cn/char_4183_mortis/cn_009.wav",
+          "url": "voice/char_4183_mortis/cn_009.wav",
           "text": "这里，谁都不认识森南和阿隆……"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_010.wav",
+          "url": "voice/char_4183_mortis/cn_010.wav",
           "text": "你起来了？抱歉。"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_011.wav",
+          "url": "voice/char_4183_mortis/cn_011.wav",
           "text": "若叶睦……请多多指教。"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_034.wav",
+          "url": "voice/char_4183_mortis/cn_034.wav",
           "text": "怎么了？"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_036.wav",
+          "url": "voice/char_4183_mortis/cn_036.wav",
           "text": "我正在练习。"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_037.wav",
+          "url": "voice/char_4183_mortis/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4183_mortis/cn_042.wav",
+          "url": "voice/char_4183_mortis/cn_042.wav",
           "text": "博士。昨晚我没做噩梦，您呢？"
         }
       ]
@@ -34897,71 +34897,71 @@
     "中文": {
       "登录": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_001.wav",
+          "url": "voice/char_4215_buddy/cn_001.wav",
           "text": "博士和梓兰一样，每天都要讨伐名为“文件”的怪物喵？"
         }
       ],
       "交谈": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_002.wav",
+          "url": "voice/char_4215_buddy/cn_002.wav",
           "text": "义经，你还记得随从广场的样子喵？确实喵，这里应该这样画喵——好，这一话完成了，赶紧去给斑点看看喵！没错，把家乡的故事画出来是怀念家乡最好的方式喵，提出这个点子的斑点真聪明喵！"
         },
         {
-          "url": "voice_cn/char_4215_buddy/cn_003.wav",
+          "url": "voice/char_4215_buddy/cn_003.wav",
           "text": "泡普卡和宝巫迦陛下的性格完全不同喵！之前她一直盯着我看，我还以为自己做了什么坏事，害怕得睡不着喵！壮着胆子去问她，原来只是想摸摸我喵！现在已经是能够一起睡觉的好朋友了喵！"
         },
         {
-          "url": "voice_cn/char_4215_buddy/cn_004.wav",
+          "url": "voice/char_4215_buddy/cn_004.wav",
           "text": "博士，对不起喵！义经之前在训练中差点伤到月见夜喵！因为他把月见夜认成了那个百折不挠的将军，所以下意识就——啊，不是说这边的月见夜不够坚强的意思喵！"
         }
       ],
       "信赖": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_007.wav",
+          "url": "voice/char_4215_buddy/cn_007.wav",
           "text": "空爆又不见了？我去帮梓兰找找喵！什么，义经，你要拦我？！你居然站在空爆那边喵？！没办法了，决一胜负吧喵！"
         },
         {
-          "url": "voice_cn/char_4215_buddy/cn_008.wav",
+          "url": "voice/char_4215_buddy/cn_008.wav",
           "text": "博士也想使用翔虫喵？没问题喵！抓住它尾部分泌的丝线，然后往想要的方向丢出去——糟糕，博士把自己甩飞了，义经，快接住喵！"
         },
         {
-          "url": "voice_cn/char_4215_buddy/cn_009.wav",
+          "url": "voice/char_4215_buddy/cn_009.wav",
           "text": "喵？！开会要来不及了？义经——博士，义经让你骑上他喵！但是，要小心，义经的速度很快，以博士的体质——啊，走掉了喵。好像已经听到博士的惨叫声了，没办法，去给博士送药吧喵。"
         }
       ],
       "闲置": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_010.wav",
+          "url": "voice/char_4215_buddy/cn_010.wav",
           "text": "义经，你压到我的尾巴了喵......喵？原来是博士喵......"
         }
       ],
       "报到": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_011.wav",
+          "url": "voice/char_4215_buddy/cn_011.wav",
           "text": "我们是来自炎火村随从隐秘队的政宗和义经喵！调查情报和收集素材就交给我们喵！呼——比第一次见到前代陛下时的自我介绍好多了喵！"
         }
       ],
       "戳一下": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_034.wav",
+          "url": "voice/char_4215_buddy/cn_034.wav",
           "text": "敌袭喵？原来是博士喵！"
         }
       ],
       "信赖触摸": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_036.wav",
+          "url": "voice/char_4215_buddy/cn_036.wav",
           "text": "罗德岛上的各种器械，好复杂喵......"
         }
       ],
       "标题": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_037.wav",
+          "url": "voice/char_4215_buddy/cn_037.wav",
           "text": "明日方舟。"
         }
       ],
       "问候": [
         {
-          "url": "voice_cn/char_4215_buddy/cn_042.wav",
+          "url": "voice/char_4215_buddy/cn_042.wav",
           "text": "博士，一起去狩猎喵！"
         }
       ]
