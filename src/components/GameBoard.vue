@@ -121,7 +121,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted, nextTick } from 'vue'
+import { ref, reactive, computed, onMounted, watch, nextTick } from 'vue'
 import { loadOperators } from '../logic/operatorSearch.js'
 import { selectRandomOperator, getVoiceClips, generateChoices } from '../logic/gameEngine.js'
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
@@ -301,6 +301,14 @@ function nextQuestion() {
 
 function onAudioLoaded() {}
 function onAudioError(e) { console.warn('Audio error:', e) }
+
+// 切换输入模式时重新生成选项
+watch(() => settings.inputMode, () => {
+  if (currentQuestion.value && !showResult.value) {
+    const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
+    currentChoices.value = generateChoices(currentQuestion.value.operator, operators.value, numChoices)
+  }
+})
 </script>
 
 <style scoped>

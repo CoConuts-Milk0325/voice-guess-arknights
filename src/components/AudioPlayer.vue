@@ -58,7 +58,11 @@ watch(() => props.language, (lang) => {
 }, { immediate: true })
 
 watch(() => props.url, async (newUrl) => {
-  if (!newUrl) return
+  console.log('AudioPlayer: url changed to', newUrl)
+  if (!newUrl) {
+    loadError.value = '无语音URL'
+    return
+  }
   stopAudio()
   isPlaying.value = false
   currentTime.value = 0
@@ -66,6 +70,7 @@ watch(() => props.url, async (newUrl) => {
   loadError.value = ''
 
   const fullUrl = buildVoiceUrl(newUrl)
+  console.log('AudioPlayer: loading', fullUrl)
   try {
     await loadAudio(fullUrl)
     const audio = getCurrentAudio()
@@ -74,7 +79,8 @@ watch(() => props.url, async (newUrl) => {
       emit('loaded')
     }
   } catch (e) {
-    loadError.value = `语音加载失败: ${newUrl.split('/').pop()}`
+    console.error('AudioPlayer: load failed', e)
+    loadError.value = `加载失败: ${e.message || newUrl.split('/').pop()}`
     emit('error', e)
   }
 }, { immediate: true })
