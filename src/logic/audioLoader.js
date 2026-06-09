@@ -8,7 +8,11 @@ export function buildVoiceUrl(relativePath) {
 }
 
 export function loadAudio(url) {
-  stopAudio()
+  // Stop previous audio but don't clear currentAudio reference yet
+  if (currentAudio) {
+    currentAudio.pause()
+    currentAudio.currentTime = 0
+  }
 
   return new Promise((resolve, reject) => {
     const audio = new Audio()
@@ -19,10 +23,8 @@ export function loadAudio(url) {
     const cacheBuster = url.includes('?') ? '&' : '?'
     const finalUrl = `${url}${cacheBuster}t=${Date.now()}`
 
-    console.log('loadAudio: setting src to', finalUrl)
-
     audio.addEventListener('canplaythrough', () => {
-      console.log('loadAudio: canplaythrough fired')
+      currentAudio = audio
       resolve(audio)
     }, { once: true })
 
@@ -33,8 +35,6 @@ export function loadAudio(url) {
 
     audio.src = finalUrl
     cache.set(url, audio)
-    currentAudio = audio
-    console.log('loadAudio: currentAudio set to', currentAudio)
   })
 }
 
