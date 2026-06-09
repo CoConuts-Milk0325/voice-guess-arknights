@@ -135,6 +135,7 @@ const showChallengeSetup = ref(false)
 const guessText = ref('')
 const guessInputRef = ref(null)
 const inChallenge = ref(false)
+const lastOperatorName = ref(null)
 
 const voiceTypesList = VOICE_TYPES
 
@@ -209,11 +210,14 @@ function startChallenge() {
 }
 
 function startNewQuestion() {
-  const op = selectRandomOperator(operators.value, voiceMapping.value)
+  const op = selectRandomOperator(operators.value, voiceMapping.value, lastOperatorName.value)
   if (!op) return
 
+  lastOperatorName.value = op.name
+
   const clips = getVoiceClips(op.name, voiceMapping.value, settings)
-  const choices = generateChoices(op, operators.value, settings.guessesPerClip)
+  const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
+  const choices = generateChoices(op, operators.value, numChoices)
 
   currentQuestion.value = { operator: op }
   currentClips.value = clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }]
