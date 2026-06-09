@@ -19,6 +19,9 @@
         还可猜 <strong>{{ guessesLeft }}</strong> 次
       </span>
     </div>
+    <div v-if="text" class="voice-text">
+      <div class="voice-text-content">「{{ text }}」</div>
+    </div>
   </div>
 </template>
 
@@ -31,7 +34,8 @@ const props = defineProps({
   language: { type: String, default: '中文' },
   voiceType: { type: String, default: '' },
   clipIndex: { type: Number, default: 1 },
-  guessesLeft: { type: Number, default: 3 }
+  guessesLeft: { type: Number, default: 3 },
+  text: { type: String, default: '' }
 })
 
 const emit = defineEmits(['loaded', 'error'])
@@ -261,5 +265,20 @@ onUnmounted(() => {
 .guesses-left strong {
   color: var(--accent);
   font-weight: 700;
+}
+
+.voice-text {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: var(--bg-warm);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--accent);
+}
+
+.voice-text-content {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
 }
 </style>

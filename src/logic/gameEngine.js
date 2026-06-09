@@ -23,8 +23,11 @@ export function getVoiceClips(operatorName, voiceMapping, settings) {
       : types
 
     for (const type of filteredTypes) {
-      for (const path of voices[lang][type]) {
-        clips.push({ language: lang, type, url: path })
+      for (const entry of voices[lang][type]) {
+        // Support both old format (string) and new format (object with url and text)
+        const url = typeof entry === 'string' ? entry : entry.url
+        const text = typeof entry === 'string' ? '' : (entry.text || '')
+        clips.push({ language: lang, type, url, text })
       }
     }
   }

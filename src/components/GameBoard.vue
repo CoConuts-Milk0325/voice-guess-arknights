@@ -8,6 +8,9 @@
     <div class="top-controls">
       <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 自由输入</button>
       <button class="ctrl-btn" @click="showSettings = true">⚙ 设置</button>
+      <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
+        {{ showText ? '📖 文' : '📖' }}
+      </button>
     </div>
 
     <div v-if="loading" class="loading-state">
@@ -20,7 +23,7 @@
       <SummaryReport v-if="challenge.isComplete" v-bind="summaryData" @restart="startNewChallenge" />
 
       <template v-else-if="currentQuestion">
-        <AudioPlayer :key="currentClipIndex" :url="currentClip?.url" :language="currentClip?.language" :voiceType="currentClip?.type" :clipIndex="currentClipIndex" :guessesLeft="guessesLeftForClip" @loaded="onAudioLoaded" @error="onAudioError" />
+        <AudioPlayer :key="currentClipIndex" :url="currentClip?.url" :language="currentClip?.language" :voiceType="currentClip?.type" :clipIndex="currentClipIndex" :guessesLeft="guessesLeftForClip" :text="showText ? currentClip?.text : ''" @loaded="onAudioLoaded" @error="onAudioError" />
 
         <GuessInput v-if="settings.inputMode === 'typing'" v-model="guessText" :operators="operators" :history="currentHistory" :disabled="showResult" @submit="onGuess" ref="guessInputRef" />
 
@@ -52,6 +55,7 @@ const loading = ref(true)
 const operators = ref([])
 const voiceMapping = ref({})
 const showSettings = ref(false)
+const showText = ref(false)
 const guessText = ref('')
 const guessInputRef = ref(null)
 
@@ -255,6 +259,11 @@ watch(() => [settings.languages, settings.voiceTypes], () => {
   background: var(--accent);
   border-color: var(--accent);
   color: white;
+}
+
+.text-toggle {
+  font-size: 14px;
+  padding: 8px 12px;
 }
 
 .loading-state {
