@@ -22,12 +22,16 @@
     <div v-if="text" class="voice-text">
       <div class="voice-text-content">「{{ text }}」</div>
     </div>
+    <div v-if="loadError" class="voice-error">
+      <span class="error-icon">⚠️</span>
+      <span class="error-text">{{ loadError }}</span>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, watch, onUnmounted } from 'vue'
-import { playAudio, stopAudio, getCurrentAudio, buildVoiceUrl } from '../logic/audioLoader.js'
+import { loadAudio, stopAudio, getCurrentAudio, buildVoiceUrl } from '../logic/audioLoader.js'
 
 const props = defineProps({
   url: { type: String, required: true },
@@ -47,6 +51,7 @@ let progressInterval = null
 
 const progressPercent = ref(0)
 const languageClass = ref('')
+const loadError = ref('')
 
 watch(() => props.language, (lang) => {
   languageClass.value = lang === '中文' ? 'lang-zh' : 'lang-jp'
@@ -58,18 +63,18 @@ watch(() => props.url, async (newUrl) => {
   isPlaying.value = false
   currentTime.value = 0
   progressPercent.value = 0
+  loadError.value = ''
 
   const fullUrl = buildVoiceUrl(newUrl)
   try {
-    await playAudio(fullUrl)
+    await loadAudio(fullUrl)
     const audio = getCurrentAudio()
     if (audio) {
       duration.value = audio.duration || 5
-      isPlaying.value = true
-      startProgress()
       emit('loaded')
     }
   } catch (e) {
+    loadError.value = `语音加载失败: ${newUrl.split('/').pop()}`
     emit('error', e)
   }
 }, { immediate: true })
@@ -83,9 +88,12 @@ function togglePlay() {
     isPlaying.value = false
     stopProgress()
   } else {
-    audio.play()
-    isPlaying.value = true
-    startProgress()
+    audio.play().then(() => {
+      isPlaying.value = true
+      startProgress()
+    }).catch(e => {
+      loadError.value = '播放失败，请点击页面后重试'
+    })
   }
 }
 
@@ -280,5 +288,26 @@ onUnmounted(() => {
   color: var(--text-secondary);
   line-height: 1.6;
   font-style: italic;
+}
+
+.voice-error {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--red-light);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-icon {
+  font-size: 14px;
+}
+
+.error-text {
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 500;
 }
 </style>

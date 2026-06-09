@@ -7,7 +7,7 @@ export function buildVoiceUrl(relativePath) {
   return `${CDN_BASE}${relativePath}`
 }
 
-export function playAudio(url) {
+export function loadAudio(url) {
   stopAudio()
 
   return new Promise((resolve, reject) => {
@@ -16,16 +16,22 @@ export function playAudio(url) {
     audio.preload = 'auto'
 
     audio.addEventListener('canplaythrough', () => {
-      audio.play().then(resolve).catch(reject)
+      resolve(audio)
     }, { once: true })
 
-    audio.addEventListener('error', () => {
-      reject(new Error(`Failed to load audio: ${url}`))
+    audio.addEventListener('error', (e) => {
+      reject(new Error(`Failed to load: ${url.split('/').pop()}`))
     }, { once: true })
 
     audio.src = url
     cache.set(url, audio)
     currentAudio = audio
+  })
+}
+
+export function playAudio(url) {
+  return loadAudio(url).then(audio => {
+    return audio.play()
   })
 }
 
