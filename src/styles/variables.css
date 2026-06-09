@@ -1,0 +1,16 @@
+/* CSS variables - placeholder for Task 2 styling */
+:root {
+  /* Colors, fonts, etc. will be added in the styling task */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Outfit', sans-serif;
+  background-color: #0f0f1a;
+  color: #e0e0e0;
+}
