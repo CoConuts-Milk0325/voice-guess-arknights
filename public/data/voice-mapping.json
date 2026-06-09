@@ -1,0 +1,90 @@
+{
+  "阿米娅": {
+    "中文": {
+      "登录": ["voice/干员称呼+Amiya/Login_1.wav"],
+      "交谈": ["voice/干员称呼+Amiya/Chat_1.wav"],
+      "信赖": ["voice/干员称呼+Amiya/Trust_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Amiya/JP_Login_1.wav"],
+      "战斗": ["voice/干员称呼+Amiya/JP_Combat_1.wav"]
+    }
+  },
+  "陈": {
+    "中文": {
+      "登录": ["voice/干员称呼+Chen/Login_1.wav"],
+      "战斗胜利": ["voice/干员称呼+Chen/Victory_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Chen/JP_Login_1.wav"]
+    }
+  },
+  "银灰": {
+    "中文": {
+      "登录": ["voice/干员称呼+SilverAsh/Login_1.wav"],
+      "信赖": ["voice/干员称呼+SilverAsh/Trust_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+SilverAsh/JP_Login_1.wav"]
+    }
+  },
+  "能天使": {
+    "中文": {
+      "登录": ["voice/干员称呼+Exusiai/Login_1.wav"],
+      "战斗": ["voice/干员称呼+Exusiai/Combat_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Exusiai/JP_Login_1.wav"]
+    }
+  },
+  "德克萨斯": {
+    "中文": {
+      "登录": ["voice/干员称呼+Texas/Login_1.wav"],
+      "交谈": ["voice/干员称呼+Texas/Chat_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Texas/JP_Login_1.wav"]
+    }
+  },
+  "推进之王": {
+    "中文": {
+      "登录": ["voice/干员称呼+Siege/Login_1.wav"],
+      "信赖": ["voice/干员称呼+Siege/Trust_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Siege/JP_Login_1.wav"]
+    }
+  },
+  "星熊": {
+    "中文": {
+      "登录": ["voice/干员称呼+Hoshiguma/Login_1.wav"],
+      "战斗胜利": ["voice/干员称呼+Hoshiguma/Victory_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Hoshiguma/JP_Login_1.wav"]
+    }
+  },
+  "闪灵": {
+    "中文": {
+      "登录": ["voice/干员称呼+Shining/Login_1.wav"],
+      "信赖": ["voice/干员称呼+Shining/Trust_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+Shining/JP_Login_1.wav"]
+    }
+  },
+  "夜刀": {
+    "中文": {
+      "登录": ["voice/干员称呼+Yato/Login_1.wav"]
+    }
+  },
+  "W": {
+    "中文": {
+      "登录": ["voice/干员称呼+W/Login_1.wav"],
+      "战斗": ["voice/干员称呼+W/Combat_1.wav"]
+    },
+    "日文": {
+      "登录": ["voice/干员称呼+W/JP_Login_1.wav"]
+    }
+  }
+}
