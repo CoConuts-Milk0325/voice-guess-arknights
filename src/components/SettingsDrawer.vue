@@ -52,7 +52,7 @@
       </div>
 
       <div class="setting-group">
-        <div class="setting-label">语音类型（不选则随机）</div>
+        <div class="setting-label">语音类型</div>
         <div class="check-group">
           <div v-for="vt in voiceTypes" :key="vt" class="check-item" :class="{ checked: selectedVoiceTypes.includes(vt) }" @click="toggleVoiceType(vt)">
             <div class="check-box">{{ selectedVoiceTypes.includes(vt) ? '✓' : '' }}</div>
