@@ -1,90 +1,174 @@
 {
   "阿米娅": {
     "中文": {
-      "登录": ["voice/干员称呼+Amiya/Login_1.wav"],
-      "交谈": ["voice/干员称呼+Amiya/Chat_1.wav"],
-      "信赖": ["voice/干员称呼+Amiya/Trust_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Amiya/JP_Login_1.wav"],
-      "战斗": ["voice/干员称呼+Amiya/JP_Combat_1.wav"]
+      "登录": ["voice/char_002_amiya/cn_001.wav"],
+      "交谈": ["voice/char_002_amiya/cn_002.wav", "voice/char_002_amiya/cn_003.wav"],
+      "信赖": ["voice/char_002_amiya/cn_007.wav", "voice/char_002_amiya/cn_008.wav"],
+      "闲置": ["voice/char_002_amiya/cn_010.wav"],
+      "精英化": ["voice/char_002_amiya/cn_013.wav", "voice/char_002_amiya/cn_014.wav"],
+      "编入": ["voice/char_002_amiya/cn_017.wav"],
+      "行动开始": ["voice/char_002_amiya/cn_020.wav"],
+      "选中": ["voice/char_002_amiya/cn_021.wav"],
+      "部署": ["voice/char_002_amiya/cn_023.wav"],
+      "技能": ["voice/char_002_amiya/cn_025.wav", "voice/char_002_amiya/cn_026.wav"],
+      "战斗胜利": ["voice/char_002_amiya/cn_030.wav"],
+      "战斗失败": ["voice/char_002_amiya/cn_031.wav"]
     }
   },
   "陈": {
     "中文": {
-      "登录": ["voice/干员称呼+Chen/Login_1.wav"],
-      "战斗胜利": ["voice/干员称呼+Chen/Victory_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Chen/JP_Login_1.wav"]
+      "登录": ["voice/char_010_chen/cn_001.wav"],
+      "交谈": ["voice/char_010_chen/cn_002.wav", "voice/char_010_chen/cn_003.wav", "voice/char_010_chen/cn_004.wav"],
+      "信赖": ["voice/char_010_chen/cn_007.wav", "voice/char_010_chen/cn_008.wav", "voice/char_010_chen/cn_009.wav"],
+      "闲置": ["voice/char_010_chen/cn_010.wav"],
+      "精英化": ["voice/char_010_chen/cn_013.wav", "voice/char_010_chen/cn_014.wav"],
+      "编入": ["voice/char_010_chen/cn_017.wav"],
+      "行动开始": ["voice/char_010_chen/cn_020.wav"],
+      "选中": ["voice/char_010_chen/cn_021.wav"],
+      "部署": ["voice/char_010_chen/cn_023.wav"],
+      "技能": ["voice/char_010_chen/cn_025.wav"],
+      "战斗胜利": ["voice/char_010_chen/cn_030.wav"],
+      "战斗失败": ["voice/char_010_chen/cn_031.wav"]
     }
   },
   "银灰": {
     "中文": {
-      "登录": ["voice/干员称呼+SilverAsh/Login_1.wav"],
-      "信赖": ["voice/干员称呼+SilverAsh/Trust_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+SilverAsh/JP_Login_1.wav"]
+      "登录": ["voice/char_172_svrash/cn_001.wav"],
+      "交谈": ["voice/char_172_svrash/cn_002.wav", "voice/char_172_svrash/cn_003.wav"],
+      "信赖": ["voice/char_172_svrash/cn_007.wav", "voice/char_172_svrash/cn_008.wav"],
+      "闲置": ["voice/char_172_svrash/cn_010.wav"],
+      "精英化": ["voice/char_172_svrash/cn_013.wav", "voice/char_172_svrash/cn_014.wav"],
+      "编入": ["voice/char_172_svrash/cn_017.wav"],
+      "行动开始": ["voice/char_172_svrash/cn_020.wav"],
+      "选中": ["voice/char_172_svrash/cn_021.wav"],
+      "部署": ["voice/char_172_svrash/cn_023.wav"],
+      "技能": ["voice/char_172_svrash/cn_025.wav"],
+      "战斗胜利": ["voice/char_172_svrash/cn_030.wav"],
+      "战斗失败": ["voice/char_172_svrash/cn_031.wav"]
     }
   },
   "能天使": {
     "中文": {
-      "登录": ["voice/干员称呼+Exusiai/Login_1.wav"],
-      "战斗": ["voice/干员称呼+Exusiai/Combat_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Exusiai/JP_Login_1.wav"]
+      "登录": ["voice/char_103_angel/cn_001.wav"],
+      "交谈": ["voice/char_103_angel/cn_002.wav", "voice/char_103_angel/cn_003.wav"],
+      "信赖": ["voice/char_103_angel/cn_007.wav", "voice/char_103_angel/cn_008.wav"],
+      "闲置": ["voice/char_103_angel/cn_010.wav"],
+      "精英化": ["voice/char_103_angel/cn_013.wav", "voice/char_103_angel/cn_014.wav"],
+      "编入": ["voice/char_103_angel/cn_017.wav"],
+      "行动开始": ["voice/char_103_angel/cn_020.wav"],
+      "选中": ["voice/char_103_angel/cn_021.wav"],
+      "部署": ["voice/char_103_angel/cn_023.wav"],
+      "技能": ["voice/char_103_angel/cn_025.wav"],
+      "战斗胜利": ["voice/char_103_angel/cn_030.wav"],
+      "战斗失败": ["voice/char_103_angel/cn_031.wav"]
     }
   },
   "德克萨斯": {
     "中文": {
-      "登录": ["voice/干员称呼+Texas/Login_1.wav"],
-      "交谈": ["voice/干员称呼+Texas/Chat_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Texas/JP_Login_1.wav"]
+      "登录": ["voice/char_102_texas/cn_001.wav"],
+      "交谈": ["voice/char_102_texas/cn_002.wav", "voice/char_102_texas/cn_003.wav"],
+      "信赖": ["voice/char_102_texas/cn_007.wav", "voice/char_102_texas/cn_008.wav"],
+      "闲置": ["voice/char_102_texas/cn_010.wav"],
+      "精英化": ["voice/char_102_texas/cn_013.wav", "voice/char_102_texas/cn_014.wav"],
+      "编入": ["voice/char_102_texas/cn_017.wav"],
+      "行动开始": ["voice/char_102_texas/cn_020.wav"],
+      "选中": ["voice/char_102_texas/cn_021.wav"],
+      "部署": ["voice/char_102_texas/cn_023.wav"],
+      "技能": ["voice/char_102_texas/cn_025.wav"],
+      "战斗胜利": ["voice/char_102_texas/cn_030.wav"],
+      "战斗失败": ["voice/char_102_texas/cn_031.wav"]
     }
   },
   "推进之王": {
     "中文": {
-      "登录": ["voice/干员称呼+Siege/Login_1.wav"],
-      "信赖": ["voice/干员称呼+Siege/Trust_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Siege/JP_Login_1.wav"]
+      "登录": ["voice/char_112_siege/cn_001.wav"],
+      "交谈": ["voice/char_112_siege/cn_002.wav", "voice/char_112_siege/cn_003.wav"],
+      "信赖": ["voice/char_112_siege/cn_007.wav", "voice/char_112_siege/cn_008.wav"],
+      "闲置": ["voice/char_112_siege/cn_010.wav"],
+      "精英化": ["voice/char_112_siege/cn_013.wav", "voice/char_112_siege/cn_014.wav"],
+      "编入": ["voice/char_112_siege/cn_017.wav"],
+      "行动开始": ["voice/char_112_siege/cn_020.wav"],
+      "选中": ["voice/char_112_siege/cn_021.wav"],
+      "部署": ["voice/char_112_siege/cn_023.wav"],
+      "技能": ["voice/char_112_siege/cn_025.wav"],
+      "战斗胜利": ["voice/char_112_siege/cn_030.wav"],
+      "战斗失败": ["voice/char_112_siege/cn_031.wav"]
     }
   },
   "星熊": {
     "中文": {
-      "登录": ["voice/干员称呼+Hoshiguma/Login_1.wav"],
-      "战斗胜利": ["voice/干员称呼+Hoshiguma/Victory_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Hoshiguma/JP_Login_1.wav"]
+      "登录": ["voice/char_136_hsguma/cn_001.wav"],
+      "交谈": ["voice/char_136_hsguma/cn_002.wav", "voice/char_136_hsguma/cn_003.wav"],
+      "信赖": ["voice/char_136_hsguma/cn_007.wav", "voice/char_136_hsguma/cn_008.wav"],
+      "闲置": ["voice/char_136_hsguma/cn_010.wav"],
+      "精英化": ["voice/char_136_hsguma/cn_013.wav", "voice/char_136_hsguma/cn_014.wav"],
+      "编入": ["voice/char_136_hsguma/cn_017.wav"],
+      "行动开始": ["voice/char_136_hsguma/cn_020.wav"],
+      "选中": ["voice/char_136_hsguma/cn_021.wav"],
+      "部署": ["voice/char_136_hsguma/cn_023.wav"],
+      "技能": ["voice/char_136_hsguma/cn_025.wav"],
+      "战斗胜利": ["voice/char_136_hsguma/cn_030.wav"],
+      "战斗失败": ["voice/char_136_hsguma/cn_031.wav"]
     }
   },
   "闪灵": {
     "中文": {
-      "登录": ["voice/干员称呼+Shining/Login_1.wav"],
-      "信赖": ["voice/干员称呼+Shining/Trust_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+Shining/JP_Login_1.wav"]
+      "登录": ["voice/char_147_shining/cn_001.wav"],
+      "交谈": ["voice/char_147_shining/cn_002.wav", "voice/char_147_shining/cn_003.wav"],
+      "信赖": ["voice/char_147_shining/cn_007.wav", "voice/char_147_shining/cn_008.wav"],
+      "闲置": ["voice/char_147_shining/cn_010.wav"],
+      "精英化": ["voice/char_147_shining/cn_013.wav", "voice/char_147_shining/cn_014.wav"],
+      "编入": ["voice/char_147_shining/cn_017.wav"],
+      "行动开始": ["voice/char_147_shining/cn_020.wav"],
+      "选中": ["voice/char_147_shining/cn_021.wav"],
+      "部署": ["voice/char_147_shining/cn_023.wav"],
+      "技能": ["voice/char_147_shining/cn_025.wav"],
+      "战斗胜利": ["voice/char_147_shining/cn_030.wav"],
+      "战斗失败": ["voice/char_147_shining/cn_031.wav"]
     }
   },
   "夜刀": {
     "中文": {
-      "登录": ["voice/干员称呼+Yato/Login_1.wav"]
+      "登录": ["voice/char_502_nblade/cn_001.wav"],
+      "交谈": ["voice/char_502_nblade/cn_002.wav"],
+      "闲置": ["voice/char_502_nblade/cn_010.wav"],
+      "编入": ["voice/char_502_nblade/cn_017.wav"],
+      "行动开始": ["voice/char_502_nblade/cn_020.wav"],
+      "部署": ["voice/char_502_nblade/cn_023.wav"],
+      "战斗胜利": ["voice/char_502_nblade/cn_030.wav"],
+      "战斗失败": ["voice/char_502_nblade/cn_031.wav"]
     }
   },
   "W": {
     "中文": {
-      "登录": ["voice/干员称呼+W/Login_1.wav"],
-      "战斗": ["voice/干员称呼+W/Combat_1.wav"]
-    },
-    "日文": {
-      "登录": ["voice/干员称呼+W/JP_Login_1.wav"]
+      "登录": ["voice/char_113_cqbw/cn_001.wav"],
+      "交谈": ["voice/char_113_cqbw/cn_002.wav", "voice/char_113_cqbw/cn_003.wav"],
+      "信赖": ["voice/char_113_cqbw/cn_007.wav", "voice/char_113_cqbw/cn_008.wav"],
+      "闲置": ["voice/char_113_cqbw/cn_010.wav"],
+      "精英化": ["voice/char_113_cqbw/cn_013.wav", "voice/char_113_cqbw/cn_014.wav"],
+      "编入": ["voice/char_113_cqbw/cn_017.wav"],
+      "行动开始": ["voice/char_113_cqbw/cn_020.wav"],
+      "选中": ["voice/char_113_cqbw/cn_021.wav"],
+      "部署": ["voice/char_113_cqbw/cn_023.wav"],
+      "技能": ["voice/char_113_cqbw/cn_025.wav"],
+      "战斗胜利": ["voice/char_113_cqbw/cn_030.wav"],
+      "战斗失败": ["voice/char_113_cqbw/cn_031.wav"]
+    }
+  },
+  "丰川祥子": {
+    "中文": {
+      "登录": ["voice/char_4182_oblvns/cn_001.wav"],
+      "交谈": ["voice/char_4182_oblvns/cn_002.wav", "voice/char_4182_oblvns/cn_003.wav"],
+      "信赖": ["voice/char_4182_oblvns/cn_007.wav", "voice/char_4182_oblvns/cn_008.wav"],
+      "闲置": ["voice/char_4182_oblvns/cn_010.wav"],
+      "精英化": ["voice/char_4182_oblvns/cn_013.wav", "voice/char_4182_oblvns/cn_014.wav"],
+      "编入": ["voice/char_4182_oblvns/cn_017.wav"],
+      "行动开始": ["voice/char_4182_oblvns/cn_020.wav"],
+      "选中": ["voice/char_4182_oblvns/cn_021.wav"],
+      "部署": ["voice/char_4182_oblvns/cn_023.wav"],
+      "技能": ["voice/char_4182_oblvns/cn_025.wav"],
+      "战斗胜利": ["voice/char_4182_oblvns/cn_030.wav"],
+      "战斗失败": ["voice/char_4182_oblvns/cn_031.wav"]
     }
   }
 }

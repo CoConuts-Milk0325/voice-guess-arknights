@@ -17,4 +17,4 @@ export const MAX_QUESTIONS = 20
 
 export const MAX_SCORE_PER_QUESTION = 150
 
-export const CDN_BASE = 'https://media.prts.wiki/'
+export const CDN_BASE = 'https://torappu.prts.wiki/assets/audio/'
