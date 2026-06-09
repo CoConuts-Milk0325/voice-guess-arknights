@@ -234,6 +234,7 @@ function startChallenge() {
 }
 
 function onSettingsConfirm() {
+  console.log('Settings confirmed, starting new question...')
   showSettings.value = false
   startNewQuestion()
 }
