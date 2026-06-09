@@ -13,17 +13,22 @@ export function loadAudio(url) {
   return new Promise((resolve, reject) => {
     const audio = new Audio()
     audio.crossOrigin = 'anonymous'
-    audio.preload = 'metadata'
+    audio.preload = 'auto'
 
-    audio.addEventListener('loadedmetadata', () => {
+    // Add timestamp to prevent caching
+    const cacheBuster = url.includes('?') ? '&' : '?'
+    const finalUrl = `${url}${cacheBuster}t=${Date.now()}`
+
+    audio.addEventListener('canplaythrough', () => {
       resolve(audio)
     }, { once: true })
 
     audio.addEventListener('error', (e) => {
+      console.error('Audio error:', finalUrl, e)
       reject(new Error(`Failed to load: ${url}`))
     }, { once: true })
 
-    audio.src = url
+    audio.src = finalUrl
     cache.set(url, audio)
     currentAudio = audio
   })
