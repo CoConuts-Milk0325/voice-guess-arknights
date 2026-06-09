@@ -13,6 +13,20 @@
       "技能": [{"url": "voice_cn/char_002_amiya/cn_025.wav", "text": ""}, {"url": "voice_cn/char_002_amiya/cn_026.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_002_amiya/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_002_amiya/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_002_amiya/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_002_amiya/jp_002.wav", "text": ""}, {"url": "voice/char_002_amiya/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_002_amiya/jp_007.wav", "text": ""}, {"url": "voice/char_002_amiya/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_002_amiya/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_002_amiya/jp_013.wav", "text": ""}, {"url": "voice/char_002_amiya/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_002_amiya/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_002_amiya/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_002_amiya/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_002_amiya/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_002_amiya/jp_025.wav", "text": ""}, {"url": "voice/char_002_amiya/jp_026.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_002_amiya/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_002_amiya/jp_031.wav", "text": ""}]
     }
   },
   "陈": {
@@ -29,6 +43,20 @@
       "技能": [{"url": "voice_cn/char_010_chen/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_010_chen/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_010_chen/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_010_chen/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_010_chen/jp_002.wav", "text": ""}, {"url": "voice/char_010_chen/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_010_chen/jp_007.wav", "text": ""}, {"url": "voice/char_010_chen/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_010_chen/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_010_chen/jp_013.wav", "text": ""}, {"url": "voice/char_010_chen/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_010_chen/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_010_chen/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_010_chen/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_010_chen/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_010_chen/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_010_chen/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_010_chen/jp_031.wav", "text": ""}]
     }
   },
   "银灰": {
@@ -45,6 +73,20 @@
       "技能": [{"url": "voice_cn/char_172_svrash/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_172_svrash/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_172_svrash/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_172_svrash/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_172_svrash/jp_002.wav", "text": ""}, {"url": "voice/char_172_svrash/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_172_svrash/jp_007.wav", "text": ""}, {"url": "voice/char_172_svrash/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_172_svrash/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_172_svrash/jp_013.wav", "text": ""}, {"url": "voice/char_172_svrash/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_172_svrash/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_172_svrash/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_172_svrash/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_172_svrash/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_172_svrash/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_172_svrash/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_172_svrash/jp_031.wav", "text": ""}]
     }
   },
   "能天使": {
@@ -61,6 +103,20 @@
       "技能": [{"url": "voice_cn/char_103_angel/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_103_angel/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_103_angel/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_103_angel/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_103_angel/jp_002.wav", "text": ""}, {"url": "voice/char_103_angel/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_103_angel/jp_007.wav", "text": ""}, {"url": "voice/char_103_angel/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_103_angel/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_103_angel/jp_013.wav", "text": ""}, {"url": "voice/char_103_angel/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_103_angel/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_103_angel/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_103_angel/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_103_angel/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_103_angel/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_103_angel/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_103_angel/jp_031.wav", "text": ""}]
     }
   },
   "德克萨斯": {
@@ -77,6 +133,20 @@
       "技能": [{"url": "voice_cn/char_102_texas/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_102_texas/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_102_texas/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_102_texas/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_102_texas/jp_002.wav", "text": ""}, {"url": "voice/char_102_texas/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_102_texas/jp_007.wav", "text": ""}, {"url": "voice/char_102_texas/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_102_texas/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_102_texas/jp_013.wav", "text": ""}, {"url": "voice/char_102_texas/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_102_texas/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_102_texas/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_102_texas/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_102_texas/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_102_texas/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_102_texas/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_102_texas/jp_031.wav", "text": ""}]
     }
   },
   "推进之王": {
@@ -93,6 +163,20 @@
       "技能": [{"url": "voice_cn/char_112_siege/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_112_siege/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_112_siege/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_112_siege/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_112_siege/jp_002.wav", "text": ""}, {"url": "voice/char_112_siege/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_112_siege/jp_007.wav", "text": ""}, {"url": "voice/char_112_siege/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_112_siege/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_112_siege/jp_013.wav", "text": ""}, {"url": "voice/char_112_siege/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_112_siege/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_112_siege/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_112_siege/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_112_siege/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_112_siege/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_112_siege/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_112_siege/jp_031.wav", "text": ""}]
     }
   },
   "星熊": {
@@ -109,6 +193,20 @@
       "技能": [{"url": "voice_cn/char_136_hsguma/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_136_hsguma/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_136_hsguma/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_136_hsguma/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_136_hsguma/jp_002.wav", "text": ""}, {"url": "voice/char_136_hsguma/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_136_hsguma/jp_007.wav", "text": ""}, {"url": "voice/char_136_hsguma/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_136_hsguma/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_136_hsguma/jp_013.wav", "text": ""}, {"url": "voice/char_136_hsguma/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_136_hsguma/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_136_hsguma/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_136_hsguma/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_136_hsguma/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_136_hsguma/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_136_hsguma/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_136_hsguma/jp_031.wav", "text": ""}]
     }
   },
   "闪灵": {
@@ -125,6 +223,20 @@
       "技能": [{"url": "voice_cn/char_147_shining/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_147_shining/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_147_shining/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_147_shining/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_147_shining/jp_002.wav", "text": ""}, {"url": "voice/char_147_shining/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_147_shining/jp_007.wav", "text": ""}, {"url": "voice/char_147_shining/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_147_shining/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_147_shining/jp_013.wav", "text": ""}, {"url": "voice/char_147_shining/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_147_shining/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_147_shining/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_147_shining/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_147_shining/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_147_shining/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_147_shining/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_147_shining/jp_031.wav", "text": ""}]
     }
   },
   "夜刀": {
@@ -138,6 +250,17 @@
       "部署": [{"url": "voice_cn/char_502_nblade/cn_023.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_502_nblade/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_502_nblade/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_502_nblade/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_502_nblade/jp_002.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_502_nblade/jp_007.wav", "text": ""}, {"url": "voice/char_502_nblade/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_502_nblade/jp_010.wav", "text": ""}],
+      "编入": [{"url": "voice/char_502_nblade/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_502_nblade/jp_020.wav", "text": ""}],
+      "部署": [{"url": "voice/char_502_nblade/jp_023.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_502_nblade/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_502_nblade/jp_031.wav", "text": ""}]
     }
   },
   "W": {
@@ -154,6 +277,20 @@
       "技能": [{"url": "voice_cn/char_113_cqbw/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice_cn/char_113_cqbw/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice_cn/char_113_cqbw/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_113_cqbw/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_113_cqbw/jp_002.wav", "text": ""}, {"url": "voice/char_113_cqbw/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_113_cqbw/jp_007.wav", "text": ""}, {"url": "voice/char_113_cqbw/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_113_cqbw/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_113_cqbw/jp_013.wav", "text": ""}, {"url": "voice/char_113_cqbw/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_113_cqbw/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_113_cqbw/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_113_cqbw/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_113_cqbw/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_113_cqbw/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_113_cqbw/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_113_cqbw/jp_031.wav", "text": ""}]
     }
   },
   "丰川祥子": {
@@ -170,6 +307,20 @@
       "技能": [{"url": "voice/char_4182_oblvns/cn_025.wav", "text": ""}],
       "战斗胜利": [{"url": "voice/char_4182_oblvns/cn_030.wav", "text": ""}],
       "战斗失败": [{"url": "voice/char_4182_oblvns/cn_031.wav", "text": ""}]
+    },
+    "日文": {
+      "登录": [{"url": "voice/char_4182_oblvns/jp_001.wav", "text": ""}],
+      "交谈": [{"url": "voice/char_4182_oblvns/jp_002.wav", "text": ""}, {"url": "voice/char_4182_oblvns/jp_003.wav", "text": ""}],
+      "信赖": [{"url": "voice/char_4182_oblvns/jp_007.wav", "text": ""}, {"url": "voice/char_4182_oblvns/jp_008.wav", "text": ""}],
+      "闲置": [{"url": "voice/char_4182_oblvns/jp_010.wav", "text": ""}],
+      "精英化": [{"url": "voice/char_4182_oblvns/jp_013.wav", "text": ""}, {"url": "voice/char_4182_oblvns/jp_014.wav", "text": ""}],
+      "编入": [{"url": "voice/char_4182_oblvns/jp_017.wav", "text": ""}],
+      "行动开始": [{"url": "voice/char_4182_oblvns/jp_020.wav", "text": ""}],
+      "选中": [{"url": "voice/char_4182_oblvns/jp_021.wav", "text": ""}],
+      "部署": [{"url": "voice/char_4182_oblvns/jp_023.wav", "text": ""}],
+      "技能": [{"url": "voice/char_4182_oblvns/jp_025.wav", "text": ""}],
+      "战斗胜利": [{"url": "voice/char_4182_oblvns/jp_030.wav", "text": ""}],
+      "战斗失败": [{"url": "voice/char_4182_oblvns/jp_031.wav", "text": ""}]
     }
   }
 }
