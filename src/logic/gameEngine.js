@@ -44,10 +44,11 @@ function shuffleArray(arr) {
   return a
 }
 
-export function generateChoices(correctOperator, operators) {
+export function generateChoices(correctOperator, operators, numChoices = 4) {
   const others = operators.filter(op => op.name !== correctOperator.name)
   const shuffled = shuffleArray(others)
-  const wrongOptions = shuffled.slice(0, 3)
+  const wrongCount = Math.max(1, numChoices - 1)
+  const wrongOptions = shuffled.slice(0, wrongCount)
 
   const options = [correctOperator, ...wrongOptions]
   return shuffleArray(options)

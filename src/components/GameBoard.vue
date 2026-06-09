@@ -20,8 +20,8 @@
           <div class="setting-group">
             <div class="setting-label">输入模式</div>
             <div class="toggle-group">
-              <button class="toggle-option" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">自由输入</button>
-              <button class="toggle-option" :class="{ active: settings.inputMode === 'choice' }" @click="settings.inputMode = 'choice'">选择题</button>
+              <button class="toggle-option" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">输入模式</button>
+              <button class="toggle-option" :class="{ active: settings.inputMode === 'choice' }" @click="settings.inputMode = 'choice'">选择模式</button>
             </div>
           </div>
 
@@ -85,7 +85,7 @@
     <!-- 挑战进行中 -->
     <template v-else>
       <div class="top-controls">
-        <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 自由输入</button>
+        <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 输入模式</button>
         <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
           {{ showText ? '📖 文' : '📖' }}
         </button>
@@ -209,7 +209,7 @@ function startNewQuestion() {
   if (!op) return
 
   const clips = getVoiceClips(op.name, voiceMapping.value, settings)
-  const choices = generateChoices(op, operators.value)
+  const choices = generateChoices(op, operators.value, settings.guessesPerClip)
 
   currentQuestion.value = { operator: op }
   currentClips.value = clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }]

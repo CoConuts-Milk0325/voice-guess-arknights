@@ -8,8 +8,8 @@
       <div class="setting-group">
         <div class="setting-label">输入模式</div>
         <div class="toggle-group">
-          <button class="toggle-option" :class="{ active: inputMode === 'typing' }" @click="$emit('update:inputMode', 'typing')">自由输入</button>
-          <button class="toggle-option" :class="{ active: inputMode === 'choice' }" @click="$emit('update:inputMode', 'choice')">选择题</button>
+          <button class="toggle-option" :class="{ active: inputMode === 'typing' }" @click="$emit('update:inputMode', 'typing')">输入模式</button>
+          <button class="toggle-option" :class="{ active: inputMode === 'choice' }" @click="$emit('update:inputMode', 'choice')">选择模式</button>
         </div>
       </div>
 

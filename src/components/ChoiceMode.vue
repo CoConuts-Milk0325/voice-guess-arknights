@@ -39,7 +39,7 @@ defineProps({
 
 defineEmits(['select'])
 
-const letters = ['A', 'B', 'C', 'D']
+const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 </script>
 
 <style scoped>
