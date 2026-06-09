@@ -97,17 +97,19 @@
         <SummaryReport v-if="inChallenge && challenge.isComplete" v-bind="summaryData" @restart="startChallenge" />
 
         <template v-else-if="currentQuestion">
-          <AudioPlayer
-            :key="audioKey"
-            :url="currentClip?.url"
-            :language="currentClip?.language"
-            :voiceType="currentClip?.type"
-            :clipIndex="currentClipIndex"
-            :guessesLeft="guessesLeftForClip"
-            :text="showText ? (currentClip?.text || '') : ''"
-            @loaded="onAudioLoaded"
-            @skip="onAudioSkip"
-          />
+          <!-- 显示所有已加载的语音 -->
+          <div v-for="(clip, idx) in displayedClips" :key="'clip-' + idx" class="clip-wrapper">
+            <AudioPlayer
+              :url="clip.url"
+              :language="clip.language"
+              :voiceType="clip.type"
+              :clipIndex="idx + 1"
+              :guessesLeft="idx === displayedClips.length - 1 ? guessesLeftForClip : 0"
+              :text="showText ? (clip.text || '') : ''"
+              @loaded="onAudioLoaded"
+              @skip="onAudioSkip"
+            />
+          </div>
 
           <GuessInput v-if="settings.inputMode === 'typing'" v-model="guessText" :operators="operators" :history="currentHistory" :disabled="showResult" @submit="onGuess" ref="guessInputRef" />
 
@@ -173,6 +175,11 @@ const questionStartTime = ref(0)
 
 const currentClip = computed(() => {
   return currentClips.value[currentClipIndex.value - 1] || null
+})
+
+// 显示所有已加载的语音（递进式）
+const displayedClips = computed(() => {
+  return currentClips.value.slice(0, currentClipIndex.value)
 })
 
 const guessesLeftForClip = computed(() => {
@@ -331,6 +338,10 @@ watch(() => settings.inputMode, () => {
 .text-toggle { font-size: 14px; padding: 8px 12px; }
 .loading-state { display: flex; justify-content: center; align-items: center; min-height: 200px; }
 .loading-text { font-size: 16px; color: var(--text-muted); }
+
+.clip-wrapper {
+  margin-bottom: 12px;
+}
 .challenge-setup { flex: 1; }
 .back-btn { display: flex; align-items: center; gap: 4px; padding: 8px 16px; background: none; border: none; font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); cursor: pointer; margin-bottom: 16px; transition: color 0.2s; }
 .back-btn:hover { color: var(--accent); }
