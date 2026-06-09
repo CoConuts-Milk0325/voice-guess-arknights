@@ -19,7 +19,10 @@ export function loadAudio(url) {
     const cacheBuster = url.includes('?') ? '&' : '?'
     const finalUrl = `${url}${cacheBuster}t=${Date.now()}`
 
+    console.log('loadAudio: setting src to', finalUrl)
+
     audio.addEventListener('canplaythrough', () => {
+      console.log('loadAudio: canplaythrough fired')
       resolve(audio)
     }, { once: true })
 
@@ -31,6 +34,7 @@ export function loadAudio(url) {
     audio.src = finalUrl
     cache.set(url, audio)
     currentAudio = audio
+    console.log('loadAudio: currentAudio set to', currentAudio)
   })
 }
 
