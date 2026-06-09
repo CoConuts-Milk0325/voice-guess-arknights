@@ -1,18 +1,10 @@
 <template>
-  <div class="app">
-    <h1>配音猜干员</h1>
-    <p>正在搭建中...</p>
-  </div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <GameBoard />
 </template>
 
 <script setup>
+import GameBoard from './components/GameBoard.vue'
 </script>
-
-<style scoped>
-.app {
-  max-width: 440px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  min-height: 100vh;
-}
-</style>
