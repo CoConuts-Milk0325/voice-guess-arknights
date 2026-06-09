@@ -87,17 +87,24 @@ watch(() => props.url, async (newUrl) => {
 
 function togglePlay() {
   const audio = getCurrentAudio()
-  if (!audio) return
+  console.log('togglePlay: audio =', audio, 'isPlaying =', isPlaying.value)
+  if (!audio) {
+    console.log('togglePlay: no audio element')
+    return
+  }
 
   if (isPlaying.value) {
     audio.pause()
     isPlaying.value = false
     stopProgress()
   } else {
+    console.log('togglePlay: attempting to play, readyState =', audio.readyState)
     audio.play().then(() => {
+      console.log('togglePlay: play succeeded')
       isPlaying.value = true
       startProgress()
     }).catch(e => {
+      console.error('togglePlay: play failed', e)
       loadError.value = '播放失败，请点击页面后重试'
     })
   }
