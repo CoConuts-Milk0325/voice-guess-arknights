@@ -16,13 +16,16 @@ export function loadAudio(url) {
     audio.preload = 'auto'
 
     audio.addEventListener('canplaythrough', () => {
+      console.log('Audio loaded OK:', url)
       resolve(audio)
     }, { once: true })
 
     audio.addEventListener('error', (e) => {
-      reject(new Error(`Failed to load: ${url.split('/').pop()}`))
+      console.error('Audio load error:', url, e)
+      reject(new Error(`Failed to load: ${url}`))
     }, { once: true })
 
+    console.log('Setting audio src:', url)
     audio.src = url
     cache.set(url, audio)
     currentAudio = audio
