@@ -13,19 +13,16 @@ export function loadAudio(url) {
   return new Promise((resolve, reject) => {
     const audio = new Audio()
     audio.crossOrigin = 'anonymous'
-    audio.preload = 'auto'
+    audio.preload = 'metadata'
 
-    audio.addEventListener('canplaythrough', () => {
-      console.log('Audio loaded OK:', url)
+    audio.addEventListener('loadedmetadata', () => {
       resolve(audio)
     }, { once: true })
 
     audio.addEventListener('error', (e) => {
-      console.error('Audio load error:', url, e)
       reject(new Error(`Failed to load: ${url}`))
     }, { once: true })
 
-    console.log('Setting audio src:', url)
     audio.src = url
     cache.set(url, audio)
     currentAudio = audio

@@ -37,7 +37,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { buildVoiceUrl } from '../logic/audioLoader.js'
+import MD5 from 'md5'
 
 const props = defineProps({
   operator: { type: Object, required: true },
@@ -63,18 +63,9 @@ const avatarUrl = computed(() => {
   const filename = parseInt(props.operator.rarity) >= 3
     ? `头像_${name}_2.png`
     : `头像_${name}.png`
-  return `https://media.prts.wiki/${getMd5Path(filename)}/${filename}`
+  const md5 = MD5(filename)
+  return `https://media.prts.wiki/${md5[0]}/${md5.slice(0, 2)}/${filename}`
 })
-
-function getMd5Path(filename) {
-  let hash = 0
-  for (let i = 0; i < filename.length; i++) {
-    hash = ((hash << 5) - hash) + filename.charCodeAt(i)
-    hash |= 0
-  }
-  const hex = Math.abs(hash).toString(16).padStart(8, '0')
-  return `${hex[0]}/${hex.slice(0, 2)}`
-}
 </script>
 
 <style scoped>
