@@ -251,7 +251,7 @@ function startNewQuestion() {
 
   const clips = getVoiceClips(op.name, voiceMapping.value, settings)
   const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
-  const choices = generateChoices(op, operators.value, numChoices)
+  const choices = generateChoices(op, filteredOperators, numChoices)
 
   currentQuestion.value = { operator: op }
   currentClips.value = clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }]
