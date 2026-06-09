@@ -5,96 +5,29 @@
       <div class="header-sub">听声音，猜干员</div>
     </div>
 
+    <div class="top-controls">
+      <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 输入模式</button>
+      <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
+        {{ showText ? '📖 文' : '📖' }}
+      </button>
+      <button class="ctrl-btn" :class="{ active: inChallenge }" @click="toggleChallenge">
+        {{ inChallenge ? '🏆 挑战中' : '🏆 挑战' }}
+      </button>
+      <button class="ctrl-btn" @click="showSettings = true">⚙ 设置</button>
+    </div>
+
     <div v-if="loading" class="loading-state">
       <div class="loading-text">加载中...</div>
     </div>
 
-    <!-- 挑战开始前的设置界面 -->
-    <template v-else-if="!challengeStarted">
-      <div class="start-screen">
-        <div class="start-card">
-          <h2 class="start-title">挑战模式</h2>
-          <p class="start-desc">20道题，猜干员语音身份</p>
-
-          <!-- 输入模式 -->
-          <div class="setting-group">
-            <div class="setting-label">输入模式</div>
-            <div class="toggle-group">
-              <button class="toggle-option" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">输入模式</button>
-              <button class="toggle-option" :class="{ active: settings.inputMode === 'choice' }" @click="settings.inputMode = 'choice'">选择模式</button>
-            </div>
-          </div>
-
-          <!-- 语音语言 -->
-          <div class="setting-group">
-            <div class="setting-label">语音语言</div>
-            <div class="check-group">
-              <div class="check-item" :class="{ checked: settings.languages.includes('中文') }" @click="toggleLang('中文')">
-                <div class="check-box">{{ settings.languages.includes('中文') ? '✓' : '' }}</div>
-                中文配音
-              </div>
-              <div class="check-item" :class="{ checked: settings.languages.includes('日文') }" @click="toggleLang('日文')">
-                <div class="check-box">{{ settings.languages.includes('日文') ? '✓' : '' }}</div>
-                日文配音
-              </div>
-            </div>
-          </div>
-
-          <!-- 每题最大猜测次数 -->
-          <div class="setting-group">
-            <div class="setting-label">每题最大猜测次数</div>
-            <div class="slider-container">
-              <div class="slider-header">
-                <span class="slider-desc">总次数上限</span>
-                <span class="slider-value">{{ settings.maxGuesses }}</span>
-              </div>
-              <input type="range" class="slider" min="3" max="30" v-model.number="settings.maxGuesses" />
-              <div class="slider-labels"><span>3</span><span>15</span><span>30</span></div>
-            </div>
-          </div>
-
-          <!-- 猜几次后播下一条 -->
-          <div class="setting-group">
-            <div class="setting-label">猜几次后播下一条语音</div>
-            <div class="slider-container">
-              <div class="slider-header">
-                <span class="slider-desc">每条次数</span>
-                <span class="slider-value">{{ settings.guessesPerClip }}</span>
-              </div>
-              <input type="range" class="slider" min="1" max="10" v-model.number="settings.guessesPerClip" />
-              <div class="slider-labels"><span>1</span><span>5</span><span>10</span></div>
-            </div>
-          </div>
-
-          <!-- 语音类型 -->
-          <div class="setting-group">
-            <div class="setting-label">语音类型</div>
-            <div class="check-group">
-              <div v-for="vt in voiceTypesList" :key="vt" class="check-item" :class="{ checked: settings.voiceTypes.includes(vt) }" @click="toggleVoiceType(vt)">
-                <div class="check-box">{{ settings.voiceTypes.includes(vt) ? '✓' : '' }}</div>
-                {{ vt }}
-              </div>
-            </div>
-          </div>
-
-          <button class="start-btn" @click="startChallenge">开始挑战</button>
-        </div>
-      </div>
-    </template>
-
-    <!-- 挑战进行中 -->
     <template v-else>
-      <div class="top-controls">
-        <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 输入模式</button>
-        <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
-          {{ showText ? '📖 文' : '📖' }}
-        </button>
-      </div>
+      <!-- 挑战模式信息栏 -->
+      <ChallengeBar v-if="inChallenge" :streak="challenge.streak" :score="challenge.score" :current="challenge.currentQuestion" :total="challenge.totalQuestions" />
 
-      <ChallengeBar :streak="challenge.streak" :score="challenge.score" :current="challenge.currentQuestion" :total="challenge.totalQuestions" />
+      <!-- 挑战结算 -->
+      <SummaryReport v-if="challenge.isComplete" v-bind="summaryData" @restart="startNewChallenge" />
 
-      <SummaryReport v-if="challenge.isComplete" v-bind="summaryData" @restart="resetChallenge" />
-
+      <!-- 游戏内容 -->
       <template v-else-if="currentQuestion">
         <AudioPlayer :key="currentClipIndex" :url="currentClip?.url" :language="currentClip?.language" :voiceType="currentClip?.type" :clipIndex="currentClipIndex" :guessesLeft="guessesLeftForClip" :text="showText ? currentClip?.text : ''" @loaded="onAudioLoaded" @error="onAudioError" />
 
@@ -102,9 +35,12 @@
 
         <ChoiceMode v-else :choices="currentChoices" :history="currentHistory" @select="onGuess" />
 
-        <ResultCard v-if="showResult" :operator="currentQuestion.operator" :correct="lastGuessCorrect" :clipsUsed="currentClipIndex" :isLast="challenge.currentQuestion >= challenge.totalQuestions - 1" @next="nextQuestion" />
+        <ResultCard v-if="showResult" :operator="currentQuestion.operator" :correct="lastGuessCorrect" :clipsUsed="currentClipIndex" :isLast="inChallenge && challenge.currentQuestion >= challenge.totalQuestions - 1" @next="nextQuestion" />
       </template>
     </template>
+
+    <!-- 设置抽屉 -->
+    <SettingsDrawer v-model="showSettings" v-model:inputMode="settings.inputMode" v-model:languages="settings.languages" v-model:maxGuesses="settings.maxGuesses" v-model:guessesPerClip="settings.guessesPerClip" v-model:selectedVoiceTypes="settings.voiceTypes" />
   </div>
 </template>
 
@@ -119,25 +55,25 @@ import AudioPlayer from './AudioPlayer.vue'
 import GuessInput from './GuessInput.vue'
 import ChoiceMode from './ChoiceMode.vue'
 import ResultCard from './ResultCard.vue'
+import SettingsDrawer from './SettingsDrawer.vue'
 import ChallengeBar from './ChallengeBar.vue'
 import SummaryReport from './SummaryReport.vue'
 
 const loading = ref(true)
 const operators = ref([])
 const voiceMapping = ref({})
+const showSettings = ref(false)
 const showText = ref(false)
 const guessText = ref('')
 const guessInputRef = ref(null)
-const challengeStarted = ref(false)
-
-const voiceTypesList = VOICE_TYPES
+const inChallenge = ref(false)
 
 const settings = reactive({
   inputMode: 'typing',
   languages: ['中文', '日文'],
   maxGuesses: 10,
   guessesPerClip: 3,
-  voiceTypes: [...VOICE_TYPES] // 默认全选
+  voiceTypes: [...VOICE_TYPES]
 })
 
 const challenge = ref(createChallenge())
@@ -171,37 +107,28 @@ onMounted(async () => {
     console.error('Failed to load data:', e)
   } finally {
     loading.value = false
+    startNewQuestion()
   }
 })
 
-function toggleLang(lang) {
-  const idx = settings.languages.indexOf(lang)
-  if (idx >= 0) {
-    if (settings.languages.length > 1) {
-      settings.languages.splice(idx, 1)
-    }
+function toggleChallenge() {
+  if (inChallenge.value) {
+    // 退出挑战
+    inChallenge.value = false
+    challenge.value = createChallenge()
+    startNewQuestion()
   } else {
-    settings.languages.push(lang)
+    // 开始挑战
+    inChallenge.value = true
+    challenge.value = createChallenge()
+    startNewQuestion()
   }
 }
 
-function toggleVoiceType(vt) {
-  const idx = settings.voiceTypes.indexOf(vt)
-  if (idx >= 0) {
-    settings.voiceTypes.splice(idx, 1)
-  } else {
-    settings.voiceTypes.push(vt)
-  }
-}
-
-function startChallenge() {
-  challengeStarted.value = true
+function startNewChallenge() {
+  inChallenge.value = true
   challenge.value = createChallenge()
   startNewQuestion()
-}
-
-function resetChallenge() {
-  challengeStarted.value = false
 }
 
 function startNewQuestion() {
@@ -239,16 +166,18 @@ function onGuess(name) {
     lastGuessCorrect.value = true
     showResult.value = true
 
-    const timeUsed = Math.round((Date.now() - questionStartTime.value) / 1000)
-    challenge.value = recordQuestion(challenge.value, {
-      operatorName: currentQuestion.value.operator.name,
-      guessed: name,
-      correct: true,
-      clipsUsed: currentClipIndex.value,
-      language: currentClip.value?.language || '中文',
-      timeUsed: `${timeUsed}s`,
-      isChoiceMode: settings.inputMode === 'choice'
-    })
+    if (inChallenge.value) {
+      const timeUsed = Math.round((Date.now() - questionStartTime.value) / 1000)
+      challenge.value = recordQuestion(challenge.value, {
+        operatorName: currentQuestion.value.operator.name,
+        guessed: name,
+        correct: true,
+        clipsUsed: currentClipIndex.value,
+        language: currentClip.value?.language || '中文',
+        timeUsed: `${timeUsed}s`,
+        isChoiceMode: settings.inputMode === 'choice'
+      })
+    }
   } else {
     const totalGuessesForClip = questionGuessCount.value % settings.guessesPerClip
     if (totalGuessesForClip === 0 && currentClipIndex.value < currentClips.value.length) {
@@ -259,16 +188,18 @@ function onGuess(name) {
       lastGuessCorrect.value = false
       showResult.value = true
 
-      const timeUsed = Math.round((Date.now() - questionStartTime.value) / 1000)
-      challenge.value = recordQuestion(challenge.value, {
-        operatorName: currentQuestion.value.operator.name,
-        guessed: name,
-        correct: false,
-        clipsUsed: currentClipIndex.value,
-        language: currentClip.value?.language || '中文',
-        timeUsed: `${timeUsed}s`,
-        isChoiceMode: settings.inputMode === 'choice'
-      })
+      if (inChallenge.value) {
+        const timeUsed = Math.round((Date.now() - questionStartTime.value) / 1000)
+        challenge.value = recordQuestion(challenge.value, {
+          operatorName: currentQuestion.value.operator.name,
+          guessed: name,
+          correct: false,
+          clipsUsed: currentClipIndex.value,
+          language: currentClip.value?.language || '中文',
+          timeUsed: `${timeUsed}s`,
+          isChoiceMode: settings.inputMode === 'choice'
+        })
+      }
     }
 
     guessText.value = ''
@@ -276,7 +207,7 @@ function onGuess(name) {
 }
 
 function nextQuestion() {
-  if (challenge.value.isComplete) return
+  if (inChallenge.value && challenge.value.isComplete) return
   startNewQuestion()
 }
 
@@ -322,6 +253,7 @@ function onAudioError(e) {
   justify-content: center;
   gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .ctrl-btn {
@@ -367,208 +299,5 @@ function onAudioError(e) {
 .loading-text {
   font-size: 16px;
   color: var(--text-muted);
-}
-
-/* Start screen */
-.start-screen {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.start-card {
-  width: 100%;
-  background: var(--bg-white);
-  border-radius: var(--r-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
-}
-
-.start-title {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-.start-desc {
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 13px;
-  margin-bottom: 24px;
-}
-
-.setting-group {
-  margin-bottom: 20px;
-}
-
-.setting-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-}
-
-.toggle-group {
-  display: flex;
-  background: var(--bg-warm);
-  border-radius: var(--r-md);
-  padding: 4px;
-  gap: 4px;
-}
-
-.toggle-option {
-  flex: 1;
-  padding: 10px;
-  border-radius: var(--r-sm);
-  border: none;
-  background: transparent;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: center;
-}
-
-.toggle-option.active {
-  background: white;
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-  font-weight: 600;
-}
-
-.check-group {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.check-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  background: var(--bg-warm);
-  border-radius: var(--r-sm);
-  cursor: pointer;
-  transition: all 0.2s;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  border: 1.5px solid transparent;
-  user-select: none;
-}
-
-.check-item:hover {
-  background: white;
-}
-
-.check-item.checked {
-  background: var(--accent-light);
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.check-box {
-  width: 18px;
-  height: 18px;
-  border-radius: 5px;
-  border: 2px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  transition: all 0.2s;
-  flex-shrink: 0;
-}
-
-.check-item.checked .check-box {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: white;
-}
-
-.slider-container {
-  background: var(--bg-warm);
-  border-radius: var(--r-md);
-  padding: 16px;
-}
-
-.slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.slider-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.slider-value {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.slider-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  background: var(--border);
-  border-radius: 3px;
-  outline: none;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--accent);
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(232, 101, 42, 0.3);
-  border: 3px solid white;
-  transition: transform 0.15s;
-}
-
-.slider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-}
-
-.start-btn {
-  width: 100%;
-  margin-top: 8px;
-  padding: 14px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: var(--r-md);
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(232, 101, 42, 0.2);
-}
-
-.start-btn:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 6px 20px rgba(232, 101, 42, 0.3);
-  transform: translateY(-1px);
 }
 </style>
