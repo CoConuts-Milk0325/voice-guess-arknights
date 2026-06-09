@@ -42,7 +42,7 @@ const props = defineProps({
   text: { type: String, default: '' }
 })
 
-const emit = defineEmits(['loaded', 'error'])
+const emit = defineEmits(['loaded', 'error', 'skip'])
 
 const isPlaying = ref(false)
 const currentTime = ref(0)
@@ -80,8 +80,8 @@ watch(() => props.url, async (newUrl) => {
     }
   } catch (e) {
     console.error('AudioPlayer: load failed', e)
-    loadError.value = `加载失败: ${e.message || newUrl.split('/').pop()}`
-    emit('error', e)
+    loadError.value = `加载失败，跳过...`
+    emit('skip')
   }
 }, { immediate: true })
 

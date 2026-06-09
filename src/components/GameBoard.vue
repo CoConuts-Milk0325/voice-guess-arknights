@@ -77,7 +77,9 @@
     <!-- 主页面 -->
     <template v-else>
       <div class="top-controls">
-        <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = 'typing'">⌨ 输入模式</button>
+        <button class="ctrl-btn" :class="{ active: settings.inputMode === 'typing' }" @click="settings.inputMode = settings.inputMode === 'typing' ? 'choice' : 'typing'">
+          ⌨ {{ settings.inputMode === 'typing' ? '输入模式' : '选择模式' }}
+        </button>
         <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
           {{ showText ? '📖 文' : '📖' }}
         </button>
@@ -104,7 +106,7 @@
             :guessesLeft="guessesLeftForClip"
             :text="showText ? (currentClip?.text || '') : ''"
             @loaded="onAudioLoaded"
-            @error="onAudioError"
+            @skip="onAudioSkip"
           />
 
           <GuessInput v-if="settings.inputMode === 'typing'" v-model="guessText" :operators="operators" :history="currentHistory" :disabled="showResult" @submit="onGuess" ref="guessInputRef" />
@@ -150,7 +152,7 @@ const audioKey = ref(0)
 const voiceTypesList = VOICE_TYPES
 
 const settings = reactive({
-  inputMode: 'typing',
+  inputMode: 'choice',
   languages: ['中文', '日文'],
   maxGuesses: 10,
   guessesPerClip: 3,
@@ -300,7 +302,13 @@ function nextQuestion() {
 }
 
 function onAudioLoaded() {}
-function onAudioError(e) { console.warn('Audio error:', e) }
+function onAudioSkip() {
+  // 语音加载失败，自动跳到下一条
+  if (currentClipIndex.value < currentClips.value.length) {
+    currentClipIndex.value++
+    audioKey.value++
+  }
+}
 
 // 切换输入模式时重新生成选项
 watch(() => settings.inputMode, () => {
