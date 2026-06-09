@@ -28,6 +28,16 @@
       </div>
 
       <div class="setting-group">
+        <div class="setting-label">干员星级</div>
+        <div class="check-group">
+          <div v-for="star in 6" :key="star" class="check-item" :class="{ checked: selectedStars.includes(star) }" @click="toggleStar(star)">
+            <div class="check-box">{{ selectedStars.includes(star) ? '✓' : '' }}</div>
+            {{ '★'.repeat(star) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-group">
         <div class="setting-label">每题最大猜测次数</div>
         <div class="slider-container">
           <div class="slider-header">
@@ -60,6 +70,8 @@
           </div>
         </div>
       </div>
+
+      <button class="confirm-btn" @click="$emit('confirm')">确定</button>
     </div>
   </div>
 </template>
@@ -71,6 +83,7 @@ const props = defineProps({
   modelValue: { type: Boolean, default: false },
   inputMode: { type: String, default: 'typing' },
   languages: { type: Array, default: () => ['中文', '日文'] },
+  selectedStars: { type: Array, default: () => [1, 2, 3, 4, 5, 6] },
   maxGuesses: { type: Number, default: 10 },
   guessesPerClip: { type: Number, default: 3 },
   selectedVoiceTypes: { type: Array, default: () => [] }
@@ -80,9 +93,11 @@ const emit = defineEmits([
   'update:modelValue',
   'update:inputMode',
   'update:languages',
+  'update:selectedStars',
   'update:maxGuesses',
   'update:guessesPerClip',
-  'update:selectedVoiceTypes'
+  'update:selectedVoiceTypes',
+  'confirm'
 ])
 
 const voiceTypes = VOICE_TYPES
@@ -97,6 +112,19 @@ function toggleLang(lang) {
   }
   if (current.length > 0) {
     emit('update:languages', current)
+  }
+}
+
+function toggleStar(star) {
+  const current = [...props.selectedStars]
+  const idx = current.indexOf(star)
+  if (idx >= 0) {
+    current.splice(idx, 1)
+  } else {
+    current.push(star)
+  }
+  if (current.length > 0) {
+    emit('update:selectedStars', current)
   }
 }
 
@@ -313,5 +341,26 @@ function toggleVoiceType(vt) {
 
 .slider::-webkit-slider-thumb:hover {
   transform: scale(1.15);
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--r-md);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(232, 101, 42, 0.2);
+  margin-top: 8px;
+}
+
+.confirm-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
 }
 </style>

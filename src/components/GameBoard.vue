@@ -120,7 +120,16 @@
       </template>
     </template>
 
-    <SettingsDrawer v-model="showSettings" v-model:inputMode="settings.inputMode" v-model:languages="settings.languages" v-model:maxGuesses="settings.maxGuesses" v-model:guessesPerClip="settings.guessesPerClip" v-model:selectedVoiceTypes="settings.voiceTypes" />
+    <SettingsDrawer
+      v-model="showSettings"
+      v-model:inputMode="settings.inputMode"
+      v-model:languages="settings.languages"
+      v-model:selectedStars="settings.selectedStars"
+      v-model:maxGuesses="settings.maxGuesses"
+      v-model:guessesPerClip="settings.guessesPerClip"
+      v-model:selectedVoiceTypes="settings.voiceTypes"
+      @confirm="onSettingsConfirm"
+    />
   </div>
 </template>
 
@@ -156,6 +165,7 @@ const voiceTypesList = VOICE_TYPES
 const settings = reactive({
   inputMode: 'choice',
   languages: ['中文', '日文'],
+  selectedStars: [1, 2, 3, 4, 5, 6],
   maxGuesses: 10,
   guessesPerClip: 3,
   voiceTypes: [...VOICE_TYPES]
@@ -223,8 +233,18 @@ function startChallenge() {
   startNewQuestion()
 }
 
+function onSettingsConfirm() {
+  showSettings.value = false
+  startNewQuestion()
+}
+
 function startNewQuestion() {
-  const op = selectRandomOperator(operators.value, voiceMapping.value, lastOperatorName.value)
+  // Filter operators by star rating
+  const filteredOperators = operators.value.filter(op => {
+    const rarity = parseInt(op.rarity) || 0
+    return settings.selectedStars.includes(rarity + 1)
+  })
+  const op = selectRandomOperator(filteredOperators, voiceMapping.value, lastOperatorName.value)
   if (!op) return
 
   lastOperatorName.value = op.name
