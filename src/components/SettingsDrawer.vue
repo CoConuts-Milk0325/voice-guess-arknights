@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <button class="confirm-btn" @click="$emit('confirm')">确定</button>
+      <button class="confirm-btn" @click="handleConfirm">确定</button>
     </div>
   </div>
 </template>
@@ -137,6 +137,11 @@ function toggleVoiceType(vt) {
     current.push(vt)
   }
   emit('update:selectedVoiceTypes', current)
+}
+
+function handleConfirm() {
+  console.log('SettingsDrawer: confirm button clicked')
+  emit('confirm')
 }
 </script>
 
