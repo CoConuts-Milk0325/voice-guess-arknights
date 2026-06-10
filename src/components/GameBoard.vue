@@ -69,6 +69,16 @@
             </div>
           </div>
 
+          <div class="setting-group">
+            <div class="setting-label">干员星级</div>
+            <div class="check-group">
+              <div v-for="star in 6" :key="star" class="check-item" :class="{ checked: settings.selectedStars.includes(star) }" @click="toggleStar(star)">
+                <div class="check-box">{{ settings.selectedStars.includes(star) ? '✓' : '' }}</div>
+                {{ '★'.repeat(star) }}
+              </div>
+            </div>
+          </div>
+
           <button class="start-btn" @click="startChallenge">开始挑战</button>
         </div>
       </div>
@@ -224,6 +234,15 @@ function toggleVoiceType(vt) {
   const idx = settings.voiceTypes.indexOf(vt)
   if (idx >= 0) settings.voiceTypes.splice(idx, 1)
   else settings.voiceTypes.push(vt)
+}
+
+function toggleStar(star) {
+  const idx = settings.selectedStars.indexOf(star)
+  if (idx >= 0) {
+    if (settings.selectedStars.length > 1) settings.selectedStars.splice(idx, 1)
+  } else {
+    settings.selectedStars.push(star)
+  }
 }
 
 function startChallenge() {

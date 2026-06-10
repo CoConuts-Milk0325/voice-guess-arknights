@@ -15,7 +15,7 @@
     </div>
     <div class="audio-footer">
       <span class="voice-type">{{ voiceType }}</span>
-      <span class="guesses-left">
+      <span class="guesses-left" v-if="guessesLeft > 0">
         还可猜 <strong>{{ guessesLeft }}</strong> 次
       </span>
     </div>
@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref, watch, onUnmounted } from 'vue'
-import { loadAudio, stopAudio, getCurrentAudio, buildVoiceUrl } from '../logic/audioLoader.js'
+import { buildVoiceUrl } from '../logic/audioLoader.js'
 
 const props = defineProps({
   url: { type: String, required: true },
@@ -47,64 +47,66 @@ const emit = defineEmits(['loaded', 'error', 'skip'])
 const isPlaying = ref(false)
 const currentTime = ref(0)
 const duration = ref(0)
-let progressInterval = null
-
 const progressPercent = ref(0)
 const languageClass = ref('')
 const loadError = ref('')
+
+let myAudio = null
+let progressInterval = null
 
 watch(() => props.language, (lang) => {
   languageClass.value = lang === '中文' ? 'lang-zh' : 'lang-jp'
 }, { immediate: true })
 
 watch(() => props.url, async (newUrl) => {
-  console.log('AudioPlayer: url changed to', newUrl)
   if (!newUrl) {
     loadError.value = '无语音URL'
     return
   }
-  stopAudio()
+
+  // Stop previous audio
+  stopMyAudio()
   isPlaying.value = false
   currentTime.value = 0
   progressPercent.value = 0
   loadError.value = ''
 
   const fullUrl = buildVoiceUrl(newUrl)
-  console.log('AudioPlayer: loading', fullUrl)
+
   try {
-    await loadAudio(fullUrl)
-    const audio = getCurrentAudio()
-    if (audio) {
-      duration.value = audio.duration || 5
-      emit('loaded')
-    }
+    myAudio = new Audio()
+    myAudio.crossOrigin = 'anonymous'
+    myAudio.preload = 'auto'
+
+    const cacheBuster = fullUrl.includes('?') ? '&' : '?'
+    const finalUrl = `${fullUrl}${cacheBuster}t=${Date.now()}`
+
+    await new Promise((resolve, reject) => {
+      myAudio.addEventListener('canplaythrough', resolve, { once: true })
+      myAudio.addEventListener('error', reject, { once: true })
+      myAudio.src = finalUrl
+    })
+
+    duration.value = myAudio.duration || 5
+    emit('loaded')
   } catch (e) {
-    console.error('AudioPlayer: load failed', e)
-    loadError.value = `加载失败，跳过...`
+    loadError.value = '加载失败，跳过...'
     emit('skip')
   }
 }, { immediate: true })
 
 function togglePlay() {
-  const audio = getCurrentAudio()
-  console.log('togglePlay: audio =', audio, 'isPlaying =', isPlaying.value)
-  if (!audio) {
-    console.log('togglePlay: no audio element')
-    return
-  }
+  if (!myAudio) return
 
   if (isPlaying.value) {
-    audio.pause()
+    myAudio.pause()
     isPlaying.value = false
     stopProgress()
   } else {
-    console.log('togglePlay: attempting to play, readyState =', audio.readyState)
-    audio.play().then(() => {
-      console.log('togglePlay: play succeeded')
+    myAudio.play().then(() => {
       isPlaying.value = true
       startProgress()
-    }).catch(e => {
-      console.error('togglePlay: play failed', e)
+    }).catch(() => {
       loadError.value = '播放失败，请点击页面后重试'
     })
   }
@@ -113,16 +115,14 @@ function togglePlay() {
 function startProgress() {
   stopProgress()
   progressInterval = setInterval(() => {
-    const audio = getCurrentAudio()
-    if (audio) {
-      currentTime.value = audio.currentTime
-      duration.value = audio.duration || 5
-      progressPercent.value = (currentTime.value / duration.value) * 100
+    if (!myAudio) return
+    currentTime.value = myAudio.currentTime
+    duration.value = myAudio.duration || 5
+    progressPercent.value = (currentTime.value / duration.value) * 100
 
-      if (audio.ended) {
-        isPlaying.value = false
-        stopProgress()
-      }
+    if (myAudio.ended) {
+      isPlaying.value = false
+      stopProgress()
     }
   }, 100)
 }
@@ -134,12 +134,21 @@ function stopProgress() {
   }
 }
 
+function stopMyAudio() {
+  stopProgress()
+  if (myAudio) {
+    myAudio.pause()
+    myAudio.currentTime = 0
+    myAudio.src = ''
+    myAudio = null
+  }
+}
+
 function seek(e) {
-  const audio = getCurrentAudio()
-  if (!audio) return
+  if (!myAudio) return
   const rect = e.currentTarget.getBoundingClientRect()
   const percent = (e.clientX - rect.left) / rect.width
-  audio.currentTime = percent * (audio.duration || 5)
+  myAudio.currentTime = percent * (myAudio.duration || 5)
 }
 
 function formatTime(seconds) {
@@ -149,8 +158,7 @@ function formatTime(seconds) {
 }
 
 onUnmounted(() => {
-  stopProgress()
-  stopAudio()
+  stopMyAudio()
 })
 </script>
 
