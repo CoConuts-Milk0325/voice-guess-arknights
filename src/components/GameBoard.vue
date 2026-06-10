@@ -1,7 +1,7 @@
 <template>
   <div class="game-board">
     <div class="header">
-      <div class="logo">🎧 配音猜干员</div>
+      <div class="logo">🎧 语音猜干员</div>
       <div class="header-sub">听声音，猜干员</div>
     </div>
 
@@ -245,7 +245,9 @@ function startNewQuestion() {
     const rarity = parseInt(op.rarity) || 0
     return settings.selectedStars.includes(rarity + 1)
   })
+  console.log('startNewQuestion: filteredOperators count =', filteredOperators.length)
   const op = selectRandomOperator(filteredOperators, voiceMapping.value, lastOperatorName.value)
+  console.log('startNewQuestion: selected operator =', op?.name)
   if (!op) return
 
   lastOperatorName.value = op.name
