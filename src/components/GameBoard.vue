@@ -122,11 +122,14 @@
             />
           </div>
 
-          <GuessInput v-if="settings.inputMode === 'typing'" v-model="guessText" :operators="operators" :history="currentHistory" :disabled="showResult" @submit="onGuess" ref="guessInputRef" />
-
-          <ChoiceMode v-else :choices="currentChoices" :history="currentHistory" @select="onGuess" />
-
+          <!-- 猜对时卡片显示在语音和选项中间 -->
           <ResultCard v-if="showResult" :operator="currentQuestion.operator" :correct="lastGuessCorrect" :clipsUsed="currentClipIndex" :isLast="inChallenge && challenge.currentQuestion >= challenge.totalQuestions - 1" @next="nextQuestion" />
+
+          <!-- 未猜对时显示输入 -->
+          <template v-if="!showResult">
+            <GuessInput v-if="settings.inputMode === 'typing'" v-model="guessText" :operators="operators" :history="currentHistory" :disabled="showResult" @submit="onGuess" ref="guessInputRef" />
+            <ChoiceMode v-else :choices="currentChoices" :history="currentHistory" @select="onGuess" />
+          </template>
         </template>
       </template>
     </template>
