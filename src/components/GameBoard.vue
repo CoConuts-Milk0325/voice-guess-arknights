@@ -36,6 +36,16 @@
           </div>
 
           <div class="setting-group">
+            <div class="setting-label">干员星级</div>
+            <div class="check-group">
+              <div v-for="star in 6" :key="star" class="check-item" :class="{ checked: settings.selectedStars.includes(star) }" @click="toggleStar(star)">
+                <div class="check-box">{{ settings.selectedStars.includes(star) ? '✓' : '' }}</div>
+                {{ '★'.repeat(star) }}
+              </div>
+            </div>
+          </div>
+
+          <div class="setting-group">
             <div class="setting-label">每题最大猜测次数</div>
             <div class="slider-container">
               <div class="slider-header">
@@ -65,16 +75,6 @@
               <div v-for="vt in voiceTypesList" :key="vt" class="check-item" :class="{ checked: settings.voiceTypes.includes(vt) }" @click="toggleVoiceType(vt)">
                 <div class="check-box">{{ settings.voiceTypes.includes(vt) ? '✓' : '' }}</div>
                 {{ vt }}
-              </div>
-            </div>
-          </div>
-
-          <div class="setting-group">
-            <div class="setting-label">干员星级</div>
-            <div class="check-group">
-              <div v-for="star in 6" :key="star" class="check-item" :class="{ checked: settings.selectedStars.includes(star) }" @click="toggleStar(star)">
-                <div class="check-box">{{ settings.selectedStars.includes(star) ? '✓' : '' }}</div>
-                {{ '★'.repeat(star) }}
               </div>
             </div>
           </div>
@@ -116,6 +116,7 @@
               :clipIndex="idx + 1"
               :guessesLeft="idx === displayedClips.length - 1 ? guessesLeftForClip : 0"
               :text="showText ? (clip.text || '') : ''"
+              :active="idx === displayedClips.length - 1"
               @loaded="onAudioLoaded"
               @skip="onAudioSkip"
             />

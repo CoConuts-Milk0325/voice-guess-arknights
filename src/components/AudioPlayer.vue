@@ -39,7 +39,8 @@ const props = defineProps({
   voiceType: { type: String, default: '' },
   clipIndex: { type: Number, default: 1 },
   guessesLeft: { type: Number, default: 3 },
-  text: { type: String, default: '' }
+  text: { type: String, default: '' },
+  active: { type: Boolean, default: true }
 })
 
 const emit = defineEmits(['loaded', 'error', 'skip'])
@@ -57,6 +58,15 @@ let progressInterval = null
 watch(() => props.language, (lang) => {
   languageClass.value = lang === '中文' ? 'lang-zh' : 'lang-jp'
 }, { immediate: true })
+
+// When this clip becomes inactive, pause audio
+watch(() => props.active, (isActive) => {
+  if (!isActive && isPlaying.value && myAudio) {
+    myAudio.pause()
+    isPlaying.value = false
+    stopProgress()
+  }
+})
 
 watch(() => props.url, async (newUrl) => {
   if (!newUrl) {
