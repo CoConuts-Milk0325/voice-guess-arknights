@@ -25,10 +25,6 @@
         {
           "url": "voice_cn/char_212_ansel/cn_005.wav",
           "text": "您问我连续上夜班，身体吃得消吗？嗯，没问题的，我所属的种族，体内激素分泌的方式比较特别，比较利于我们在夜间活动。这样正好能和芙蓉小姐换班哟。"
-        },
-        {
-          "url": "voice_cn/char_212_ansel/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -67,12 +63,6 @@
         {
           "url": "voice_cn/char_212_ansel/cn_013.wav",
           "text": "您这样重视我们医疗干员的处境，我很高兴。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_212_ansel/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -127,14 +117,6 @@
         {
           "url": "voice_cn/char_212_ansel/cn_026.wav",
           "text": "这是给你的药，请拿好！"
-        },
-        {
-          "url": "voice_cn/char_212_ansel/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_212_ansel/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -223,10 +205,6 @@
         {
           "url": "voice/char_212_ansel/cn_005.wav",
           "text": "您问我连续上夜班，身体吃得消吗？嗯，没问题的，我所属的种族，体内激素分泌的方式比较特别，比较利于我们在夜间活动。这样正好能和芙蓉小姐换班哟。"
-        },
-        {
-          "url": "voice/char_212_ansel/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -265,12 +243,6 @@
         {
           "url": "voice/char_212_ansel/cn_013.wav",
           "text": "您这样重视我们医疗干员的处境，我很高兴。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_212_ansel/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -325,14 +297,6 @@
         {
           "url": "voice/char_212_ansel/cn_026.wav",
           "text": "这是给你的药，请拿好！"
-        },
-        {
-          "url": "voice/char_212_ansel/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_212_ansel/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -423,10 +387,6 @@
         {
           "url": "voice_cn/char_211_adnach/cn_005.wav",
           "text": "并不是每个拉特兰人都有使用铳的权力，因为铳对我们来说是不可多得的武器。在我的故乡，仿制铳部件的技术倒是很发达，制造弩的技术也在同步发展。这把装配了战术鱼骨的弩，就是这种技术的成果。"
-        },
-        {
-          "url": "voice_cn/char_211_adnach/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -465,12 +425,6 @@
         {
           "url": "voice_cn/char_211_adnach/cn_013.wav",
           "text": "非常感谢您的提拔。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_211_adnach/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -525,14 +479,6 @@
         {
           "url": "voice_cn/char_211_adnach/cn_026.wav",
           "text": "锁定！"
-        },
-        {
-          "url": "voice_cn/char_211_adnach/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_211_adnach/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -621,10 +567,6 @@
         {
           "url": "voice/char_211_adnach/cn_005.wav",
           "text": "并不是每个拉特兰人都有使用铳的权力，因为铳对我们来说是不可多得的武器。在我的故乡，仿制铳部件的技术倒是很发达，制造弩的技术也在同步发展。这把装配了战术鱼骨的弩，就是这种技术的成果。"
-        },
-        {
-          "url": "voice/char_211_adnach/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -663,12 +605,6 @@
         {
           "url": "voice/char_211_adnach/cn_013.wav",
           "text": "非常感谢您的提拔。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_211_adnach/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -723,14 +659,6 @@
         {
           "url": "voice/char_211_adnach/cn_026.wav",
           "text": "锁定！"
-        },
-        {
-          "url": "voice/char_211_adnach/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_211_adnach/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -8543,12 +8471,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_456_ash/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_456_ash/cn_042.wav",
@@ -8739,12 +8661,6 @@
         {
           "url": "voice/char_456_ash/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_456_ash/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -10771,10 +10687,6 @@
         {
           "url": "voice_cn/char_122_beagle/cn_005.wav",
           "text": "杜宾老师总是教育我们——“就算新人期结束，实战中也要以保命为优先“——这样的话。呜~不甘心，什么时候才能变成她那样帅气又强大的人呢？"
-        },
-        {
-          "url": "voice_cn/char_122_beagle/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -10813,12 +10725,6 @@
         {
           "url": "voice_cn/char_122_beagle/cn_013.wav",
           "text": "这样、这样的话！就不会被人喊“宇宙级新人！”啦！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_122_beagle/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -10873,14 +10779,6 @@
         {
           "url": "voice_cn/char_122_beagle/cn_026.wav",
           "text": "看我~的！"
-        },
-        {
-          "url": "voice_cn/char_122_beagle/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_122_beagle/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -10969,10 +10867,6 @@
         {
           "url": "voice/char_122_beagle/cn_005.wav",
           "text": "杜宾老师总是教育我们——“就算新人期结束，实战中也要以保命为优先“——这样的话。呜~不甘心，什么时候才能变成她那样帅气又强大的人呢？"
-        },
-        {
-          "url": "voice/char_122_beagle/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -11011,12 +10905,6 @@
         {
           "url": "voice/char_122_beagle/cn_013.wav",
           "text": "这样、这样的话！就不会被人喊“宇宙级新人！”啦！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_122_beagle/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -11071,14 +10959,6 @@
         {
           "url": "voice/char_122_beagle/cn_026.wav",
           "text": "看我~的！"
-        },
-        {
-          "url": "voice/char_122_beagle/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_122_beagle/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -13265,10 +13145,6 @@
         {
           "url": "voice_cn/char_325_bison/cn_027.wav",
           "text": "请放心，我的盾还是很坚固的。"
-        },
-        {
-          "url": "voice_cn/char_325_bison/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -13463,10 +13339,6 @@
         {
           "url": "voice/char_325_bison/cn_027.wav",
           "text": "请放心，我的盾还是很坚固的。"
-        },
-        {
-          "url": "voice/char_325_bison/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -15309,12 +15181,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_457_blitz/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_457_blitz/cn_042.wav",
@@ -15505,12 +15371,6 @@
         {
           "url": "voice/char_457_blitz/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_457_blitz/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -16847,10 +16707,6 @@
         {
           "url": "voice_cn/char_275_breeze/cn_027.wav",
           "text": "意志！"
-        },
-        {
-          "url": "voice_cn/char_275_breeze/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -17045,10 +16901,6 @@
         {
           "url": "voice/char_275_breeze/cn_027.wav",
           "text": "意志！"
-        },
-        {
-          "url": "voice/char_275_breeze/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -17935,10 +17787,6 @@
         {
           "url": "voice_cn/char_209_ardign/cn_005.wav",
           "text": "大家经常抱着“重装干员的话，职责就是巩固好自己的防线”这样老旧的印象，这样的想法早就落伍啦！现在可是机动战的时代，速度才是最重要的！"
-        },
-        {
-          "url": "voice_cn/char_209_ardign/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -17977,12 +17825,6 @@
         {
           "url": "voice_cn/char_209_ardign/cn_013.wav",
           "text": "耶！我会努力争取下次晋升的！毕竟有一就有二嘛~"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_209_ardign/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -18037,14 +17879,6 @@
         {
           "url": "voice_cn/char_209_ardign/cn_026.wav",
           "text": "你们的攻击毫无意义！"
-        },
-        {
-          "url": "voice_cn/char_209_ardign/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_209_ardign/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -18133,10 +17967,6 @@
         {
           "url": "voice/char_209_ardign/cn_005.wav",
           "text": "大家经常抱着“重装干员的话，职责就是巩固好自己的防线”这样老旧的印象，这样的想法早就落伍啦！现在可是机动战的时代，速度才是最重要的！"
-        },
-        {
-          "url": "voice/char_209_ardign/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -18175,12 +18005,6 @@
         {
           "url": "voice/char_209_ardign/cn_013.wav",
           "text": "耶！我会努力争取下次晋升的！毕竟有一就有二嘛~"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_209_ardign/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -18235,14 +18059,6 @@
         {
           "url": "voice/char_209_ardign/cn_026.wav",
           "text": "你们的攻击毫无意义！"
-        },
-        {
-          "url": "voice/char_209_ardign/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_209_ardign/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -19925,10 +19741,6 @@
         {
           "url": "voice_cn/char_282_catap/cn_005.wav",
           "text": "嗯？杜宾教官，今天是不是不在？出差去了？......哼哼，终于！终于又能轻轻松松地过一天了！太棒了！博士我马上要去买点零食，你想吃薯片还是爆米花？让我帮你带一份！"
-        },
-        {
-          "url": "voice_cn/char_282_catap/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -19967,12 +19779,6 @@
         {
           "url": "voice_cn/char_282_catap/cn_013.wav",
           "text": "哼哼，总算要和新人训练营告别了......什么什么？新进干员晋升之后还是由杜宾小姐管理？你骗我的吧——？！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_282_catap/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -20027,14 +19833,6 @@
         {
           "url": "voice_cn/char_282_catap/cn_026.wav",
           "text": "你们全都给我飞上天！"
-        },
-        {
-          "url": "voice_cn/char_282_catap/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_282_catap/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -20123,10 +19921,6 @@
         {
           "url": "voice/char_282_catap/cn_005.wav",
           "text": "嗯？杜宾教官，今天是不是不在？出差去了？......哼哼，终于！终于又能轻轻松松地过一天了！太棒了！博士我马上要去买点零食，你想吃薯片还是爆米花？让我帮你带一份！"
-        },
-        {
-          "url": "voice/char_282_catap/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -20165,12 +19959,6 @@
         {
           "url": "voice/char_282_catap/cn_013.wav",
           "text": "哼哼，总算要和新人训练营告别了......什么什么？新进干员晋升之后还是由杜宾小姐管理？你骗我的吧——？！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_282_catap/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -20225,14 +20013,6 @@
         {
           "url": "voice/char_282_catap/cn_026.wav",
           "text": "你们全都给我飞上天！"
-        },
-        {
-          "url": "voice/char_282_catap/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_282_catap/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -22817,10 +22597,6 @@
         {
           "url": "voice_cn/char_348_ceylon/cn_027.wav",
           "text": "这招应该更符合现在的状况。"
-        },
-        {
-          "url": "voice_cn/char_348_ceylon/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -23015,10 +22791,6 @@
         {
           "url": "voice/char_348_ceylon/cn_027.wav",
           "text": "这招应该更符合现在的状况。"
-        },
-        {
-          "url": "voice/char_348_ceylon/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -23503,16 +23275,6 @@
           "text": "不，博士，请不要将我送到工程部。事到如今，这里只有修习过信仰辅助器械设计的能天使小姐可以帮我......是的，问题非常严重，我的麦克风支架偏移了至少半厘米，会严重影响告解体验。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4188_confes/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4188_confes/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4188_confes/cn_007.wav",
@@ -23543,18 +23305,6 @@
         {
           "url": "voice_cn/char_4188_confes/cn_012.wav",
           "text": "这位“罗德岛”号，是通过播放人类激烈互殴的影像来抚慰告解者的吗？"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4188_confes/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4188_confes/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -23701,16 +23451,6 @@
           "text": "不，博士，请不要将我送到工程部。事到如今，这里只有修习过信仰辅助器械设计的能天使小姐可以帮我......是的，问题非常严重，我的麦克风支架偏移了至少半厘米，会严重影响告解体验。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4188_confes/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4188_confes/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4188_confes/cn_007.wav",
@@ -23741,18 +23481,6 @@
         {
           "url": "voice/char_4188_confes/cn_012.wav",
           "text": "这位“罗德岛”号，是通过播放人类激烈互殴的影像来抚慰告解者的吗？"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4188_confes/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4188_confes/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -31861,16 +31589,6 @@
           "text": "要帮我定制小号制服？不——要，大号制服在睡觉的时候能当被子，很——暖和。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_501_durin/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_501_durin/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_501_durin/cn_007.wav",
@@ -31901,18 +31619,6 @@
         {
           "url": "voice_cn/char_501_durin/cn_012.wav",
           "text": "啊——我·终·于·变·强·啦。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_501_durin/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_501_durin/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -31967,14 +31673,6 @@
         {
           "url": "voice_cn/char_501_durin/cn_026.wav",
           "text": "去吧！"
-        },
-        {
-          "url": "voice_cn/char_501_durin/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_501_durin/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -32059,16 +31757,6 @@
           "text": "要帮我定制小号制服？不——要，大号制服在睡觉的时候能当被子，很——暖和。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_501_durin/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_501_durin/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_501_durin/cn_007.wav",
@@ -32099,18 +31787,6 @@
         {
           "url": "voice/char_501_durin/cn_012.wav",
           "text": "啊——我·终·于·变·强·啦。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_501_durin/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_501_durin/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -32165,14 +31841,6 @@
         {
           "url": "voice/char_501_durin/cn_026.wav",
           "text": "去吧！"
-        },
-        {
-          "url": "voice/char_501_durin/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_501_durin/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -33617,12 +33285,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_4125_rdoc/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_4125_rdoc/cn_042.wav",
@@ -33813,12 +33475,6 @@
         {
           "url": "voice/char_4125_rdoc/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_4125_rdoc/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -37597,12 +37253,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_4123_ela/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_4123_ela/cn_042.wav",
@@ -37793,12 +37443,6 @@
         {
           "url": "voice/char_4123_ela/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_4123_ela/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -40223,10 +39867,6 @@
         {
           "url": "voice_cn/char_123_fang/cn_005.wav",
           "text": "啊，我知道了，我的小队里又有人迟到了对吧。我会想办法解决的。"
-        },
-        {
-          "url": "voice_cn/char_123_fang/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -40265,12 +39905,6 @@
         {
           "url": "voice_cn/char_123_fang/cn_013.wav",
           "text": "您的提拔是对我努力的最好肯定。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_123_fang/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -40325,14 +39959,6 @@
         {
           "url": "voice_cn/char_123_fang/cn_026.wav",
           "text": "大家跟着我！"
-        },
-        {
-          "url": "voice_cn/char_123_fang/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_123_fang/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -40421,10 +40047,6 @@
         {
           "url": "voice/char_123_fang/cn_005.wav",
           "text": "啊，我知道了，我的小队里又有人迟到了对吧。我会想办法解决的。"
-        },
-        {
-          "url": "voice/char_123_fang/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -40463,12 +40085,6 @@
         {
           "url": "voice/char_123_fang/cn_013.wav",
           "text": "您的提拔是对我努力的最好肯定。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_123_fang/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -40523,14 +40139,6 @@
         {
           "url": "voice/char_123_fang/cn_026.wav",
           "text": "大家跟着我！"
-        },
-        {
-          "url": "voice/char_123_fang/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_123_fang/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -44363,12 +43971,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_458_rfrost/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_458_rfrost/cn_042.wav",
@@ -44559,12 +44161,6 @@
         {
           "url": "voice/char_458_rfrost/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_458_rfrost/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -46985,16 +46581,6 @@
           "text": "今天的工作就到此为止吧，博士。我还要去一趟凯尔希的办公室，想必她又在无谓地熬夜。一个人被使命感推着走了数万年，又能阻止什么呢？不如早点睡吧。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4093_frston/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4093_frston/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4093_frston/cn_007.wav",
@@ -47025,18 +46611,6 @@
         {
           "url": "voice_cn/char_4093_frston/cn_012.wav",
           "text": "挺有价值的研究资料，我需要复制一份。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4093_frston/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4093_frston/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -47183,16 +46757,6 @@
           "text": "今天的工作就到此为止吧，博士。我还要去一趟凯尔希的办公室，想必她又在无谓地熬夜。一个人被使命感推着走了数万年，又能阻止什么呢？不如早点睡吧。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4093_frston/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4093_frston/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4093_frston/cn_007.wav",
@@ -47223,18 +46787,6 @@
         {
           "url": "voice/char_4093_frston/cn_012.wav",
           "text": "挺有价值的研究资料，我需要复制一份。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4093_frston/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4093_frston/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -48343,12 +47895,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_4126_fuze/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_4126_fuze/cn_042.wav",
@@ -48539,12 +48085,6 @@
         {
           "url": "voice/char_4126_fuze/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_4126_fuze/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -49771,16 +49311,6 @@
           "text": "什么叫你的源石？我吃进去就是我的胃石了，帮助消化的，很重要好吗？哎哎哎干嘛干嘛？告诉你，我这小屋和存钱罐是一回事，取东西只能靠砸的。你难道要为了取几颗破石头，对我做那种事？"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4227_gallus/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4227_gallus/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4227_gallus/cn_007.wav",
@@ -49811,18 +49341,6 @@
         {
           "url": "voice_cn/char_4227_gallus/cn_012.wav",
           "text": "你是说，他们这么折腾既不是为了捕食，也不是为了求偶？怎么跟凯尔希似的。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4227_gallus/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4227_gallus/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -49969,16 +49487,6 @@
           "text": "什么叫你的源石？我吃进去就是我的胃石了，帮助消化的，很重要好吗？哎哎哎干嘛干嘛？告诉你，我这小屋和存钱罐是一回事，取东西只能靠砸的。你难道要为了取几颗破石头，对我做那种事？"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4227_gallus/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4227_gallus/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4227_gallus/cn_007.wav",
@@ -50009,18 +49517,6 @@
         {
           "url": "voice/char_4227_gallus/cn_012.wav",
           "text": "你是说，他们这么折腾既不是为了捕食，也不是为了求偶？怎么跟凯尔希似的。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4227_gallus/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4227_gallus/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -51765,10 +51261,6 @@
         {
           "url": "voice_cn/char_120_hibisc/cn_005.wav",
           "text": "比起刚加入罗德岛时，现在我对大家更放心了！大家也会按时吃掉我的健康食品。只是，为什么吃完之后，大家的表情都变得那么奇怪呢？"
-        },
-        {
-          "url": "voice_cn/char_120_hibisc/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -51807,12 +51299,6 @@
         {
           "url": "voice_cn/char_120_hibisc/cn_013.wav",
           "text": "很荣幸能获得晋升！博士，今后我也会为大家努力进行健康管理，请随时监督我！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_120_hibisc/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -51867,14 +51353,6 @@
         {
           "url": "voice_cn/char_120_hibisc/cn_026.wav",
           "text": "我能让你的伤口快速愈合！"
-        },
-        {
-          "url": "voice_cn/char_120_hibisc/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_120_hibisc/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -51963,10 +51441,6 @@
         {
           "url": "voice/char_120_hibisc/cn_005.wav",
           "text": "比起刚加入罗德岛时，现在我对大家更放心了！大家也会按时吃掉我的健康食品。只是，为什么吃完之后，大家的表情都变得那么奇怪呢？"
-        },
-        {
-          "url": "voice/char_120_hibisc/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -52005,12 +51479,6 @@
         {
           "url": "voice/char_120_hibisc/cn_013.wav",
           "text": "很荣幸能获得晋升！博士，今后我也会为大家努力进行健康管理，请随时监督我！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_120_hibisc/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -52065,14 +51533,6 @@
         {
           "url": "voice/char_120_hibisc/cn_026.wav",
           "text": "我能让你的伤口快速愈合！"
-        },
-        {
-          "url": "voice/char_120_hibisc/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_120_hibisc/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -54711,12 +54171,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_4124_iana/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_4124_iana/cn_042.wav",
@@ -54907,12 +54361,6 @@
         {
           "url": "voice/char_4124_iana/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_4124_iana/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -60119,16 +59567,6 @@
           "text": "博士......主人为什么会说“现在的正义号太吵了，没事就自己去玩玩！”这样的话呢？“滴滴”......“滴滴”......正义号不明白。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4000_jnight/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4000_jnight/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4000_jnight/cn_007.wav",
@@ -60159,18 +59597,6 @@
         {
           "url": "voice_cn/char_4000_jnight/cn_012.wav",
           "text": "这些资料对正义号来说很有用，之后可以向可露希尔女士申请加装更多功能。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4000_jnight/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4000_jnight/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -60317,16 +59743,6 @@
           "text": "博士......主人为什么会说“现在的正义号太吵了，没事就自己去玩玩！”这样的话呢？“滴滴”......“滴滴”......正义号不明白。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4000_jnight/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4000_jnight/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4000_jnight/cn_007.wav",
@@ -60357,18 +59773,6 @@
         {
           "url": "voice/char_4000_jnight/cn_012.wav",
           "text": "这些资料对正义号来说很有用，之后可以向可露希尔女士申请加装更多功能。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4000_jnight/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4000_jnight/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -65297,10 +64701,6 @@
         {
           "url": "voice_cn/char_124_kroos/cn_005.wav",
           "text": "博士~！我床头多了十个闹钟~！真是过分的恶作剧~到底是谁放的呢？"
-        },
-        {
-          "url": "voice_cn/char_124_kroos/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -65339,12 +64739,6 @@
         {
           "url": "voice_cn/char_124_kroos/cn_013.wav",
           "text": "晋升啦~做了个好梦呢~嗯？不是在梦中吗？"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_124_kroos/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -65403,10 +64797,6 @@
         {
           "url": "voice_cn/char_124_kroos/cn_027.wav",
           "text": "瞄准~！"
-        },
-        {
-          "url": "voice_cn/char_124_kroos/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -65495,10 +64885,6 @@
         {
           "url": "voice/char_124_kroos/cn_005.wav",
           "text": "博士~！我床头多了十个闹钟~！真是过分的恶作剧~到底是谁放的呢？"
-        },
-        {
-          "url": "voice/char_124_kroos/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -65537,12 +64923,6 @@
         {
           "url": "voice/char_124_kroos/cn_013.wav",
           "text": "晋升啦~做了个好梦呢~嗯？不是在梦中吗？"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_124_kroos/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -65601,10 +64981,6 @@
         {
           "url": "voice/char_124_kroos/cn_027.wav",
           "text": "瞄准~！"
-        },
-        {
-          "url": "voice/char_124_kroos/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -66093,10 +65469,6 @@
         {
           "url": "voice_cn/char_121_lava/cn_005.wav",
           "text": "有句话你听说过吧，“妹妹就是正义”，也就是说，我的姐姐自然就是邪恶，至少，在我的观念里就是这样。"
-        },
-        {
-          "url": "voice_cn/char_121_lava/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -66135,12 +65507,6 @@
         {
           "url": "voice_cn/char_121_lava/cn_013.wav",
           "text": "我说过吧？我不为任何组织做事，不需要团队......但是......算了，谢谢。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_121_lava/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -66195,14 +65561,6 @@
         {
           "url": "voice_cn/char_121_lava/cn_026.wav",
           "text": "亡灵也救不了你。"
-        },
-        {
-          "url": "voice_cn/char_121_lava/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_121_lava/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -66291,10 +65649,6 @@
         {
           "url": "voice/char_121_lava/cn_005.wav",
           "text": "有句话你听说过吧，“妹妹就是正义”，也就是说，我的姐姐自然就是邪恶，至少，在我的观念里就是这样。"
-        },
-        {
-          "url": "voice/char_121_lava/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -66333,12 +65687,6 @@
         {
           "url": "voice/char_121_lava/cn_013.wav",
           "text": "我说过吧？我不为任何组织做事，不需要团队......但是......算了，谢谢。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_121_lava/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -66393,14 +65741,6 @@
         {
           "url": "voice/char_121_lava/cn_026.wav",
           "text": "亡灵也救不了你。"
-        },
-        {
-          "url": "voice/char_121_lava/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_121_lava/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -66589,18 +65929,6 @@
         {
           "url": "voice_cn/char_4142_laios/cn_025.wav",
           "text": "咯————咯咯，咯咯咯！"
-        },
-        {
-          "url": "voice_cn/char_4142_laios/cn_026.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4142_laios/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4142_laios/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -66787,18 +66115,6 @@
         {
           "url": "voice/char_4142_laios/cn_025.wav",
           "text": "咯————咯咯，咯咯咯！"
-        },
-        {
-          "url": "voice/char_4142_laios/cn_026.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4142_laios/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4142_laios/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -74451,10 +73767,6 @@
         {
           "url": "voice_cn/char_208_melan/cn_005.wav",
           "text": "不，我并不是......不想接近大家，只是，我不知道......该怎么做才好......"
-        },
-        {
-          "url": "voice_cn/char_208_melan/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -74493,12 +73805,6 @@
         {
           "url": "voice_cn/char_208_melan/cn_013.wav",
           "text": "非常感谢您......那个，其他人也获得晋升了吗？我想，大家应该都和我一样，拥有这样的资格。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_208_melan/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -74553,14 +73859,6 @@
         {
           "url": "voice_cn/char_208_melan/cn_026.wav",
           "text": "斩。"
-        },
-        {
-          "url": "voice_cn/char_208_melan/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_208_melan/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -74649,10 +73947,6 @@
         {
           "url": "voice/char_208_melan/cn_005.wav",
           "text": "不，我并不是......不想接近大家，只是，我不知道......该怎么做才好......"
-        },
-        {
-          "url": "voice/char_208_melan/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -74691,12 +73985,6 @@
         {
           "url": "voice/char_208_melan/cn_013.wav",
           "text": "非常感谢您......那个，其他人也获得晋升了吗？我想，大家应该都和我一样，拥有这样的资格。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_208_melan/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -74751,14 +74039,6 @@
         {
           "url": "voice/char_208_melan/cn_026.wav",
           "text": "斩。"
-        },
-        {
-          "url": "voice/char_208_melan/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_208_melan/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -84109,10 +83389,6 @@
         {
           "url": "voice_cn/char_151_myrtle/cn_027.wav",
           "text": "小苹果，今天也拜托你啦。"
-        },
-        {
-          "url": "voice_cn/char_151_myrtle/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -84307,10 +83583,6 @@
         {
           "url": "voice/char_151_myrtle/cn_027.wav",
           "text": "小苹果，今天也拜托你啦。"
-        },
-        {
-          "url": "voice/char_151_myrtle/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -85193,16 +84465,6 @@
           "text": "任务完成之后的休息时间是最棒的。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_500_noirc/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_500_noirc/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_500_noirc/cn_007.wav",
@@ -85233,18 +84495,6 @@
         {
           "url": "voice_cn/char_500_noirc/cn_012.wav",
           "text": "原来如此，巡林者老爷子提过的战术就是这个啊！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_500_noirc/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_500_noirc/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -85299,14 +84549,6 @@
         {
           "url": "voice_cn/char_500_noirc/cn_026.wav",
           "text": "加强防御!"
-        },
-        {
-          "url": "voice_cn/char_500_noirc/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_500_noirc/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -85391,16 +84633,6 @@
           "text": "任务完成之后的休息时间是最棒的。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_500_noirc/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_500_noirc/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_500_noirc/cn_007.wav",
@@ -85431,18 +84663,6 @@
         {
           "url": "voice/char_500_noirc/cn_012.wav",
           "text": "原来如此，巡林者老爷子提过的战术就是这个啊！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_500_noirc/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_500_noirc/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -85497,14 +84717,6 @@
         {
           "url": "voice/char_500_noirc/cn_026.wav",
           "text": "加强防御!"
-        },
-        {
-          "url": "voice/char_500_noirc/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_500_noirc/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -89177,10 +88389,6 @@
         {
           "url": "voice_cn/char_278_orchid/cn_005.wav",
           "text": "......组里的其他人每天都在惹麻烦，有自闭的，听不懂话的，屡教不改的......要到哪一天大家才会安稳工作啊......"
-        },
-        {
-          "url": "voice_cn/char_278_orchid/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -89219,12 +88427,6 @@
         {
           "url": "voice_cn/char_278_orchid/cn_013.wav",
           "text": "十分感谢，之后我也会努力提高自己，为博士争取更好的业绩！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_278_orchid/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -89375,10 +88577,6 @@
         {
           "url": "voice/char_278_orchid/cn_005.wav",
           "text": "......组里的其他人每天都在惹麻烦，有自闭的，听不懂话的，屡教不改的......要到哪一天大家才会安稳工作啊......"
-        },
-        {
-          "url": "voice/char_278_orchid/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -89417,12 +88615,6 @@
         {
           "url": "voice/char_278_orchid/cn_013.wav",
           "text": "十分感谢，之后我也会努力提高自己，为博士争取更好的业绩！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_278_orchid/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -93953,10 +93145,6 @@
         {
           "url": "voice_cn/char_192_falco/cn_005.wav",
           "text": "感谢你对我的信任，我一定不会辜负你的厚爱。"
-        },
-        {
-          "url": "voice_cn/char_192_falco/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -93995,12 +93183,6 @@
         {
           "url": "voice_cn/char_192_falco/cn_013.wav",
           "text": "谢谢你，博士。作为卫士，你的嘉奖就是我最好的勋章。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_192_falco/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -94151,10 +93333,6 @@
         {
           "url": "voice/char_192_falco/cn_005.wav",
           "text": "感谢你对我的信任，我一定不会辜负你的厚爱。"
-        },
-        {
-          "url": "voice/char_192_falco/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -94193,12 +93371,6 @@
         {
           "url": "voice/char_192_falco/cn_013.wav",
           "text": "谢谢你，博士。作为卫士，你的嘉奖就是我最好的勋章。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_192_falco/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -94351,10 +93523,6 @@
         {
           "url": "voice_cn/char_281_popka/cn_005.wav",
           "text": "博士，A6组的大家，现在是和和气气的吗？......嗯嗯，和和气气的，最好......而且，只要大家不再吵闹，泡普卡也能安安心心待在博士身边......"
-        },
-        {
-          "url": "voice_cn/char_281_popka/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -94393,12 +93561,6 @@
         {
           "url": "voice_cn/char_281_popka/cn_013.wav",
           "text": "泡普卡，高兴得不知道该说些什么好......！谢谢博士......！谢谢您！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_281_popka/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -94453,14 +93615,6 @@
         {
           "url": "voice_cn/char_281_popka/cn_026.wav",
           "text": "锯子，在生气了......"
-        },
-        {
-          "url": "voice_cn/char_281_popka/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_281_popka/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -94549,10 +93703,6 @@
         {
           "url": "voice/char_281_popka/cn_005.wav",
           "text": "博士，A6组的大家，现在是和和气气的吗？......嗯嗯，和和气气的，最好......而且，只要大家不再吵闹，泡普卡也能安安心心待在博士身边......"
-        },
-        {
-          "url": "voice/char_281_popka/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -94591,12 +93741,6 @@
         {
           "url": "voice/char_281_popka/cn_013.wav",
           "text": "泡普卡，高兴得不知道该说些什么好......！谢谢博士......！谢谢您！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_281_popka/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -94651,14 +93795,6 @@
         {
           "url": "voice/char_281_popka/cn_026.wav",
           "text": "锯子，在生气了......"
-        },
-        {
-          "url": "voice/char_281_popka/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_281_popka/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -95541,16 +94677,6 @@
           "text": "博士，我的前身只是一枚承载了防护咒言的法器，是哀珐尼尔选择让我生出意识，陪伴在他身边。所以在我的算法模型中，第一行便写着女妖们对他的爱意。因此而生，我很幸运。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4136_phonor/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4136_phonor/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4136_phonor/cn_007.wav",
@@ -95581,18 +94707,6 @@
         {
           "url": "voice_cn/char_4136_phonor/cn_012.wav",
           "text": "我可以下载到自己的存储模块吗，博士？离开河谷前，菈玛莲特意嘱咐我保存一些哀珐尼尔的视频给她。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4136_phonor/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4136_phonor/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -95739,16 +94853,6 @@
           "text": "博士，我的前身只是一枚承载了防护咒言的法器，是哀珐尼尔选择让我生出意识，陪伴在他身边。所以在我的算法模型中，第一行便写着女妖们对他的爱意。因此而生，我很幸运。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4136_phonor/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4136_phonor/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4136_phonor/cn_007.wav",
@@ -95779,18 +94883,6 @@
         {
           "url": "voice/char_4136_phonor/cn_012.wav",
           "text": "我可以下载到自己的存储模块吗，博士？离开河谷前，菈玛莲特意嘱咐我保存一些哀珐尼尔的视频给她。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4136_phonor/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4136_phonor/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -106685,16 +105777,6 @@
           "text": "博士，对不起喵！义经之前在训练中差点伤到月见夜喵！因为他把月见夜认成了那个百折不挠的将军，所以下意识就——啊，不是说这边的月见夜不够坚强的意思喵！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4215_buddy/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4215_buddy/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4215_buddy/cn_007.wav",
@@ -106725,18 +105807,6 @@
         {
           "url": "voice_cn/char_4215_buddy/cn_012.wav",
           "text": "强大的猎人果然都有各自独特的战斗方式喵！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4215_buddy/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4215_buddy/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -106883,16 +105953,6 @@
           "text": "博士，对不起喵！义经之前在训练中差点伤到月见夜喵！因为他把月见夜认成了那个百折不挠的将军，所以下意识就——啊，不是说这边的月见夜不够坚强的意思喵！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4215_buddy/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4215_buddy/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4215_buddy/cn_007.wav",
@@ -106923,18 +105983,6 @@
         {
           "url": "voice/char_4215_buddy/cn_012.wav",
           "text": "强大的猎人果然都有各自独特的战斗方式喵！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4215_buddy/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4215_buddy/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -110665,16 +109713,6 @@
           "text": "老夫我睡觉的时候也得戴着这条围巾，不然脖子啊，会着凉的。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_503_rang/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_503_rang/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_503_rang/cn_007.wav",
@@ -110705,18 +109743,6 @@
         {
           "url": "voice_cn/char_503_rang/cn_012.wav",
           "text": "真不错。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_503_rang/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_503_rang/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -110771,14 +109797,6 @@
         {
           "url": "voice_cn/char_503_rang/cn_026.wav",
           "text": "尝尝老夫这一箭！"
-        },
-        {
-          "url": "voice_cn/char_503_rang/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_503_rang/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -110863,16 +109881,6 @@
           "text": "老夫我睡觉的时候也得戴着这条围巾，不然脖子啊，会着凉的。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_503_rang/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_503_rang/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_503_rang/cn_007.wav",
@@ -110903,18 +109911,6 @@
         {
           "url": "voice/char_503_rang/cn_012.wav",
           "text": "真不错。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_503_rang/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_503_rang/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -110969,14 +109965,6 @@
         {
           "url": "voice/char_503_rang/cn_026.wav",
           "text": "尝尝老夫这一箭！"
-        },
-        {
-          "url": "voice/char_503_rang/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_503_rang/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -113455,10 +112443,6 @@
         {
           "url": "voice_cn/char_284_spot/cn_005.wav",
           "text": "虽然有时候我说话很直接，但该做的事情，我一定会做好。这不关职业道德什么事，只是我觉得连任务都没法完成的人，一定没有用心去做。"
-        },
-        {
-          "url": "voice_cn/char_284_spot/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -113497,12 +112481,6 @@
         {
           "url": "voice_cn/char_284_spot/cn_013.wav",
           "text": "我会加倍努力工作的，从0.1到0.2的水平吧。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_284_spot/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -113653,10 +112631,6 @@
         {
           "url": "voice/char_284_spot/cn_005.wav",
           "text": "虽然有时候我说话很直接，但该做的事情，我一定会做好。这不关职业道德什么事，只是我觉得连任务都没法完成的人，一定没有用心去做。"
-        },
-        {
-          "url": "voice/char_284_spot/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -113695,12 +112669,6 @@
         {
           "url": "voice/char_284_spot/cn_013.wav",
           "text": "我会加倍努力工作的，从0.1到0.2的水平吧。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_284_spot/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -119421,16 +118389,6 @@
           "text": "很久以前，神灵说：“要有光”于是就有了光，神灵又说：“要有力量。”于是就有了雷神挑衅者熔岩猫魔鬼高性能版。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_376_therex/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_376_therex/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_376_therex/cn_007.wav",
@@ -119461,18 +118419,6 @@
         {
           "url": "voice_cn/char_376_therex/cn_012.wav",
           "text": "嗷嗷！这股炽热的力量是......是......是热更新！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_376_therex/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_376_therex/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -119619,16 +118565,6 @@
           "text": "很久以前，神灵说：“要有光”于是就有了光，神灵又说：“要有力量。”于是就有了雷神挑衅者熔岩猫魔鬼高性能版。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_376_therex/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_376_therex/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_376_therex/cn_007.wav",
@@ -119659,18 +118595,6 @@
         {
           "url": "voice/char_376_therex/cn_012.wav",
           "text": "嗷嗷！这股炽热的力量是......是......是热更新！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_376_therex/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_376_therex/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -119819,16 +118743,6 @@
           "text": "敲，敲，没有燕雀石了喵......作为替代，岩蛛背上的石头，钳兽的壳......都加进去试试喵。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4077_palico/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4077_palico/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4077_palico/cn_007.wav",
@@ -119859,18 +118773,6 @@
         {
           "url": "voice_cn/char_4077_palico/cn_012.wav",
           "text": "小工匠，你怎么在这盒子里面了？动......竟然动起来了！怎么做到的喵？"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4077_palico/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4077_palico/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -119983,12 +118885,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_4077_palico/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_4077_palico/cn_042.wav",
@@ -120015,16 +118911,6 @@
         {
           "url": "voice/char_4077_palico/cn_004.wav",
           "text": "敲，敲，没有燕雀石了喵......作为替代，岩蛛背上的石头，钳兽的壳......都加进去试试喵。"
-        }
-      ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4077_palico/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4077_palico/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -120057,18 +118943,6 @@
         {
           "url": "voice/char_4077_palico/cn_012.wav",
           "text": "小工匠，你怎么在这盒子里面了？动......竟然动起来了！怎么做到的喵？"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4077_palico/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4077_palico/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -120179,12 +119053,6 @@
         {
           "url": "voice/char_4077_palico/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_4077_palico/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -122371,12 +121239,6 @@
           "text": "明日方舟。"
         }
       ],
-      "新年": [
-        {
-          "url": "voice_cn/char_459_tachak/cn_038.wav",
-          "text": ""
-        }
-      ],
       "问候": [
         {
           "url": "voice_cn/char_459_tachak/cn_042.wav",
@@ -122567,12 +121429,6 @@
         {
           "url": "voice/char_459_tachak/cn_037.wav",
           "text": "明日方舟。"
-        }
-      ],
-      "新年": [
-        {
-          "url": "voice/char_459_tachak/cn_038.wav",
-          "text": ""
         }
       ],
       "问候": [
@@ -124595,16 +123451,6 @@
           "text": "好郁闷啊，为什么口误剪辑的播放量比所有录播加起来还高这么多，真搞不懂现在的观众......博士你看，只是把我的口误剪在一起，有什么好笑的——等等，你笑了吧，你刚刚绝对笑了吧！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_4091_ulika/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_4091_ulika/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_4091_ulika/cn_007.wav",
@@ -124635,18 +123481,6 @@
         {
           "url": "voice_cn/char_4091_ulika/cn_012.wav",
           "text": "博士，不骗你，这样的录像看得再多，我也学不会打架的啦。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_4091_ulika/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_4091_ulika/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -124793,16 +123627,6 @@
           "text": "好郁闷啊，为什么口误剪辑的播放量比所有录播加起来还高这么多，真搞不懂现在的观众......博士你看，只是把我的口误剪在一起，有什么好笑的——等等，你笑了吧，你刚刚绝对笑了吧！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_4091_ulika/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_4091_ulika/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_4091_ulika/cn_007.wav",
@@ -124833,18 +123657,6 @@
         {
           "url": "voice/char_4091_ulika/cn_012.wav",
           "text": "博士，不骗你，这样的录像看得再多，我也学不会打架的啦。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_4091_ulika/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_4091_ulika/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -125793,10 +124605,6 @@
         {
           "url": "voice_cn/char_240_wyvern/cn_005.wav",
           "text": "比起在黑钢实习的时候，我变得更强了。"
-        },
-        {
-          "url": "voice_cn/char_240_wyvern/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -125835,12 +124643,6 @@
         {
           "url": "voice_cn/char_240_wyvern/cn_013.wav",
           "text": "这是......晋升勋章？给我的？谢，谢谢！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_240_wyvern/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -125991,10 +124793,6 @@
         {
           "url": "voice/char_240_wyvern/cn_005.wav",
           "text": "比起在黑钢实习的时候，我变得更强了。"
-        },
-        {
-          "url": "voice/char_240_wyvern/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -126033,12 +124831,6 @@
         {
           "url": "voice/char_240_wyvern/cn_013.wav",
           "text": "这是......晋升勋章？给我的？谢，谢谢！"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_240_wyvern/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -127783,10 +126575,6 @@
         {
           "url": "voice_cn/char_210_stward/cn_005.wav",
           "text": "炎熔小姐的战斗方式有些与众不同。我曾以为，她使用手中的书本来释放法术，没想到，真正的施术工具却是她的那把匕首。这样的战斗风格，让我想起了那位曾经教过我法术的通灵师。"
-        },
-        {
-          "url": "voice_cn/char_210_stward/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -127825,12 +126613,6 @@
         {
           "url": "voice_cn/char_210_stward/cn_013.wav",
           "text": "我的工作成果能让您满意就足够了。杜宾老师也会很高兴吧。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_210_stward/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -127885,14 +126667,6 @@
         {
           "url": "voice_cn/char_210_stward/cn_026.wav",
           "text": "倒下吧。"
-        },
-        {
-          "url": "voice_cn/char_210_stward/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_210_stward/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -127981,10 +126755,6 @@
         {
           "url": "voice/char_210_stward/cn_005.wav",
           "text": "炎熔小姐的战斗方式有些与众不同。我曾以为，她使用手中的书本来释放法术，没想到，真正的施术工具却是她的那把匕首。这样的战斗风格，让我想起了那位曾经教过我法术的通灵师。"
-        },
-        {
-          "url": "voice/char_210_stward/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -128023,12 +126793,6 @@
         {
           "url": "voice/char_210_stward/cn_013.wav",
           "text": "我的工作成果能让您满意就足够了。杜宾老师也会很高兴吧。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_210_stward/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -128083,14 +126847,6 @@
         {
           "url": "voice/char_210_stward/cn_026.wav",
           "text": "倒下吧。"
-        },
-        {
-          "url": "voice/char_210_stward/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_210_stward/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -136137,16 +134893,6 @@
           "text": "我的皮肤对阳光的抵抗力非常弱，所以我希望您尽可能地把夜间行动的任务安排给我。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_502_nblade/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_502_nblade/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_502_nblade/cn_007.wav",
@@ -136177,18 +134923,6 @@
         {
           "url": "voice_cn/char_502_nblade/cn_012.wav",
           "text": "非常感谢。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_502_nblade/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_502_nblade/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -136335,16 +135069,6 @@
           "text": "我的皮肤对阳光的抵抗力非常弱，所以我希望您尽可能地把夜间行动的任务安排给我。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_502_nblade/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_502_nblade/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_502_nblade/cn_007.wav",
@@ -136375,18 +135099,6 @@
         {
           "url": "voice/char_502_nblade/cn_012.wav",
           "text": "非常感谢。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_502_nblade/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_502_nblade/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -148081,10 +146793,6 @@
         {
           "url": "voice_cn/char_283_midn/cn_005.wav",
           "text": "我可是很强的，剑术这项优雅的运动，既能维持身材又能提升气质，有什么理由不勤加练习呢？喂，再强的人不努力也会变弱的！先搞清楚这点啊！"
-        },
-        {
-          "url": "voice_cn/char_283_midn/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -148123,12 +146831,6 @@
         {
           "url": "voice_cn/char_283_midn/cn_013.wav",
           "text": "喔噢，我的努力也有了回报了啊！为表庆祝，就摆上个香槟塔吧！当然，这次我请。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_283_midn/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -148183,14 +146885,6 @@
         {
           "url": "voice_cn/char_283_midn/cn_026.wav",
           "text": "渴饮鲜血吧！"
-        },
-        {
-          "url": "voice_cn/char_283_midn/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_283_midn/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -148279,10 +146973,6 @@
         {
           "url": "voice/char_283_midn/cn_005.wav",
           "text": "我可是很强的，剑术这项优雅的运动，既能维持身材又能提升气质，有什么理由不勤加练习呢？喂，再强的人不努力也会变弱的！先搞清楚这点啊！"
-        },
-        {
-          "url": "voice/char_283_midn/cn_006.wav",
-          "text": ""
         }
       ],
       "信赖": [
@@ -148321,12 +147011,6 @@
         {
           "url": "voice/char_283_midn/cn_013.wav",
           "text": "喔噢，我的努力也有了回报了啊！为表庆祝，就摆上个香槟塔吧！当然，这次我请。"
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_283_midn/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -148381,14 +147065,6 @@
         {
           "url": "voice/char_283_midn/cn_026.wav",
           "text": "渴饮鲜血吧！"
-        },
-        {
-          "url": "voice/char_283_midn/cn_027.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_283_midn/cn_028.wav",
-          "text": ""
         }
       ],
       "高难胜利": [
@@ -152497,18 +151173,6 @@
           "text": "“如果战斗不可避免......”这是以前我最信任的人教给我的话。"
         }
       ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_1001_amiya2/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_1001_amiya2/cn_014.wav",
-          "text": ""
-        }
-      ],
       "编入": [
         {
           "url": "voice_cn/char_1001_amiya2/cn_017.wav",
@@ -152693,18 +151357,6 @@
         {
           "url": "voice/char_1001_amiya2/cn_012.wav",
           "text": "“如果战斗不可避免......”这是以前我最信任的人教给我的话。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_1001_amiya2/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_1001_amiya2/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -159661,18 +158313,6 @@
           "text": "能不能......在同一场战斗中运用不同的力量？啊，博士，我在思考。"
         }
       ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_1037_amiya3/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_1037_amiya3/cn_014.wav",
-          "text": ""
-        }
-      ],
       "编入": [
         {
           "url": "voice_cn/char_1037_amiya3/cn_017.wav",
@@ -159859,18 +158499,6 @@
           "text": "能不能......在同一场战斗中运用不同的力量？啊，博士，我在思考。"
         }
       ],
-      "精英化1": [
-        {
-          "url": "voice/char_1037_amiya3/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_1037_amiya3/cn_014.wav",
-          "text": ""
-        }
-      ],
       "编入": [
         {
           "url": "voice/char_1037_amiya3/cn_017.wav",
@@ -160017,16 +158645,6 @@
           "text": "巨枭她虽然对人不是很友好，不过她并没有什么恶意，希望您可以多多包涵。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_009_12fce/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_009_12fce/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_009_12fce/cn_007.wav",
@@ -160057,18 +158675,6 @@
         {
           "url": "voice_cn/char_009_12fce/cn_012.wav",
           "text": "原来是这样，我明白了。感谢您的指导。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_009_12fce/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_009_12fce/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -160215,16 +158821,6 @@
           "text": "巨枭她虽然对人不是很友好，不过她并没有什么恶意，希望您可以多多包涵。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_009_12fce/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_009_12fce/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_009_12fce/cn_007.wav",
@@ -160255,18 +158851,6 @@
         {
           "url": "voice/char_009_12fce/cn_012.wav",
           "text": "原来是这样，我明白了。感谢您的指导。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_009_12fce/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_009_12fce/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -160415,16 +158999,6 @@
           "text": "野外的地形多变，但是Castle-3配备了性能卓越的引擎，采用四轮驱动方案，将会在任何时候载您离开困境！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_286_cast3/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_286_cast3/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_286_cast3/cn_007.wav",
@@ -160455,18 +159029,6 @@
         {
           "url": "voice_cn/char_286_cast3/cn_012.wav",
           "text": "固件升级完成，请重新启动设备。请点击任意位置以重启动您可靠的近卫机器人！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_286_cast3/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_286_cast3/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -160613,16 +159175,6 @@
           "text": "野外的地形多变，但是Castle-3配备了性能卓越的引擎，采用四轮驱动方案，将会在任何时候载您离开困境！"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_286_cast3/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_286_cast3/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_286_cast3/cn_007.wav",
@@ -160653,18 +159205,6 @@
         {
           "url": "voice/char_286_cast3/cn_012.wav",
           "text": "固件升级完成，请重新启动设备。请点击任意位置以重启动您可靠的近卫机器人！"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_286_cast3/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_286_cast3/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -160813,16 +159353,6 @@
           "text": "工作辛苦了，来杯咖啡吧博士。其实我也很想喝咖啡，但是我并不能喝......我看着你喝就好啦。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice_cn/char_285_medic2/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice_cn/char_285_medic2/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice_cn/char_285_medic2/cn_007.wav",
@@ -160853,18 +159383,6 @@
         {
           "url": "voice_cn/char_285_medic2/cn_012.wav",
           "text": "固件升级完成，请重新启动设备。请点击任意位置以重新启动。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice_cn/char_285_medic2/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice_cn/char_285_medic2/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
@@ -161011,16 +159529,6 @@
           "text": "工作辛苦了，来杯咖啡吧博士。其实我也很想喝咖啡，但是我并不能喝......我看着你喝就好啦。"
         }
       ],
-      "晋升交谈": [
-        {
-          "url": "voice/char_285_medic2/cn_005.wav",
-          "text": ""
-        },
-        {
-          "url": "voice/char_285_medic2/cn_006.wav",
-          "text": ""
-        }
-      ],
       "信赖": [
         {
           "url": "voice/char_285_medic2/cn_007.wav",
@@ -161051,18 +159559,6 @@
         {
           "url": "voice/char_285_medic2/cn_012.wav",
           "text": "固件升级完成，请重新启动设备。请点击任意位置以重新启动。"
-        }
-      ],
-      "精英化1": [
-        {
-          "url": "voice/char_285_medic2/cn_013.wav",
-          "text": ""
-        }
-      ],
-      "精英化2": [
-        {
-          "url": "voice/char_285_medic2/cn_014.wav",
-          "text": ""
         }
       ],
       "编入": [
