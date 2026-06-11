@@ -1,16 +1,15 @@
-export function selectRandomOperator(operators, voiceMapping, lastName = null) {
-  const withVoices = operators.filter(op => voiceMapping[op.name])
-  if (!withVoices.length) return null
+export function selectRandomOperator(operators, lastName = null) {
+  if (!operators.length) return null
 
   // Try to avoid consecutive same operator
-  if (lastName && withVoices.length > 1) {
-    const filtered = withVoices.filter(op => op.name !== lastName)
+  if (lastName && operators.length > 1) {
+    const filtered = operators.filter(op => op.name !== lastName)
     if (filtered.length > 0) {
       return filtered[Math.floor(Math.random() * filtered.length)]
     }
   }
 
-  return withVoices[Math.floor(Math.random() * withVoices.length)]
+  return operators[Math.floor(Math.random() * operators.length)]
 }
 
 export function getVoiceClips(operatorName, voiceMapping, settings) {

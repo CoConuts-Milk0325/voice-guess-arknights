@@ -288,7 +288,7 @@ async function startNewQuestion() {
     return settings.selectedStars.includes(rarity + 1)
   })
 
-  const op = selectRandomOperator(filteredOperators, {}, lastOperatorName.value)
+  const op = selectRandomOperator(filteredOperators, lastOperatorName.value)
   if (!op) return
 
   lastOperatorName.value = op.name
