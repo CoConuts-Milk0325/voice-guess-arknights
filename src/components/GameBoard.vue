@@ -214,19 +214,11 @@ const guessesLeftForClip = computed(() => {
 
 const summaryData = computed(() => generateSummary(challenge.value))
 
+// Load voice index (small file)
 onMounted(async () => {
   try {
     operators.value = await loadOperators()
-
-    // Try cache first
-    const cachedMapping = getCached('voice-mapping')
-    if (cachedMapping) {
-      voiceMapping.value = cachedMapping
-    } else {
-      const resp = await fetch('./data/voice-mapping.json')
-      voiceMapping.value = await resp.json()
-      setCache('voice-mapping', voiceMapping.value)
-    }
+    // Index file loaded - voice data loaded on-demand per operator
   } catch (e) {
     console.error('Failed to load data:', e)
   } finally {
@@ -234,6 +226,23 @@ onMounted(async () => {
     startNewQuestion()
   }
 })
+
+// Load voice data for a specific operator (on-demand)
+async function loadOperatorVoices(operatorName) {
+  const cacheKey = `voice-${operatorName}`
+  const cached = getCached(cacheKey)
+  if (cached) return cached
+
+  try {
+    const resp = await fetch(`./data/voices/${operatorName}.json`)
+    const data = await resp.json()
+    setCache(cacheKey, data)
+    return data
+  } catch (e) {
+    console.error(`Failed to load voice data for ${operatorName}:`, e)
+    return null
+  }
+}
 
 function toggleLang(lang) {
   const idx = settings.languages.indexOf(lang)
@@ -272,20 +281,27 @@ function onSettingsConfirm() {
   startNewQuestion()
 }
 
-function startNewQuestion() {
+async function startNewQuestion() {
   // Filter operators by star rating
   const filteredOperators = operators.value.filter(op => {
     const rarity = parseInt(op.rarity) || 0
     return settings.selectedStars.includes(rarity + 1)
   })
-  console.log('startNewQuestion: filteredOperators count =', filteredOperators.length)
-  const op = selectRandomOperator(filteredOperators, voiceMapping.value, lastOperatorName.value)
-  console.log('startNewQuestion: selected operator =', op?.name)
+
+  const op = selectRandomOperator(filteredOperators, {}, lastOperatorName.value)
   if (!op) return
 
   lastOperatorName.value = op.name
 
-  const clips = getVoiceClips(op.name, voiceMapping.value, settings)
+  // Load voice data on-demand
+  const voiceData = await loadOperatorVoices(op.name)
+  if (!voiceData) {
+    // Skip this operator if no voice data
+    startNewQuestion()
+    return
+  }
+
+  const clips = getVoiceClips(op.name, { [op.name]: voiceData }, settings)
   const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
   const choices = generateChoices(op, filteredOperators, numChoices)
 
