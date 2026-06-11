@@ -18,19 +18,14 @@
 2. 双击 `start.bat` 或运行 `node server.js`
 3. 打开 http://localhost:5173
 
-### 预下载音频（可选）
-```bash
-node download-audio.js
-```
-这会下载所有语音文件到 `audio-cache/` 目录，之后播放不依赖 prts.wiki CDN。
-
-### GitHub Pages 部署
-1. 上传 `dist/` 文件夹内容到 GitHub
-2. 启用 GitHub Pages
-3. 注意：音频需要通过后端代理，GitHub Pages 只能展示静态内容
+### 工作原理
+- 服务器代理音频请求到 prts.wiki CDN
+- 首次播放某条语音：从 CDN 下载并缓存到本地
+- 再次播放：直接从缓存读取（秒开）
+- 只下载实际用到的音频，不浪费空间
 
 ## 架构
 - 前端：Vue 3 + Vite
-- 后端：Node.js 代理服务器
-- 音频来源：prts.wiki CDN（可通过 download-audio.js 预下载到本地）
+- 后端：Node.js 代理服务器（自动缓存音频）
+- 音频来源：prts.wiki CDN（按需缓存）
 - 数据来源：prts.wiki
