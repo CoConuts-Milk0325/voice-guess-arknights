@@ -5,6 +5,7 @@ const CONFIG = {
   cdnBase: 'https://torappu.prts.wiki/assets/audio',
 };
 
+// 获取音频 URL
 export function getAudioUrl(relativePath) {
   return `${CONFIG.cdnBase}/${relativePath}`;
 }
