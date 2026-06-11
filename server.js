@@ -2,11 +2,11 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
 const PORT = 5173;
 const DIST = path.join(__dirname, 'dist');
 const CACHE_DIR = path.join(__dirname, '.audio-cache');
-const LOCAL_AUDIO_DIR = path.join(__dirname, 'audio-cache');
 
 // Create cache directory
 if (!fs.existsSync(CACHE_DIR)) {
@@ -15,10 +15,10 @@ if (!fs.existsSync(CACHE_DIR)) {
 
 // MIME types
 const MIME = {
-  '.html': 'text/html',
-  '.js': 'application/javascript',
-  '.css': 'text/css',
-  '.json': 'application/json',
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'application/javascript; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.ico': 'image/x-icon',
   '.wav': 'audio/wav',
@@ -26,37 +26,86 @@ const MIME = {
   '.ogg': 'audio/ogg'
 };
 
-// Cache for audio files (memory + disk)
+// Audio memory cache
 const audioCache = new Map();
 
-// Proxy audio requests with local cache fallback
-function proxyAudio(req, res) {
+// Check if client accepts gzip
+function acceptsGzip(req) {
+  const accept = req.headers['accept-encoding'] || '';
+  return accept.includes('gzip');
+}
+
+// Compress data with gzip
+function gzipCompress(data) {
+  return new Promise((resolve, reject) => {
+    zlib.gzip(data, { level: 6 }, (err, result) => {
+      if (err) reject(err);
+      else resolve(result);
+    });
+  });
+}
+
+// Serve static file with gzip and caching
+async function serveStatic(req, res) {
+  let filePath = path.join(DIST, req.url === '/' ? 'index.html' : req.url.split('?')[0]);
+
+  if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+    filePath = path.join(DIST, 'index.html');
+  }
+
+  const ext = path.extname(filePath);
+  const contentType = MIME[ext] || 'application/octet-stream';
+
+  try {
+    const data = fs.readFileSync(filePath);
+    const canGzip = acceptsGzip(req) && data.length > 1024; // Only gzip files > 1KB
+
+    const headers = {
+      'Content-Type': contentType,
+      'Access-Control-Allow-Origin': '*',
+    };
+
+    if (ext === '.html') {
+      headers['Cache-Control'] = 'no-cache';
+    } else if (ext === '.json') {
+      // JSON files: cache for 1 hour
+      headers['Cache-Control'] = 'public, max-age=3600';
+    } else {
+      // JS, CSS, images: cache for 7 days
+      headers['Cache-Control'] = 'public, max-age=604800, immutable';
+    }
+
+    if (canGzip) {
+      const compressed = await gzipCompress(data);
+      headers['Content-Encoding'] = 'gzip';
+      headers['Content-Length'] = compressed.length;
+      res.writeHead(200, headers);
+      res.end(compressed);
+    } else {
+      headers['Content-Length'] = data.length;
+      res.writeHead(200, headers);
+      res.end(data);
+    }
+  } catch (err) {
+    res.writeHead(404);
+    res.end('Not Found');
+  }
+}
+
+// Proxy audio requests with caching
+async function proxyAudio(req, res) {
   const urlPath = req.url;
 
-  // Check memory cache first
+  // Check memory cache
   if (audioCache.has(urlPath)) {
     const cached = audioCache.get(urlPath);
     res.writeHead(200, {
       'Content-Type': cached.contentType,
       'Cache-Control': 'public, max-age=604800',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
+      'Content-Length': cached.data.length
     });
     res.end(cached.data);
-    return;
-  }
-
-  // Check local downloaded audio
-  const localFile = path.join(LOCAL_AUDIO_DIR, urlPath.replace(/\//g, '_'));
-  if (fs.existsSync(localFile)) {
-    const data = fs.readFileSync(localFile);
-    const contentType = MIME[path.extname(urlPath)] || 'audio/wav';
-    audioCache.set(urlPath, { data, contentType });
-    res.writeHead(200, {
-      'Content-Type': contentType,
-      'Cache-Control': 'public, max-age=604800',
-      'Access-Control-Allow-Origin': '*'
-    });
-    res.end(data);
     return;
   }
 
@@ -69,13 +118,14 @@ function proxyAudio(req, res) {
     res.writeHead(200, {
       'Content-Type': contentType,
       'Cache-Control': 'public, max-age=604800',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
+      'Content-Length': data.length
     });
     res.end(data);
     return;
   }
 
-  // Fetch from prts.wiki CDN (fallback)
+  // Fetch from CDN
   const cdnUrl = `https://torappu.prts.wiki/assets/audio${urlPath}`;
 
   https.get(cdnUrl, {
@@ -93,14 +143,15 @@ function proxyAudio(req, res) {
       const data = Buffer.concat(chunks);
       const contentType = proxyRes.headers['content-type'] || 'audio/wav';
 
-      // Cache in memory and disk
+      // Cache
       audioCache.set(urlPath, { data, contentType });
       fs.writeFileSync(cacheFile, data);
 
       res.writeHead(200, {
         'Content-Type': contentType,
         'Cache-Control': 'public, max-age=604800',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Content-Length': data.length
       });
       res.end(data);
     });
@@ -113,8 +164,8 @@ function proxyAudio(req, res) {
 
 // Main server
 function startServer(port) {
-  const server = http.createServer((req, res) => {
-    // Handle CORS preflight
+  const server = http.createServer(async (req, res) => {
+    // CORS preflight
     if (req.method === 'OPTIONS') {
       res.writeHead(204, {
         'Access-Control-Allow-Origin': '*',
@@ -125,34 +176,14 @@ function startServer(port) {
       return;
     }
 
-    // Proxy audio requests
+    // Audio proxy
     if (req.url.startsWith('/audio/')) {
-      proxyAudio(req, res);
+      await proxyAudio(req, res);
       return;
     }
 
-    // Serve static files
-    let filePath = path.join(DIST, req.url === '/' ? 'index.html' : req.url);
-
-    if (!fs.existsSync(filePath)) {
-      filePath = path.join(DIST, 'index.html');
-    }
-
-    const ext = path.extname(filePath);
-    const contentType = MIME[ext] || 'application/octet-stream';
-
-    fs.readFile(filePath, (err, data) => {
-      if (err) {
-        res.writeHead(404);
-        res.end('Not Found');
-      } else {
-        res.writeHead(200, {
-          'Content-Type': contentType,
-          'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=604800'
-        });
-        res.end(data);
-      }
-    });
+    // Static files with gzip
+    await serveStatic(req, res);
   });
 
   server.on('error', (e) => {
@@ -166,7 +197,9 @@ function startServer(port) {
 
   server.listen(port, () => {
     console.log(`Server: http://localhost:${port}`);
-    console.log('Press Ctrl+C to stop');
+    console.log('Gzip compression: enabled');
+    console.log('JSON cache: 1 hour');
+    console.log('Static cache: 7 days');
   });
 }
 

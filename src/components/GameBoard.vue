@@ -151,6 +151,7 @@
 <script setup>
 import { ref, reactive, computed, onMounted, watch, nextTick } from 'vue'
 import { loadOperators } from '../logic/operatorSearch.js'
+import { getCached, setCache } from '../cache.js'
 import { selectRandomOperator, getVoiceClips, generateChoices } from '../logic/gameEngine.js'
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
 import { VOICE_TYPES } from '../utils/constants.js'
@@ -216,8 +217,16 @@ const summaryData = computed(() => generateSummary(challenge.value))
 onMounted(async () => {
   try {
     operators.value = await loadOperators()
-    const resp = await fetch('./data/voice-mapping.json')
-    voiceMapping.value = await resp.json()
+
+    // Try cache first
+    const cachedMapping = getCached('voice-mapping')
+    if (cachedMapping) {
+      voiceMapping.value = cachedMapping
+    } else {
+      const resp = await fetch('./data/voice-mapping.json')
+      voiceMapping.value = await resp.json()
+      setCache('voice-mapping', voiceMapping.value)
+    }
   } catch (e) {
     console.error('Failed to load data:', e)
   } finally {
