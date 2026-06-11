@@ -18,14 +18,18 @@
 2. 双击 `start.bat` 或运行 `node server.js`
 3. 打开 http://localhost:5173
 
-### 工作原理
-- 服务器代理音频请求到 prts.wiki CDN
-- 首次播放某条语音：从 CDN 下载并缓存到本地
-- 再次播放：直接从缓存读取（秒开）
-- 只下载实际用到的音频，不浪费空间
+### GitHub Pages 部署
+1. 推送代码到 GitHub
+2. 仓库 → Settings → Pages → Source 选择 "GitHub Actions"
+3. 自动构建部署
+
+### 自定义域名
+编辑 `vite.config.js` 的 `base` 字段：
+```js
+base: '/your-path/'
+```
 
 ## 架构
 - 前端：Vue 3 + Vite
-- 后端：Node.js 代理服务器（自动缓存音频）
-- 音频来源：prts.wiki CDN（按需缓存）
+- 音频代理：Cloudflare Workers
 - 数据来源：prts.wiki
