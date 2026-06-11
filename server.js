@@ -6,6 +6,7 @@ const path = require('path');
 const PORT = 5173;
 const DIST = path.join(__dirname, 'dist');
 const CACHE_DIR = path.join(__dirname, '.audio-cache');
+const LOCAL_AUDIO_DIR = path.join(__dirname, 'audio-cache');
 
 // Create cache directory
 if (!fs.existsSync(CACHE_DIR)) {
@@ -28,7 +29,7 @@ const MIME = {
 // Cache for audio files (memory + disk)
 const audioCache = new Map();
 
-// Proxy audio requests to prts.wiki with caching
+// Proxy audio requests with local cache fallback
 function proxyAudio(req, res) {
   const urlPath = req.url;
 
@@ -37,22 +38,19 @@ function proxyAudio(req, res) {
     const cached = audioCache.get(urlPath);
     res.writeHead(200, {
       'Content-Type': cached.contentType,
-      'Cache-Control': 'public, max-age=604800', // 7 days
+      'Cache-Control': 'public, max-age=604800',
       'Access-Control-Allow-Origin': '*'
     });
     res.end(cached.data);
     return;
   }
 
-  // Check disk cache
-  const cacheFile = path.join(CACHE_DIR, Buffer.from(urlPath).toString('base64').replace(/\//g, '_'));
-  if (fs.existsSync(cacheFile)) {
-    const data = fs.readFileSync(cacheFile);
+  // Check local downloaded audio
+  const localFile = path.join(LOCAL_AUDIO_DIR, urlPath.replace(/\//g, '_'));
+  if (fs.existsSync(localFile)) {
+    const data = fs.readFileSync(localFile);
     const contentType = MIME[path.extname(urlPath)] || 'audio/wav';
-
-    // Store in memory cache
     audioCache.set(urlPath, { data, contentType });
-
     res.writeHead(200, {
       'Content-Type': contentType,
       'Cache-Control': 'public, max-age=604800',
@@ -62,7 +60,22 @@ function proxyAudio(req, res) {
     return;
   }
 
-  // Fetch from prts.wiki CDN
+  // Check disk cache
+  const cacheFile = path.join(CACHE_DIR, Buffer.from(urlPath).toString('base64').replace(/\//g, '_'));
+  if (fs.existsSync(cacheFile)) {
+    const data = fs.readFileSync(cacheFile);
+    const contentType = MIME[path.extname(urlPath)] || 'audio/wav';
+    audioCache.set(urlPath, { data, contentType });
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': 'public, max-age=604800',
+      'Access-Control-Allow-Origin': '*'
+    });
+    res.end(data);
+    return;
+  }
+
+  // Fetch from prts.wiki CDN (fallback)
   const cdnUrl = `https://torappu.prts.wiki/assets/audio${urlPath}`;
 
   https.get(cdnUrl, {
