@@ -1,13 +1,13 @@
+import { getAudioUrl } from '../config.js'
+
 const cache = new Map()
 let currentAudio = null
 
 /**
- * Build audio URL through backend proxy
- * Backend handles caching and CDN access
+ * Build audio URL through configured proxy
  */
 export function buildVoiceUrl(relativePath) {
-  // Use backend proxy: /audio/voice_cn/... or /audio/voice/...
-  return `/audio/${relativePath}`
+  return getAudioUrl(relativePath)
 }
 
 /**
