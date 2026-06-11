@@ -3,6 +3,7 @@
     <div class="header">
       <div class="logo">🎧 语音猜干员</div>
       <div class="header-sub">听声音，猜干员</div>
+      <div class="credit">数据、音频来源<a href="https://prts.wiki" target="_blank">prts.wiki</a>，感谢伟大的wiki及工作人员</div>
     </div>
 
     <!-- 挑战设置页面 -->
@@ -91,7 +92,7 @@
           ⌨ {{ settings.inputMode === 'typing' ? '输入模式' : '选择模式' }}
         </button>
         <button class="ctrl-btn text-toggle" :class="{ active: showText }" @click="showText = !showText">
-          {{ showText ? '📖 文' : '📖' }}
+          {{ showText ? '文本 开' : '文本' }}
         </button>
         <button class="ctrl-btn" @click="showChallengeSetup = true">🏆 挑战</button>
         <button class="ctrl-btn" @click="showSettings = true">⚙ 设置</button>
@@ -377,6 +378,9 @@ watch(() => settings.inputMode, () => {
 .header { text-align: center; padding: 8px 0 20px; }
 .logo { font-family: var(--font-display); font-weight: 800; font-size: 30px; letter-spacing: -0.5px; }
 .header-sub { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+.credit { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+.credit a { color: var(--accent); text-decoration: none; }
+.credit a:hover { text-decoration: underline; }
 .top-controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
 .ctrl-btn { display: flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--bg-white); border: 1.5px solid var(--border); border-radius: var(--r-full); font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow-sm); }
 .ctrl-btn:hover { border-color: var(--accent); color: var(--accent); }
