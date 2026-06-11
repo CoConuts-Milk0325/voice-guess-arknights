@@ -1,12 +1,18 @@
-import { CDN_BASE } from '../utils/constants.js'
-
 const cache = new Map()
 let currentAudio = null
 
+/**
+ * Build audio URL through backend proxy
+ * Backend handles caching and CDN access
+ */
 export function buildVoiceUrl(relativePath) {
-  return `${CDN_BASE}${relativePath}`
+  // Use backend proxy: /audio/voice_cn/... or /audio/voice/...
+  return `/audio/${relativePath}`
 }
 
+/**
+ * Load audio through backend proxy with caching
+ */
 export function loadAudio(url) {
   // Stop previous audio but don't clear currentAudio reference yet
   if (currentAudio) {
@@ -16,12 +22,7 @@ export function loadAudio(url) {
 
   return new Promise((resolve, reject) => {
     const audio = new Audio()
-    audio.crossOrigin = 'anonymous'
     audio.preload = 'auto'
-
-    // Add timestamp to prevent caching
-    const cacheBuster = url.includes('?') ? '&' : '?'
-    const finalUrl = `${url}${cacheBuster}t=${Date.now()}`
 
     audio.addEventListener('canplaythrough', () => {
       currentAudio = audio
@@ -29,21 +30,28 @@ export function loadAudio(url) {
     }, { once: true })
 
     audio.addEventListener('error', (e) => {
-      console.error('Audio error:', finalUrl, e)
+      console.error('Audio error:', url, e)
       reject(new Error(`Failed to load: ${url}`))
     }, { once: true })
 
-    audio.src = finalUrl
+    // Load from backend proxy (no cache busting - let backend handle caching)
+    audio.src = url
     cache.set(url, audio)
   })
 }
 
+/**
+ * Play audio
+ */
 export function playAudio(url) {
   return loadAudio(url).then(audio => {
     return audio.play()
   })
 }
 
+/**
+ * Stop current audio
+ */
 export function stopAudio() {
   if (currentAudio) {
     currentAudio.pause()
@@ -52,15 +60,20 @@ export function stopAudio() {
   }
 }
 
+/**
+ * Get current audio element
+ */
 export function getCurrentAudio() {
   return currentAudio
 }
 
+/**
+ * Preload audio file
+ */
 export function preloadAudio(url) {
   if (cache.has(url)) return
 
   const audio = new Audio()
-  audio.crossOrigin = 'anonymous'
   audio.preload = 'metadata'
   audio.src = url
   cache.set(url, audio)
