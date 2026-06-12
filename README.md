@@ -18,17 +18,6 @@
 2. 双击 `start.bat` 或运行 `node server.js`
 3. 打开 http://localhost:5173
 
-### GitHub Pages 部署
-1. 推送代码到 GitHub
-2. 仓库 → Settings → Pages → Source 选择 "GitHub Actions"
-3. 自动构建部署
-
-### 自定义域名
-编辑 `vite.config.js` 的 `base` 字段：
-```js
-base: '/your-path/'
-```
-
 ## 架构
 - 前端：Vue 3 + Vite
 - 音频代理：Cloudflare Workers

@@ -1,13 +1,14 @@
 // 音频配置
-// 直接访问 prts.wiki CDN
+// 通过 Cloudflare Worker 代理（缓存后不再访问 prts.wiki）
 
 const CONFIG = {
-  cdnBase: 'https://torappu.prts.wiki/assets/audio',
+  // Cloudflare Worker 代理地址
+  proxyBase: 'https://voice-guess-arknights.guyangguan.workers.dev/audio',
 };
 
 // 获取音频 URL
 export function getAudioUrl(relativePath) {
-  return `${CONFIG.cdnBase}/${relativePath}`;
+  return `${CONFIG.proxyBase}/${relativePath}`;
 }
 
 export default CONFIG;
