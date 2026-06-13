@@ -3,7 +3,7 @@
 
 const CONFIG = {
   // Cloudflare Worker 代理地址
-  proxyBase: 'https://voice-guess-arknights.guyangguan.workers.dev/audio',
+  proxyBase: 'https://voice-guess.coconutmilk.top/audio',
 };
 
 // 获取音频 URL
