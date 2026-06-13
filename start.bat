@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-title 语音猜干员
+title 语音猜干员 - 开发模式
 
 echo ========================================
-echo   语音猜干员
+echo   语音猜干员 - 开发模式
 echo ========================================
 echo.
 
@@ -22,10 +22,19 @@ if %errorlevel% neq 0 (
     set "PATH=%PATH%;C:\Program Files\nodejs"
 )
 
+echo Node.js version:
 node -v
 echo.
-echo Starting server...
+echo Starting dev server...
 echo Open http://localhost:5173 in browser
 echo.
-node server.js
+
+:: Install deps if needed
+if not exist "node_modules\" (
+    echo Installing dependencies...
+    call npm install
+)
+
+:: Start Vite dev server
+npx vite --host 0.0.0.0
 pause
