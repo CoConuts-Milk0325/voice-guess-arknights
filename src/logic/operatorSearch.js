@@ -11,9 +11,11 @@ export async function loadOperators() {
     name: op['干员'],
     nameEn: op['干员外文名'],
     profession: op['职业'],
+    subProfession: op['子职业'],
     rarity: op['稀有度'],
     race: op['种族'],
     country: op['国家'],
+    team: op['团队'],
     gender: op['性别'],
     pinyinFull: pinyin(op['干员'], { toneType: 'none', type: 'array' }).join(''),
     pinyinInitials: pinyin(op['干员'], { pattern: 'first', toneType: 'none', type: 'array' }).join('')

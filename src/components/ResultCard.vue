@@ -24,6 +24,8 @@
         <div class="op-tags">
           <span class="op-tag stars">{{ '★'.repeat(parseInt(operator.rarity) + 1) }}</span>
           <span class="op-tag">{{ operator.profession }}</span>
+          <span v-if="operator.subProfession" class="op-tag">{{ operator.subProfession }}</span>
+          <span v-if="operator.country" class="op-tag">{{ operator.country }}</span>
           <span v-if="operator.race" class="op-tag">{{ operator.race }}</span>
         </div>
       </div>
