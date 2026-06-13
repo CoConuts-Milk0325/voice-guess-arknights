@@ -1,1 +1,398 @@
-{"中文":{"登录":[{"url":"voice_cn/char_4186_tmoris/cn_001.wav","text":"这部分的工作应该已经处理好了，博士，有什么问题吗？"}],"交谈":[{"url":"voice_cn/char_4186_tmoris/cn_002.wav","text":"罗德岛的干员们看起来都十分强大且个性十足，但是干员之间却少有冲突，都能彼此真诚相待，真是让人意想不到。"},{"url":"voice_cn/char_4186_tmoris/cn_003.wav","text":"红豆的吉他也弹得不错啊，她还邀请我去参观她的乐队表演。嗯，我很有兴趣。"},{"url":"voice_cn/char_4186_tmoris/cn_004.wav","text":"博士请放心，我不会因为忙于工作而让自己的身体状态变差。我的休息时间和锻炼时间都已经规划好了，我也给工作留好了足够的缓冲时间。"}],"晋升交谈":[{"url":"voice_cn/char_4186_tmoris/cn_005.wav","text":"我只是做了我理所应当做的事情，既然暂居罗德岛，帮助罗德岛上的大家也无可厚非。"},{"url":"voice_cn/char_4186_tmoris/cn_006.wav","text":"不愧是罗德岛，一定是阿米娅和博士的真诚感染了大家。我现在相信这里的大家都是真的把彼此当作家人看待了，能为这里出一份力是我的荣幸。"}],"信赖":[{"url":"voice_cn/char_4186_tmoris/cn_007.wav","text":"小刻喜欢吃的蜜饼果然很好吃，吃多少都没问题。"},{"url":"voice_cn/char_4186_tmoris/cn_008.wav","text":"明明罗德岛上的大家也都有自己的困扰，但还是会毫无保留地帮助彼此，我们因此受了很多人的照顾，尤其是博士你，十分感谢。"},{"url":"voice_cn/char_4186_tmoris/cn_009.wav","text":"不知不觉好像又有十多个小队需要我去帮忙。不过，我很珍惜在罗德岛的这每一份工作。"}],"闲置":[{"url":"voice_cn/char_4186_tmoris/cn_010.wav","text":"嗯......博士还在忙吗，这盒巧克力奶冻就给博士吧。"}],"报到":[{"url":"voice_cn/char_4186_tmoris/cn_011.wav","text":"我是八幡海铃，有什么需要我做的吗？"}],"作战记录":[{"url":"voice_cn/char_4186_tmoris/cn_012.wav","text":"嗯，果然是高效的手法，我会学习的。"}],"精英化1":[{"url":"voice_cn/char_4186_tmoris/cn_013.wav","text":"我只是做了分内的事而已。"}],"精英化2":[{"url":"voice_cn/char_4186_tmoris/cn_014.wav","text":"罗德岛的大家愿意接纳和信任我，真是件高兴的事。那么，大家也能回应我的期望吧？"}],"编入":[{"url":"voice_cn/char_4186_tmoris/cn_017.wav","text":"嗯，我知道了。"}],"任命队长":[{"url":"voice_cn/char_4186_tmoris/cn_018.wav","text":"要我来做指挥吗？行吧。"}],"行动出发":[{"url":"voice_cn/char_4186_tmoris/cn_019.wav","text":"我们出发。"}],"行动开始":[{"url":"voice_cn/char_4186_tmoris/cn_020.wav","text":"跟预想的一样，我们上吧。"}],"选中":[{"url":"voice_cn/char_4186_tmoris/cn_021.wav","text":"是。"},{"url":"voice_cn/char_4186_tmoris/cn_022.wav","text":"叫我吗？"}],"部署":[{"url":"voice_cn/char_4186_tmoris/cn_023.wav","text":"就位。"},{"url":"voice_cn/char_4186_tmoris/cn_024.wav","text":"没有任何偏差。"}],"技能":[{"url":"voice_cn/char_4186_tmoris/cn_025.wav","text":"交给我吧！"},{"url":"voice_cn/char_4186_tmoris/cn_026.wav","text":"并不是什么难事。"},{"url":"voice_cn/char_4186_tmoris/cn_027.wav","text":"哼！"},{"url":"voice_cn/char_4186_tmoris/cn_028.wav","text":"打扰了。"}],"高难胜利":[{"url":"voice_cn/char_4186_tmoris/cn_029.wav","text":"任务完成，多亏了大家。"}],"3星胜利":[{"url":"voice_cn/char_4186_tmoris/cn_030.wav","text":"博士的指挥真是厉害。"}],"非3星胜利":[{"url":"voice_cn/char_4186_tmoris/cn_031.wav","text":"勉勉强强，练习量还不够啊。"}],"失败":[{"url":"voice_cn/char_4186_tmoris/cn_032.wav","text":"快走吧，我们不能放弃任何一个人。"}],"进驻":[{"url":"voice_cn/char_4186_tmoris/cn_033.wav","text":"哦，这里就是自由活动的房间吗，请问训练室在哪里？"}],"戳一下":[{"url":"voice_cn/char_4186_tmoris/cn_034.wav","text":"嗯？"}],"信赖触摸":[{"url":"voice_cn/char_4186_tmoris/cn_036.wav","text":"嗯，我在。"}],"标题":[{"url":"voice_cn/char_4186_tmoris/cn_037.wav","text":"明日方舟。"}],"新年":[{"url":"voice_cn/char_4186_tmoris/cn_038.wav","text":"你好博士，新年快乐，今后也请你多多关照。"}],"问候":[{"url":"voice_cn/char_4186_tmoris/cn_042.wav","text":"你好，博士，要一起去练习吗？"}]},"日文":{"登录":[{"url":"voice/char_4186_tmoris/cn_001.wav","text":"这部分的工作应该已经处理好了，博士，有什么问题吗？"}],"交谈":[{"url":"voice/char_4186_tmoris/cn_002.wav","text":"罗德岛的干员们看起来都十分强大且个性十足，但是干员之间却少有冲突，都能彼此真诚相待，真是让人意想不到。"},{"url":"voice/char_4186_tmoris/cn_003.wav","text":"红豆的吉他也弹得不错啊，她还邀请我去参观她的乐队表演。嗯，我很有兴趣。"},{"url":"voice/char_4186_tmoris/cn_004.wav","text":"博士请放心，我不会因为忙于工作而让自己的身体状态变差。我的休息时间和锻炼时间都已经规划好了，我也给工作留好了足够的缓冲时间。"}],"晋升交谈":[{"url":"voice/char_4186_tmoris/cn_005.wav","text":"我只是做了我理所应当做的事情，既然暂居罗德岛，帮助罗德岛上的大家也无可厚非。"},{"url":"voice/char_4186_tmoris/cn_006.wav","text":"不愧是罗德岛，一定是阿米娅和博士的真诚感染了大家。我现在相信这里的大家都是真的把彼此当作家人看待了，能为这里出一份力是我的荣幸。"}],"信赖":[{"url":"voice/char_4186_tmoris/cn_007.wav","text":"小刻喜欢吃的蜜饼果然很好吃，吃多少都没问题。"},{"url":"voice/char_4186_tmoris/cn_008.wav","text":"明明罗德岛上的大家也都有自己的困扰，但还是会毫无保留地帮助彼此，我们因此受了很多人的照顾，尤其是博士你，十分感谢。"},{"url":"voice/char_4186_tmoris/cn_009.wav","text":"不知不觉好像又有十多个小队需要我去帮忙。不过，我很珍惜在罗德岛的这每一份工作。"}],"闲置":[{"url":"voice/char_4186_tmoris/cn_010.wav","text":"嗯......博士还在忙吗，这盒巧克力奶冻就给博士吧。"}],"报到":[{"url":"voice/char_4186_tmoris/cn_011.wav","text":"我是八幡海铃，有什么需要我做的吗？"}],"作战记录":[{"url":"voice/char_4186_tmoris/cn_012.wav","text":"嗯，果然是高效的手法，我会学习的。"}],"精英化1":[{"url":"voice/char_4186_tmoris/cn_013.wav","text":"我只是做了分内的事而已。"}],"精英化2":[{"url":"voice/char_4186_tmoris/cn_014.wav","text":"罗德岛的大家愿意接纳和信任我，真是件高兴的事。那么，大家也能回应我的期望吧？"}],"编入":[{"url":"voice/char_4186_tmoris/cn_017.wav","text":"嗯，我知道了。"}],"任命队长":[{"url":"voice/char_4186_tmoris/cn_018.wav","text":"要我来做指挥吗？行吧。"}],"行动出发":[{"url":"voice/char_4186_tmoris/cn_019.wav","text":"我们出发。"}],"行动开始":[{"url":"voice/char_4186_tmoris/cn_020.wav","text":"跟预想的一样，我们上吧。"}],"选中":[{"url":"voice/char_4186_tmoris/cn_021.wav","text":"是。"},{"url":"voice/char_4186_tmoris/cn_022.wav","text":"叫我吗？"}],"部署":[{"url":"voice/char_4186_tmoris/cn_023.wav","text":"就位。"},{"url":"voice/char_4186_tmoris/cn_024.wav","text":"没有任何偏差。"}],"技能":[{"url":"voice/char_4186_tmoris/cn_025.wav","text":"交给我吧！"},{"url":"voice/char_4186_tmoris/cn_026.wav","text":"并不是什么难事。"},{"url":"voice/char_4186_tmoris/cn_027.wav","text":"哼！"},{"url":"voice/char_4186_tmoris/cn_028.wav","text":"打扰了。"}],"高难胜利":[{"url":"voice/char_4186_tmoris/cn_029.wav","text":"任务完成，多亏了大家。"}],"3星胜利":[{"url":"voice/char_4186_tmoris/cn_030.wav","text":"博士的指挥真是厉害。"}],"非3星胜利":[{"url":"voice/char_4186_tmoris/cn_031.wav","text":"勉勉强强，练习量还不够啊。"}],"失败":[{"url":"voice/char_4186_tmoris/cn_032.wav","text":"快走吧，我们不能放弃任何一个人。"}],"进驻":[{"url":"voice/char_4186_tmoris/cn_033.wav","text":"哦，这里就是自由活动的房间吗，请问训练室在哪里？"}],"戳一下":[{"url":"voice/char_4186_tmoris/cn_034.wav","text":"嗯？"}],"信赖触摸":[{"url":"voice/char_4186_tmoris/cn_036.wav","text":"嗯，我在。"}],"标题":[{"url":"voice/char_4186_tmoris/cn_037.wav","text":"明日方舟。"}],"新年":[{"url":"voice/char_4186_tmoris/cn_038.wav","text":"你好博士，新年快乐，今后也请你多多关照。"}],"问候":[{"url":"voice/char_4186_tmoris/cn_042.wav","text":"你好，博士，要一起去练习吗？"}]}}
+{
+  "中文": {
+    "登录": [
+      {
+        "url": "voice/char_4186_tmoris/cn_001.wav",
+        "text": "这部分的工作应该已经处理好了，博士，有什么问题吗？"
+      }
+    ],
+    "交谈": [
+      {
+        "url": "voice/char_4186_tmoris/cn_002.wav",
+        "text": "罗德岛的干员们看起来都十分强大且个性十足，但是干员之间却少有冲突，都能彼此真诚相待，真是让人意想不到。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_003.wav",
+        "text": "红豆的吉他也弹得不错啊，她还邀请我去参观她的乐队表演。嗯，我很有兴趣。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_004.wav",
+        "text": "博士请放心，我不会因为忙于工作而让自己的身体状态变差。我的休息时间和锻炼时间都已经规划好了，我也给工作留好了足够的缓冲时间。"
+      }
+    ],
+    "晋升交谈": [
+      {
+        "url": "voice/char_4186_tmoris/cn_005.wav",
+        "text": "我只是做了我理所应当做的事情，既然暂居罗德岛，帮助罗德岛上的大家也无可厚非。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_006.wav",
+        "text": "不愧是罗德岛，一定是阿米娅和博士的真诚感染了大家。我现在相信这里的大家都是真的把彼此当作家人看待了，能为这里出一份力是我的荣幸。"
+      }
+    ],
+    "信赖": [
+      {
+        "url": "voice/char_4186_tmoris/cn_007.wav",
+        "text": "小刻喜欢吃的蜜饼果然很好吃，吃多少都没问题。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_008.wav",
+        "text": "明明罗德岛上的大家也都有自己的困扰，但还是会毫无保留地帮助彼此，我们因此受了很多人的照顾，尤其是博士你，十分感谢。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_009.wav",
+        "text": "不知不觉好像又有十多个小队需要我去帮忙。不过，我很珍惜在罗德岛的这每一份工作。"
+      }
+    ],
+    "闲置": [
+      {
+        "url": "voice/char_4186_tmoris/cn_010.wav",
+        "text": "嗯......博士还在忙吗，这盒巧克力奶冻就给博士吧。"
+      }
+    ],
+    "报到": [
+      {
+        "url": "voice/char_4186_tmoris/cn_011.wav",
+        "text": "我是八幡海铃，有什么需要我做的吗？"
+      }
+    ],
+    "作战记录": [
+      {
+        "url": "voice/char_4186_tmoris/cn_012.wav",
+        "text": "嗯，果然是高效的手法，我会学习的。"
+      }
+    ],
+    "精英化1": [
+      {
+        "url": "voice/char_4186_tmoris/cn_013.wav",
+        "text": "我只是做了分内的事而已。"
+      }
+    ],
+    "精英化2": [
+      {
+        "url": "voice/char_4186_tmoris/cn_014.wav",
+        "text": "罗德岛的大家愿意接纳和信任我，真是件高兴的事。那么，大家也能回应我的期望吧？"
+      }
+    ],
+    "编入": [
+      {
+        "url": "voice/char_4186_tmoris/cn_017.wav",
+        "text": "嗯，我知道了。"
+      }
+    ],
+    "任命队长": [
+      {
+        "url": "voice/char_4186_tmoris/cn_018.wav",
+        "text": "要我来做指挥吗？行吧。"
+      }
+    ],
+    "行动出发": [
+      {
+        "url": "voice/char_4186_tmoris/cn_019.wav",
+        "text": "我们出发。"
+      }
+    ],
+    "行动开始": [
+      {
+        "url": "voice/char_4186_tmoris/cn_020.wav",
+        "text": "跟预想的一样，我们上吧。"
+      }
+    ],
+    "选中": [
+      {
+        "url": "voice/char_4186_tmoris/cn_021.wav",
+        "text": "是。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_022.wav",
+        "text": "叫我吗？"
+      }
+    ],
+    "部署": [
+      {
+        "url": "voice/char_4186_tmoris/cn_023.wav",
+        "text": "就位。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_024.wav",
+        "text": "没有任何偏差。"
+      }
+    ],
+    "技能": [
+      {
+        "url": "voice/char_4186_tmoris/cn_025.wav",
+        "text": "交给我吧！"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_026.wav",
+        "text": "并不是什么难事。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_027.wav",
+        "text": "哼！"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_028.wav",
+        "text": "打扰了。"
+      }
+    ],
+    "高难胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_029.wav",
+        "text": "任务完成，多亏了大家。"
+      }
+    ],
+    "3星胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_030.wav",
+        "text": "博士的指挥真是厉害。"
+      }
+    ],
+    "非3星胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_031.wav",
+        "text": "勉勉强强，练习量还不够啊。"
+      }
+    ],
+    "失败": [
+      {
+        "url": "voice/char_4186_tmoris/cn_032.wav",
+        "text": "快走吧，我们不能放弃任何一个人。"
+      }
+    ],
+    "进驻": [
+      {
+        "url": "voice/char_4186_tmoris/cn_033.wav",
+        "text": "哦，这里就是自由活动的房间吗，请问训练室在哪里？"
+      }
+    ],
+    "戳一下": [
+      {
+        "url": "voice/char_4186_tmoris/cn_034.wav",
+        "text": "嗯？"
+      }
+    ],
+    "信赖触摸": [
+      {
+        "url": "voice/char_4186_tmoris/cn_036.wav",
+        "text": "嗯，我在。"
+      }
+    ],
+    "标题": [
+      {
+        "url": "voice/char_4186_tmoris/cn_037.wav",
+        "text": "明日方舟。"
+      }
+    ],
+    "新年": [
+      {
+        "url": "voice/char_4186_tmoris/cn_038.wav",
+        "text": "你好博士，新年快乐，今后也请你多多关照。"
+      }
+    ],
+    "问候": [
+      {
+        "url": "voice/char_4186_tmoris/cn_042.wav",
+        "text": "你好，博士，要一起去练习吗？"
+      }
+    ]
+  },
+  "日文": {
+    "登录": [
+      {
+        "url": "voice/char_4186_tmoris/cn_001.wav",
+        "text": "这部分的工作应该已经处理好了，博士，有什么问题吗？"
+      }
+    ],
+    "交谈": [
+      {
+        "url": "voice/char_4186_tmoris/cn_002.wav",
+        "text": "罗德岛的干员们看起来都十分强大且个性十足，但是干员之间却少有冲突，都能彼此真诚相待，真是让人意想不到。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_003.wav",
+        "text": "红豆的吉他也弹得不错啊，她还邀请我去参观她的乐队表演。嗯，我很有兴趣。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_004.wav",
+        "text": "博士请放心，我不会因为忙于工作而让自己的身体状态变差。我的休息时间和锻炼时间都已经规划好了，我也给工作留好了足够的缓冲时间。"
+      }
+    ],
+    "晋升交谈": [
+      {
+        "url": "voice/char_4186_tmoris/cn_005.wav",
+        "text": "我只是做了我理所应当做的事情，既然暂居罗德岛，帮助罗德岛上的大家也无可厚非。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_006.wav",
+        "text": "不愧是罗德岛，一定是阿米娅和博士的真诚感染了大家。我现在相信这里的大家都是真的把彼此当作家人看待了，能为这里出一份力是我的荣幸。"
+      }
+    ],
+    "信赖": [
+      {
+        "url": "voice/char_4186_tmoris/cn_007.wav",
+        "text": "小刻喜欢吃的蜜饼果然很好吃，吃多少都没问题。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_008.wav",
+        "text": "明明罗德岛上的大家也都有自己的困扰，但还是会毫无保留地帮助彼此，我们因此受了很多人的照顾，尤其是博士你，十分感谢。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_009.wav",
+        "text": "不知不觉好像又有十多个小队需要我去帮忙。不过，我很珍惜在罗德岛的这每一份工作。"
+      }
+    ],
+    "闲置": [
+      {
+        "url": "voice/char_4186_tmoris/cn_010.wav",
+        "text": "嗯......博士还在忙吗，这盒巧克力奶冻就给博士吧。"
+      }
+    ],
+    "报到": [
+      {
+        "url": "voice/char_4186_tmoris/cn_011.wav",
+        "text": "我是八幡海铃，有什么需要我做的吗？"
+      }
+    ],
+    "作战记录": [
+      {
+        "url": "voice/char_4186_tmoris/cn_012.wav",
+        "text": "嗯，果然是高效的手法，我会学习的。"
+      }
+    ],
+    "精英化1": [
+      {
+        "url": "voice/char_4186_tmoris/cn_013.wav",
+        "text": "我只是做了分内的事而已。"
+      }
+    ],
+    "精英化2": [
+      {
+        "url": "voice/char_4186_tmoris/cn_014.wav",
+        "text": "罗德岛的大家愿意接纳和信任我，真是件高兴的事。那么，大家也能回应我的期望吧？"
+      }
+    ],
+    "编入": [
+      {
+        "url": "voice/char_4186_tmoris/cn_017.wav",
+        "text": "嗯，我知道了。"
+      }
+    ],
+    "任命队长": [
+      {
+        "url": "voice/char_4186_tmoris/cn_018.wav",
+        "text": "要我来做指挥吗？行吧。"
+      }
+    ],
+    "行动出发": [
+      {
+        "url": "voice/char_4186_tmoris/cn_019.wav",
+        "text": "我们出发。"
+      }
+    ],
+    "行动开始": [
+      {
+        "url": "voice/char_4186_tmoris/cn_020.wav",
+        "text": "跟预想的一样，我们上吧。"
+      }
+    ],
+    "选中": [
+      {
+        "url": "voice/char_4186_tmoris/cn_021.wav",
+        "text": "是。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_022.wav",
+        "text": "叫我吗？"
+      }
+    ],
+    "部署": [
+      {
+        "url": "voice/char_4186_tmoris/cn_023.wav",
+        "text": "就位。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_024.wav",
+        "text": "没有任何偏差。"
+      }
+    ],
+    "技能": [
+      {
+        "url": "voice/char_4186_tmoris/cn_025.wav",
+        "text": "交给我吧！"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_026.wav",
+        "text": "并不是什么难事。"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_027.wav",
+        "text": "哼！"
+      },
+      {
+        "url": "voice/char_4186_tmoris/cn_028.wav",
+        "text": "打扰了。"
+      }
+    ],
+    "高难胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_029.wav",
+        "text": "任务完成，多亏了大家。"
+      }
+    ],
+    "3星胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_030.wav",
+        "text": "博士的指挥真是厉害。"
+      }
+    ],
+    "非3星胜利": [
+      {
+        "url": "voice/char_4186_tmoris/cn_031.wav",
+        "text": "勉勉强强，练习量还不够啊。"
+      }
+    ],
+    "失败": [
+      {
+        "url": "voice/char_4186_tmoris/cn_032.wav",
+        "text": "快走吧，我们不能放弃任何一个人。"
+      }
+    ],
+    "进驻": [
+      {
+        "url": "voice/char_4186_tmoris/cn_033.wav",
+        "text": "哦，这里就是自由活动的房间吗，请问训练室在哪里？"
+      }
+    ],
+    "戳一下": [
+      {
+        "url": "voice/char_4186_tmoris/cn_034.wav",
+        "text": "嗯？"
+      }
+    ],
+    "信赖触摸": [
+      {
+        "url": "voice/char_4186_tmoris/cn_036.wav",
+        "text": "嗯，我在。"
+      }
+    ],
+    "标题": [
+      {
+        "url": "voice/char_4186_tmoris/cn_037.wav",
+        "text": "明日方舟。"
+      }
+    ],
+    "新年": [
+      {
+        "url": "voice/char_4186_tmoris/cn_038.wav",
+        "text": "你好博士，新年快乐，今后也请你多多关照。"
+      }
+    ],
+    "问候": [
+      {
+        "url": "voice/char_4186_tmoris/cn_042.wav",
+        "text": "你好，博士，要一起去练习吗？"
+      }
+    ]
+  }
+}

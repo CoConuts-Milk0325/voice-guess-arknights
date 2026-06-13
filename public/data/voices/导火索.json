@@ -1,1 +1,386 @@
-{"中文":{"登录":[{"url":"voice_cn/char_4126_fuze/cn_001.wav","text":"嗯......有事你说。"}],"交谈":[{"url":"voice_cn/char_4126_fuze/cn_002.wav","text":"工作间里危险物品很多，留神。"},{"url":"voice_cn/char_4126_fuze/cn_003.wav","text":"工程部......还不错，就是那里的头儿......有点太能说了。"},{"url":"voice_cn/char_4126_fuze/cn_004.wav","text":"我喜欢机器，它们不说话，但上面的读数总是很坦诚。"}],"晋升交谈":[{"url":"voice_cn/char_4126_fuze/cn_005.wav","text":"只有在你无法适应的时候，混乱才会成为敌人。"},{"url":"voice_cn/char_4126_fuze/cn_006.wav","text":"当你面临的混乱危及你所爱的人，你该做的不是保护他们，而是......让他们远离你。"}],"信赖":[{"url":"voice_cn/char_4126_fuze/cn_007.wav","text":"不，我的通讯设备没有损坏，你多虑了。"},{"url":"voice_cn/char_4126_fuze/cn_008.wav","text":"让我随便说点什么？呃，这才是最困难的事。"},{"url":"voice_cn/char_4126_fuze/cn_009.wav","text":"你问我的家乡？那里......天空是蓝色的，天空下的建筑也是蓝色的。"}],"闲置":[{"url":"voice_cn/char_4126_fuze/cn_010.wav","text":"好......我会自己找事做的。"}],"报到":[{"url":"voice_cn/char_4126_fuze/cn_011.wav","text":"彩虹小队成员，代号导火索。该说的已经说了，行动吧。"}],"作战记录":[{"url":"voice_cn/char_4126_fuze/cn_012.wav","text":"没问题，我会抽时间看的。"}],"精英化1":[{"url":"voice_cn/char_4126_fuze/cn_013.wav","text":"好事......谢谢。"}],"精英化2":[{"url":"voice_cn/char_4126_fuze/cn_014.wav","text":"我需要在很多人面前说些什么吗？不用......太好了。"}],"编入":[{"url":"voice_cn/char_4126_fuze/cn_017.wav","text":"随时待命。"}],"任命队长":[{"url":"voice_cn/char_4126_fuze/cn_018.wav","text":"按我说的去做。"}],"行动出发":[{"url":"voice_cn/char_4126_fuze/cn_019.wav","text":"闲聊到此为止，现在开始行动。"}],"行动开始":[{"url":"voice_cn/char_4126_fuze/cn_020.wav","text":"“套娃”准备好了。"}],"选中":[{"url":"voice_cn/char_4126_fuze/cn_021.wav","text":"专心做手头的任务。"},{"url":"voice_cn/char_4126_fuze/cn_022.wav","text":"记住我们的目标。"}],"部署":[{"url":"voice_cn/char_4126_fuze/cn_023.wav","text":"小点声。"},{"url":"voice_cn/char_4126_fuze/cn_024.wav","text":"保持静默。"}],"技能":[{"url":"voice_cn/char_4126_fuze/cn_025.wav","text":"跟我来！"},{"url":"voice_cn/char_4126_fuze/cn_026.wav","text":"保持警觉。"},{"url":"voice_cn/char_4126_fuze/cn_027.wav","text":"集中注意力。"},{"url":"voice_cn/char_4126_fuze/cn_028.wav","text":"坚守阵地。"}],"高难胜利":[{"url":"voice_cn/char_4126_fuze/cn_029.wav","text":"每一次行动都为我们创造了获胜的机会。"}],"3星胜利":[{"url":"voice_cn/char_4126_fuze/cn_030.wav","text":"人质安全了。"}],"非3星胜利":[{"url":"voice_cn/char_4126_fuze/cn_031.wav","text":"站起来，你的伤并不致命。"}],"失败":[{"url":"voice_cn/char_4126_fuze/cn_032.wav","text":"快跑，就现在！"}],"进驻":[{"url":"voice_cn/char_4126_fuze/cn_033.wav","text":"这地方不赖。"}],"戳一下":[{"url":"voice_cn/char_4126_fuze/cn_034.wav","text":"别这样......"}],"信赖触摸":[{"url":"voice_cn/char_4126_fuze/cn_036.wav","text":"我做了抓饭，你要来点吗？"}],"标题":[{"url":"voice_cn/char_4126_fuze/cn_037.wav","text":"明日方舟。"}],"问候":[{"url":"voice_cn/char_4126_fuze/cn_042.wav","text":"嗨......"}]},"日文":{"登录":[{"url":"voice/char_4126_fuze/cn_001.wav","text":"嗯......有事你说。"}],"交谈":[{"url":"voice/char_4126_fuze/cn_002.wav","text":"工作间里危险物品很多，留神。"},{"url":"voice/char_4126_fuze/cn_003.wav","text":"工程部......还不错，就是那里的头儿......有点太能说了。"},{"url":"voice/char_4126_fuze/cn_004.wav","text":"我喜欢机器，它们不说话，但上面的读数总是很坦诚。"}],"晋升交谈":[{"url":"voice/char_4126_fuze/cn_005.wav","text":"只有在你无法适应的时候，混乱才会成为敌人。"},{"url":"voice/char_4126_fuze/cn_006.wav","text":"当你面临的混乱危及你所爱的人，你该做的不是保护他们，而是......让他们远离你。"}],"信赖":[{"url":"voice/char_4126_fuze/cn_007.wav","text":"不，我的通讯设备没有损坏，你多虑了。"},{"url":"voice/char_4126_fuze/cn_008.wav","text":"让我随便说点什么？呃，这才是最困难的事。"},{"url":"voice/char_4126_fuze/cn_009.wav","text":"你问我的家乡？那里......天空是蓝色的，天空下的建筑也是蓝色的。"}],"闲置":[{"url":"voice/char_4126_fuze/cn_010.wav","text":"好......我会自己找事做的。"}],"报到":[{"url":"voice/char_4126_fuze/cn_011.wav","text":"彩虹小队成员，代号导火索。该说的已经说了，行动吧。"}],"作战记录":[{"url":"voice/char_4126_fuze/cn_012.wav","text":"没问题，我会抽时间看的。"}],"精英化1":[{"url":"voice/char_4126_fuze/cn_013.wav","text":"好事......谢谢。"}],"精英化2":[{"url":"voice/char_4126_fuze/cn_014.wav","text":"我需要在很多人面前说些什么吗？不用......太好了。"}],"编入":[{"url":"voice/char_4126_fuze/cn_017.wav","text":"随时待命。"}],"任命队长":[{"url":"voice/char_4126_fuze/cn_018.wav","text":"按我说的去做。"}],"行动出发":[{"url":"voice/char_4126_fuze/cn_019.wav","text":"闲聊到此为止，现在开始行动。"}],"行动开始":[{"url":"voice/char_4126_fuze/cn_020.wav","text":"“套娃”准备好了。"}],"选中":[{"url":"voice/char_4126_fuze/cn_021.wav","text":"专心做手头的任务。"},{"url":"voice/char_4126_fuze/cn_022.wav","text":"记住我们的目标。"}],"部署":[{"url":"voice/char_4126_fuze/cn_023.wav","text":"小点声。"},{"url":"voice/char_4126_fuze/cn_024.wav","text":"保持静默。"}],"技能":[{"url":"voice/char_4126_fuze/cn_025.wav","text":"跟我来！"},{"url":"voice/char_4126_fuze/cn_026.wav","text":"保持警觉。"},{"url":"voice/char_4126_fuze/cn_027.wav","text":"集中注意力。"},{"url":"voice/char_4126_fuze/cn_028.wav","text":"坚守阵地。"}],"高难胜利":[{"url":"voice/char_4126_fuze/cn_029.wav","text":"每一次行动都为我们创造了获胜的机会。"}],"3星胜利":[{"url":"voice/char_4126_fuze/cn_030.wav","text":"人质安全了。"}],"非3星胜利":[{"url":"voice/char_4126_fuze/cn_031.wav","text":"站起来，你的伤并不致命。"}],"失败":[{"url":"voice/char_4126_fuze/cn_032.wav","text":"快跑，就现在！"}],"进驻":[{"url":"voice/char_4126_fuze/cn_033.wav","text":"这地方不赖。"}],"戳一下":[{"url":"voice/char_4126_fuze/cn_034.wav","text":"别这样......"}],"信赖触摸":[{"url":"voice/char_4126_fuze/cn_036.wav","text":"我做了抓饭，你要来点吗？"}],"标题":[{"url":"voice/char_4126_fuze/cn_037.wav","text":"明日方舟。"}],"问候":[{"url":"voice/char_4126_fuze/cn_042.wav","text":"嗨......"}]}}
+{
+  "中文": {
+    "登录": [
+      {
+        "url": "voice/char_4126_fuze/cn_001.wav",
+        "text": "嗯......有事你说。"
+      }
+    ],
+    "交谈": [
+      {
+        "url": "voice/char_4126_fuze/cn_002.wav",
+        "text": "工作间里危险物品很多，留神。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_003.wav",
+        "text": "工程部......还不错，就是那里的头儿......有点太能说了。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_004.wav",
+        "text": "我喜欢机器，它们不说话，但上面的读数总是很坦诚。"
+      }
+    ],
+    "晋升交谈": [
+      {
+        "url": "voice/char_4126_fuze/cn_005.wav",
+        "text": "只有在你无法适应的时候，混乱才会成为敌人。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_006.wav",
+        "text": "当你面临的混乱危及你所爱的人，你该做的不是保护他们，而是......让他们远离你。"
+      }
+    ],
+    "信赖": [
+      {
+        "url": "voice/char_4126_fuze/cn_007.wav",
+        "text": "不，我的通讯设备没有损坏，你多虑了。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_008.wav",
+        "text": "让我随便说点什么？呃，这才是最困难的事。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_009.wav",
+        "text": "你问我的家乡？那里......天空是蓝色的，天空下的建筑也是蓝色的。"
+      }
+    ],
+    "闲置": [
+      {
+        "url": "voice/char_4126_fuze/cn_010.wav",
+        "text": "好......我会自己找事做的。"
+      }
+    ],
+    "报到": [
+      {
+        "url": "voice/char_4126_fuze/cn_011.wav",
+        "text": "彩虹小队成员，代号导火索。该说的已经说了，行动吧。"
+      }
+    ],
+    "作战记录": [
+      {
+        "url": "voice/char_4126_fuze/cn_012.wav",
+        "text": "没问题，我会抽时间看的。"
+      }
+    ],
+    "精英化1": [
+      {
+        "url": "voice/char_4126_fuze/cn_013.wav",
+        "text": "好事......谢谢。"
+      }
+    ],
+    "精英化2": [
+      {
+        "url": "voice/char_4126_fuze/cn_014.wav",
+        "text": "我需要在很多人面前说些什么吗？不用......太好了。"
+      }
+    ],
+    "编入": [
+      {
+        "url": "voice/char_4126_fuze/cn_017.wav",
+        "text": "随时待命。"
+      }
+    ],
+    "任命队长": [
+      {
+        "url": "voice/char_4126_fuze/cn_018.wav",
+        "text": "按我说的去做。"
+      }
+    ],
+    "行动出发": [
+      {
+        "url": "voice/char_4126_fuze/cn_019.wav",
+        "text": "闲聊到此为止，现在开始行动。"
+      }
+    ],
+    "行动开始": [
+      {
+        "url": "voice/char_4126_fuze/cn_020.wav",
+        "text": "“套娃”准备好了。"
+      }
+    ],
+    "选中": [
+      {
+        "url": "voice/char_4126_fuze/cn_021.wav",
+        "text": "专心做手头的任务。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_022.wav",
+        "text": "记住我们的目标。"
+      }
+    ],
+    "部署": [
+      {
+        "url": "voice/char_4126_fuze/cn_023.wav",
+        "text": "小点声。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_024.wav",
+        "text": "保持静默。"
+      }
+    ],
+    "技能": [
+      {
+        "url": "voice/char_4126_fuze/cn_025.wav",
+        "text": "跟我来！"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_026.wav",
+        "text": "保持警觉。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_027.wav",
+        "text": "集中注意力。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_028.wav",
+        "text": "坚守阵地。"
+      }
+    ],
+    "高难胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_029.wav",
+        "text": "每一次行动都为我们创造了获胜的机会。"
+      }
+    ],
+    "3星胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_030.wav",
+        "text": "人质安全了。"
+      }
+    ],
+    "非3星胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_031.wav",
+        "text": "站起来，你的伤并不致命。"
+      }
+    ],
+    "失败": [
+      {
+        "url": "voice/char_4126_fuze/cn_032.wav",
+        "text": "快跑，就现在！"
+      }
+    ],
+    "进驻": [
+      {
+        "url": "voice/char_4126_fuze/cn_033.wav",
+        "text": "这地方不赖。"
+      }
+    ],
+    "戳一下": [
+      {
+        "url": "voice/char_4126_fuze/cn_034.wav",
+        "text": "别这样......"
+      }
+    ],
+    "信赖触摸": [
+      {
+        "url": "voice/char_4126_fuze/cn_036.wav",
+        "text": "我做了抓饭，你要来点吗？"
+      }
+    ],
+    "标题": [
+      {
+        "url": "voice/char_4126_fuze/cn_037.wav",
+        "text": "明日方舟。"
+      }
+    ],
+    "问候": [
+      {
+        "url": "voice/char_4126_fuze/cn_042.wav",
+        "text": "嗨......"
+      }
+    ]
+  },
+  "日文": {
+    "登录": [
+      {
+        "url": "voice/char_4126_fuze/cn_001.wav",
+        "text": "嗯......有事你说。"
+      }
+    ],
+    "交谈": [
+      {
+        "url": "voice/char_4126_fuze/cn_002.wav",
+        "text": "工作间里危险物品很多，留神。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_003.wav",
+        "text": "工程部......还不错，就是那里的头儿......有点太能说了。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_004.wav",
+        "text": "我喜欢机器，它们不说话，但上面的读数总是很坦诚。"
+      }
+    ],
+    "晋升交谈": [
+      {
+        "url": "voice/char_4126_fuze/cn_005.wav",
+        "text": "只有在你无法适应的时候，混乱才会成为敌人。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_006.wav",
+        "text": "当你面临的混乱危及你所爱的人，你该做的不是保护他们，而是......让他们远离你。"
+      }
+    ],
+    "信赖": [
+      {
+        "url": "voice/char_4126_fuze/cn_007.wav",
+        "text": "不，我的通讯设备没有损坏，你多虑了。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_008.wav",
+        "text": "让我随便说点什么？呃，这才是最困难的事。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_009.wav",
+        "text": "你问我的家乡？那里......天空是蓝色的，天空下的建筑也是蓝色的。"
+      }
+    ],
+    "闲置": [
+      {
+        "url": "voice/char_4126_fuze/cn_010.wav",
+        "text": "好......我会自己找事做的。"
+      }
+    ],
+    "报到": [
+      {
+        "url": "voice/char_4126_fuze/cn_011.wav",
+        "text": "彩虹小队成员，代号导火索。该说的已经说了，行动吧。"
+      }
+    ],
+    "作战记录": [
+      {
+        "url": "voice/char_4126_fuze/cn_012.wav",
+        "text": "没问题，我会抽时间看的。"
+      }
+    ],
+    "精英化1": [
+      {
+        "url": "voice/char_4126_fuze/cn_013.wav",
+        "text": "好事......谢谢。"
+      }
+    ],
+    "精英化2": [
+      {
+        "url": "voice/char_4126_fuze/cn_014.wav",
+        "text": "我需要在很多人面前说些什么吗？不用......太好了。"
+      }
+    ],
+    "编入": [
+      {
+        "url": "voice/char_4126_fuze/cn_017.wav",
+        "text": "随时待命。"
+      }
+    ],
+    "任命队长": [
+      {
+        "url": "voice/char_4126_fuze/cn_018.wav",
+        "text": "按我说的去做。"
+      }
+    ],
+    "行动出发": [
+      {
+        "url": "voice/char_4126_fuze/cn_019.wav",
+        "text": "闲聊到此为止，现在开始行动。"
+      }
+    ],
+    "行动开始": [
+      {
+        "url": "voice/char_4126_fuze/cn_020.wav",
+        "text": "“套娃”准备好了。"
+      }
+    ],
+    "选中": [
+      {
+        "url": "voice/char_4126_fuze/cn_021.wav",
+        "text": "专心做手头的任务。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_022.wav",
+        "text": "记住我们的目标。"
+      }
+    ],
+    "部署": [
+      {
+        "url": "voice/char_4126_fuze/cn_023.wav",
+        "text": "小点声。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_024.wav",
+        "text": "保持静默。"
+      }
+    ],
+    "技能": [
+      {
+        "url": "voice/char_4126_fuze/cn_025.wav",
+        "text": "跟我来！"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_026.wav",
+        "text": "保持警觉。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_027.wav",
+        "text": "集中注意力。"
+      },
+      {
+        "url": "voice/char_4126_fuze/cn_028.wav",
+        "text": "坚守阵地。"
+      }
+    ],
+    "高难胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_029.wav",
+        "text": "每一次行动都为我们创造了获胜的机会。"
+      }
+    ],
+    "3星胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_030.wav",
+        "text": "人质安全了。"
+      }
+    ],
+    "非3星胜利": [
+      {
+        "url": "voice/char_4126_fuze/cn_031.wav",
+        "text": "站起来，你的伤并不致命。"
+      }
+    ],
+    "失败": [
+      {
+        "url": "voice/char_4126_fuze/cn_032.wav",
+        "text": "快跑，就现在！"
+      }
+    ],
+    "进驻": [
+      {
+        "url": "voice/char_4126_fuze/cn_033.wav",
+        "text": "这地方不赖。"
+      }
+    ],
+    "戳一下": [
+      {
+        "url": "voice/char_4126_fuze/cn_034.wav",
+        "text": "别这样......"
+      }
+    ],
+    "信赖触摸": [
+      {
+        "url": "voice/char_4126_fuze/cn_036.wav",
+        "text": "我做了抓饭，你要来点吗？"
+      }
+    ],
+    "标题": [
+      {
+        "url": "voice/char_4126_fuze/cn_037.wav",
+        "text": "明日方舟。"
+      }
+    ],
+    "问候": [
+      {
+        "url": "voice/char_4126_fuze/cn_042.wav",
+        "text": "嗨......"
+      }
+    ]
+  }
+}
