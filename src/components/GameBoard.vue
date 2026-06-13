@@ -153,6 +153,7 @@ import { ref, reactive, computed, onMounted, watch, nextTick } from 'vue'
 import { loadOperators } from '../logic/operatorSearch.js'
 import { getCached, setCache } from '../cache.js'
 import { selectRandomOperator, getVoiceClips, generateChoices } from '../logic/gameEngine.js'
+import { buildVoiceUrl } from '../logic/audioLoader.js'
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
 import { VOICE_TYPES } from '../utils/constants.js'
 
@@ -304,6 +305,18 @@ async function startNewQuestion() {
   const clips = getVoiceClips(op.name, { [op.name]: voiceData }, settings)
   const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
   const choices = generateChoices(op, filteredOperators, numChoices)
+
+  // 预加载所有音频到浏览器缓存，点播放时秒开
+  clips.forEach(clip => {
+    if (clip.url) {
+      const audioUrl = buildVoiceUrl(clip.url)
+      const preloader = new Audio()
+      preloader.preload = 'auto'
+      preloader.src = audioUrl
+      preloader.load()
+      // 不保留引用，让浏览器缓存处理后续请求
+    }
+  })
 
   currentQuestion.value = { operator: op }
   currentClips.value = clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }]
