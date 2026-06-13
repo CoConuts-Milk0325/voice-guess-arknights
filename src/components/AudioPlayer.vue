@@ -138,13 +138,9 @@ function startProgress() {
     if (!myAudio) return
     const ct = myAudio.currentTime
     currentTime.value = ct
-    // 用浏览器报的 duration，如果不可用则动态推算
     const dur = myAudio.duration
     if (Number.isFinite(dur) && dur > 0) {
       duration.value = dur
-    } else if (ct > duration.value) {
-      // 浏览器没给准确时长，用当前播放位置 + 1 秒余量
-      duration.value = ct + 1
     }
     progressPercent.value = duration.value > 0
       ? (ct / duration.value) * 100

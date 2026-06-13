@@ -63,12 +63,17 @@ export default {
         return new Response('Not Found', { status: 404, headers: corsHeaders });
       }
 
-      // 构建响应
+      // 读取完整音频数据以获取 Content-Length
+      const audioData = await response.arrayBuffer();
+
+      // 构建响应，带上 Content-Length 以便浏览器计算 duration
       const headers = new Headers(corsHeaders);
       headers.set('Content-Type', response.headers.get('Content-Type') || 'audio/wav');
+      headers.set('Content-Length', audioData.byteLength.toString());
       headers.set('Cache-Control', 'public, max-age=604800'); // 7天
+      headers.set('Accept-Ranges', 'bytes');
 
-      const responseToCache = new Response(response.body, {
+      const responseToCache = new Response(audioData, {
         status: 200,
         headers,
       });
