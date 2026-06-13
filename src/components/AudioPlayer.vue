@@ -93,12 +93,15 @@ watch(() => props.url, async (newUrl) => {
     myAudio.preload = 'auto'
 
     // 不加 ?t= 时间戳，让浏览器正常缓存音频
-    // 先获取 metadata（duration），再等 canplaythrough
+    // 监听 duration 变化（流式加载过程中浏览器可能更新 duration）
+    const onDurationChange = () => {
+      const dur = myAudio.duration
+      if (Number.isFinite(dur) && dur > 0) duration.value = dur
+    }
+    myAudio.addEventListener('durationchange', onDurationChange)
+    myAudio.addEventListener('loadedmetadata', onDurationChange)
+
     await new Promise((resolve, reject) => {
-      myAudio.addEventListener('loadedmetadata', () => {
-        const dur = myAudio.duration
-        if (Number.isFinite(dur) && dur > 0) duration.value = dur
-      }, { once: true })
       myAudio.addEventListener('canplaythrough', resolve, { once: true })
       myAudio.addEventListener('error', reject, { once: true })
       myAudio.src = fullUrl
@@ -142,9 +145,9 @@ function startProgress() {
     if (Number.isFinite(dur) && dur > 0) {
       duration.value = dur
     }
-    progressPercent.value = duration.value > 0
-      ? (ct / duration.value) * 100
-      : 0
+    // 如果 duration 一直没拿到，用已播时间 + 2 秒做临时估算
+    const displayDur = duration.value > 0 ? duration.value : ct + 2
+    progressPercent.value = (ct / displayDur) * 100
 
     if (myAudio.ended) {
       isPlaying.value = false
