@@ -14,6 +14,9 @@
       <span class="time-label">{{ formatTime(currentTime) }}</span>
     </div>
     <div class="audio-footer">
+      <span class="load-status" :class="isLoaded ? 'status-loaded' : 'status-loading'">
+        <span class="status-icon"></span>
+      </span>
       <span class="voice-type">{{ voiceType }}</span>
       <span class="guesses-left" v-if="guessesLeft > 0">
         还可猜 <strong>{{ guessesLeft }}</strong> 次
@@ -51,6 +54,7 @@ const duration = ref(0)
 const progressPercent = ref(0)
 const languageClass = ref('')
 const loadError = ref('')
+const isLoaded = ref(false)
 
 let myAudio = null
 let progressInterval = null
@@ -80,6 +84,7 @@ watch(() => props.url, async (newUrl) => {
   currentTime.value = 0
   progressPercent.value = 0
   loadError.value = ''
+  isLoaded.value = false
 
   const fullUrl = buildVoiceUrl(newUrl)
 
@@ -88,13 +93,21 @@ watch(() => props.url, async (newUrl) => {
     myAudio.preload = 'auto'
 
     // 不加 ?t= 时间戳，让浏览器正常缓存音频
+    // 先获取 metadata（duration），再等 canplaythrough
     await new Promise((resolve, reject) => {
+      myAudio.addEventListener('loadedmetadata', () => {
+        const dur = myAudio.duration
+        if (Number.isFinite(dur) && dur > 0) duration.value = dur
+      }, { once: true })
       myAudio.addEventListener('canplaythrough', resolve, { once: true })
       myAudio.addEventListener('error', reject, { once: true })
       myAudio.src = fullUrl
     })
 
-    duration.value = Number.isFinite(myAudio.duration) ? myAudio.duration : 5
+    isLoaded.value = true
+    // 用 loadedmetadata 获取更准确的 duration，不设 fallback
+    const dur = myAudio.duration
+    duration.value = Number.isFinite(dur) && dur > 0 ? dur : 0
     emit('loaded')
   } catch (e) {
     loadError.value = '加载失败，跳过...'
@@ -125,7 +138,7 @@ function startProgress() {
     if (!myAudio) return
     currentTime.value = myAudio.currentTime
     const dur = myAudio.duration
-    duration.value = Number.isFinite(dur) ? dur : 5
+    if (Number.isFinite(dur) && dur > 0) duration.value = dur
     progressPercent.value = currentTime.value > 0 && duration.value > 0
       ? (currentTime.value / duration.value) * 100
       : 0
@@ -158,10 +171,11 @@ function seek(e) {
   if (!myAudio) return
   const rect = e.currentTarget.getBoundingClientRect()
   const percent = (e.clientX - rect.left) / rect.width
-  myAudio.currentTime = percent * (myAudio.duration || 5)
+  myAudio.currentTime = percent * (Number.isFinite(myAudio.duration) ? myAudio.duration : 0)
 }
 
 function formatTime(seconds) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return '--:--'
   const m = Math.floor(seconds / 60)
   const s = Math.floor(seconds % 60)
   return `${m}:${String(s).padStart(2, '0')}`
@@ -287,6 +301,52 @@ onUnmounted(() => {
   justify-content: space-between;
   align-items: center;
   margin-top: 14px;
+  gap: 6px;
+}
+
+.load-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.status-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* 加载中：旋转边框 */
+.status-loading .status-icon {
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 加载完：圆圈加对号 */
+.status-loaded .status-icon {
+  background: var(--accent);
+}
+
+.status-loaded .status-icon::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .voice-type {
