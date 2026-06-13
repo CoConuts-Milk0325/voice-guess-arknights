@@ -6,31 +6,51 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    if (request.method === 'OPTIONS') {
+      // 预检请求：回显客户端要求的头和方法
+      const reqHeaders = request.headers.get('Access-Control-Request-Headers') || '';
+      const reqMethod = request.headers.get('Access-Control-Request-Method') || 'GET';
+      return new Response(null, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': reqMethod,
+          'Access-Control-Allow-Headers': reqHeaders || '*',
+          'Access-Control-Max-Age': '86400',
+        },
+      });
+    }
+
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
     };
-
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: corsHeaders });
-    }
 
     if (!url.pathname.startsWith('/audio/')) {
       return new Response('Not Found', { status: 404 });
     }
 
+    // 去除 query 参数，避免 ?t=... 破坏缓存
+    const cleanUrl = new URL(url.toString());
+    cleanUrl.search = '';
+
     const audioPath = url.pathname.replace('/audio/', '');
     const targetUrl = `https://torappu.prts.wiki/assets/audio/${audioPath}`;
 
-    // 使用 Cloudflare Cache API
+    // 使用 Cloudflare Cache API（用无 query 的 URL 做缓存键）
     const cache = caches.default;
-    const cacheKey = new Request(url.toString(), request);
+    const cacheKey = new Request(cleanUrl.toString(), request);
     const cachedResponse = await cache.match(cacheKey);
 
     if (cachedResponse) {
-      // 命中缓存，直接返回
-      return cachedResponse;
+      // 命中缓存，加上 CORS 头后返回
+      const headers = new Headers(cachedResponse.headers);
+      headers.set('Access-Control-Allow-Origin', '*');
+      headers.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
+      headers.set('Access-Control-Allow-Headers', 'Content-Type');
+      return new Response(cachedResponse.body, {
+        status: cachedResponse.status,
+        headers,
+      });
     }
 
     try {

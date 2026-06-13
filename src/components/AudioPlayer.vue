@@ -85,7 +85,6 @@ watch(() => props.url, async (newUrl) => {
 
   try {
     myAudio = new Audio()
-    myAudio.crossOrigin = 'anonymous'
     myAudio.preload = 'auto'
 
     const cacheBuster = fullUrl.includes('?') ? '&' : '?'
