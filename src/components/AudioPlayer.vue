@@ -96,7 +96,7 @@ watch(() => props.url, async (newUrl) => {
       myAudio.src = finalUrl
     })
 
-    duration.value = myAudio.duration || 5
+    duration.value = Number.isFinite(myAudio.duration) ? myAudio.duration : 5
     emit('loaded')
   } catch (e) {
     loadError.value = '加载失败，跳过...'
@@ -126,8 +126,11 @@ function startProgress() {
   progressInterval = setInterval(() => {
     if (!myAudio) return
     currentTime.value = myAudio.currentTime
-    duration.value = myAudio.duration || 5
-    progressPercent.value = (currentTime.value / duration.value) * 100
+    const dur = myAudio.duration
+    duration.value = Number.isFinite(dur) ? dur : 5
+    progressPercent.value = currentTime.value > 0 && duration.value > 0
+      ? (currentTime.value / duration.value) * 100
+      : 0
 
     if (myAudio.ended) {
       isPlaying.value = false

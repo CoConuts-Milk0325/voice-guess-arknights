@@ -30,8 +30,8 @@
   --r-full: 9999px;
 
   /* Fonts */
-  --font-display: 'Outfit', 'Noto Sans SC', sans-serif;
-  --font-body: 'Noto Sans SC', 'Outfit', sans-serif;
+  --font-display: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-body: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 * {
