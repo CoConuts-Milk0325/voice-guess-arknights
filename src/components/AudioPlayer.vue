@@ -100,9 +100,27 @@ watch(() => props.url, async (newUrl) => {
     myAudio.addEventListener('durationchange', onDurationChange)
     myAudio.addEventListener('loadedmetadata', onDurationChange)
 
+    // 超时 + 容错： error 可能被 302 跳转误触，延迟一小段时间才确认失败
     await new Promise((resolve, reject) => {
-      myAudio.addEventListener('canplaythrough', resolve, { once: true })
-      myAudio.addEventListener('error', reject, { once: true })
+      let errorTimer = null
+      const timeoutTimer = setTimeout(() => reject(new Error('timeout')), 15000)
+
+      myAudio.addEventListener('canplaythrough', () => {
+        clearTimeout(timeoutTimer)
+        if (errorTimer) clearTimeout(errorTimer)
+        resolve()
+      }, { once: true })
+
+      myAudio.addEventListener('error', () => {
+        // 等 3 秒，如果 canplaythrough 没来再确认失败
+        if (!errorTimer) {
+          errorTimer = setTimeout(() => {
+            clearTimeout(timeoutTimer)
+            reject(new Error('load error'))
+          }, 3000)
+        }
+      })
+
       myAudio.src = fullUrl
     })
 
@@ -111,6 +129,7 @@ watch(() => props.url, async (newUrl) => {
     if (Number.isFinite(dur) && dur > 0) duration.value = dur
     emit('loaded')
   } catch (e) {
+    // 只有超时或真正的加载失败才到这里
     loadError.value = '加载失败，跳过...'
     emit('skip')
   }

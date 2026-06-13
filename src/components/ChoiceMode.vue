@@ -6,6 +6,7 @@
           v-for="(opt, i) in choices"
           :key="opt.name"
           class="choice-card"
+          :class="{ wrong: wrongNames.has(opt.name) }"
           @click="$emit('select', opt.name)"
         >
           <div class="choice-letter">{{ letters[i] }}</div>
@@ -32,12 +33,18 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   choices: { type: Array, default: () => [] },
   history: { type: Array, default: () => [] }
 })
 
 defineEmits(['select'])
+
+const wrongNames = computed(() => new Set(
+  props.history.filter(h => !h.correct).map(h => h.name)
+))
 
 const letters = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
   '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
@@ -97,6 +104,16 @@ const letters = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
 .choice-card:hover .choice-letter {
   background: var(--accent-light);
   color: var(--accent);
+}
+
+.choice-card.wrong {
+  border-color: var(--red);
+  background: var(--red-light);
+}
+
+.choice-card.wrong .choice-letter {
+  background: var(--red);
+  color: white;
 }
 
 .choice-text {
