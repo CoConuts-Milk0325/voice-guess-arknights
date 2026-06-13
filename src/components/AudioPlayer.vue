@@ -97,7 +97,6 @@ watch(() => props.url, async (newUrl) => {
     duration.value = Number.isFinite(myAudio.duration) ? myAudio.duration : 5
     emit('loaded')
   } catch (e) {
-    loading.value = false
     loadError.value = '加载失败，跳过...'
     emit('skip')
   }
