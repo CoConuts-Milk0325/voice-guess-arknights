@@ -92,8 +92,7 @@ watch(() => props.url, async (newUrl) => {
     myAudio = new Audio()
     myAudio.preload = 'auto'
 
-    // 不加 ?t= 时间戳，让浏览器正常缓存音频
-    // 监听 duration 变化（流式加载过程中浏览器可能更新 duration）
+    // 监听 duration 变化
     const onDurationChange = () => {
       const dur = myAudio.duration
       if (Number.isFinite(dur) && dur > 0) duration.value = dur
@@ -108,7 +107,6 @@ watch(() => props.url, async (newUrl) => {
     })
 
     isLoaded.value = true
-    // 用 loadedmetadata 获取更准确的 duration
     const dur = myAudio.duration
     if (Number.isFinite(dur) && dur > 0) duration.value = dur
     emit('loaded')
@@ -139,15 +137,10 @@ function startProgress() {
   stopProgress()
   progressInterval = setInterval(() => {
     if (!myAudio) return
-    const ct = myAudio.currentTime
-    currentTime.value = ct
+    currentTime.value = myAudio.currentTime
     const dur = myAudio.duration
-    if (Number.isFinite(dur) && dur > 0) {
-      duration.value = dur
-    }
-    // 如果 duration 一直没拿到，用已播时间 + 2 秒做临时估算
-    const displayDur = duration.value > 0 ? duration.value : ct + 2
-    progressPercent.value = (ct / displayDur) * 100
+    if (Number.isFinite(dur) && dur > 0) duration.value = dur
+    progressPercent.value = duration.value > 0 ? (currentTime.value / duration.value) * 100 : 0
 
     if (myAudio.ended) {
       isPlaying.value = false
