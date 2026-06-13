@@ -5,8 +5,8 @@
       <span class="audio-lang-badge" :class="languageClass">{{ language }}</span>
     </div>
     <div class="player">
-      <button class="play-btn" @click="togglePlay">
-        {{ isPlaying ? '⏸' : '▶' }}
+      <button class="play-btn" :class="{ 'is-loading': loading }" @click="togglePlay" :disabled="loading">
+        {{ loading ? '⏳' : (isPlaying ? '⏸' : '▶') }}
       </button>
       <div class="progress-track" @click="seek">
         <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
@@ -51,6 +51,7 @@ const duration = ref(0)
 const progressPercent = ref(0)
 const languageClass = ref('')
 const loadError = ref('')
+const loading = ref(false)
 
 let myAudio = null
 let progressInterval = null
@@ -87,8 +88,9 @@ watch(() => props.url, async (newUrl) => {
     myAudio = new Audio()
     myAudio.preload = 'auto'
 
-    const cacheBuster = fullUrl.includes('?') ? '&' : '?'
-    const finalUrl = `${fullUrl}${cacheBuster}t=${Date.now()}`
+    // 不加 ?t= 时间戳，让浏览器正常缓存音频
+    const finalUrl = fullUrl
+    loading.value = true
 
     await new Promise((resolve, reject) => {
       myAudio.addEventListener('canplaythrough', resolve, { once: true })
@@ -97,8 +99,19 @@ watch(() => props.url, async (newUrl) => {
     })
 
     duration.value = Number.isFinite(myAudio.duration) ? myAudio.duration : 5
+    loading.value = false
     emit('loaded')
+
+    // 加载完自动播放
+    try {
+      await myAudio.play()
+      isPlaying.value = true
+      startProgress()
+    } catch (playErr) {
+      // 浏览器阻止自动播放是正常的，用户点播放按钮即可
+    }
   } catch (e) {
+    loading.value = false
     loadError.value = '加载失败，跳过...'
     emit('skip')
   }
