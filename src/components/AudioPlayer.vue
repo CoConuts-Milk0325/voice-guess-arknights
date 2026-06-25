@@ -100,25 +100,24 @@ watch(() => props.url, async (newUrl) => {
     myAudio.addEventListener('durationchange', onDurationChange)
     myAudio.addEventListener('loadedmetadata', onDurationChange)
 
-    // 超时 + 容错： error 可能被 302 跳转误触，延迟一小段时间才确认失败
+    // 超时兜底，error 事件不用于判定（302 跳转会误触）
     await new Promise((resolve, reject) => {
-      let errorTimer = null
       const timeoutTimer = setTimeout(() => reject(new Error('timeout')), 15000)
 
       myAudio.addEventListener('canplaythrough', () => {
         clearTimeout(timeoutTimer)
-        if (errorTimer) clearTimeout(errorTimer)
         resolve()
       }, { once: true })
 
+      // error 事件：仅 MEDIA_ERR_SRC_NOT_SUPPORTED 才判定失败
       myAudio.addEventListener('error', () => {
-        // 等 3 秒，如果 canplaythrough 没来再确认失败
-        if (!errorTimer) {
-          errorTimer = setTimeout(() => {
-            clearTimeout(timeoutTimer)
-            reject(new Error('load error'))
-          }, 3000)
+        const code = myAudio?.error?.code
+        if (code === 4) { // MEDIA_ERR_SRC_NOT_SUPPORTED
+          clearTimeout(timeoutTimer)
+          reject(new Error('unsupported'))
         }
+        // 其他错误（1=ABORTED 重定向误报, 2=NETWORK 可能恢复, 3=DECODE WAV 常见）
+        // 不 reject，让超时兜底
       })
 
       myAudio.src = fullUrl
