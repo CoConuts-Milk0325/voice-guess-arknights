@@ -2,6 +2,8 @@
 
 根据《明日方舟》干员语音猜干员的网页游戏。
 
+**在线地址：https://voice-guess-arknights.coconutsmilk.top**
+
 ## 功能
 - 420+ 干员语音数据
 - 中文/日文语音支持
