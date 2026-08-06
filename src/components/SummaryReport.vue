@@ -30,6 +30,10 @@
         <div class="stat-value">{{ chineseCorrect }}/{{ totalQuestions }}</div>
         <div class="stat-label">中文猜对</div>
       </div>
+      <div class="stat-item">
+        <div class="stat-value">{{ japaneseCorrect }}/{{ totalQuestions }}</div>
+        <div class="stat-label">日文猜对</div>
+      </div>
     </div>
 
     <div class="history-section">
@@ -54,6 +58,7 @@ defineProps({
   timeUsed: { type: String, default: '0:00' },
   grade: { type: String, default: 'D' },
   chineseCorrect: { type: Number, default: 0 },
+  japaneseCorrect: { type: Number, default: 0 },
   history: { type: Array, default: () => [] }
 })
 

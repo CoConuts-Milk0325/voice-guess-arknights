@@ -1,3 +1,16 @@
+import MD5 from 'md5'
+
+export function getAvatarUrl(operator) {
+  const name = operator?.name
+  const rarity = operator?.rarity
+  if (!name) return ''
+  const filename = parseInt(rarity) >= 3
+    ? `头像_${name}_2.png`
+    : `头像_${name}.png`
+  const md5 = MD5(filename)
+  return `https://media.prts.wiki/${md5[0]}/${md5.slice(0, 2)}/${filename}`
+}
+
 export function selectRandomOperator(operators, lastName = null) {
   if (!operators.length) return null
 

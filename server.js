@@ -1,8 +1,11 @@
-const http = require('http');
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
-const zlib = require('zlib');
+import http from 'node:http';
+import https from 'node:https';
+import fs from 'node:fs';
+import path from 'node:path';
+import zlib from 'node:zlib';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const PORT = 5173;
 const DIST = path.join(__dirname, 'dist');
@@ -26,8 +29,17 @@ const MIME = {
   '.ogg': 'audio/ogg'
 };
 
-// Audio memory cache
+// Audio memory cache (cap entries to avoid unbounded memory growth)
 const audioCache = new Map();
+const AUDIO_CACHE_MAX = 200;
+
+function cacheAudio(key, value) {
+  if (audioCache.size >= AUDIO_CACHE_MAX && !audioCache.has(key)) {
+    const oldestKey = audioCache.keys().next().value;
+    audioCache.delete(oldestKey);
+  }
+  audioCache.set(key, value);
+}
 
 // Check if client accepts gzip
 function acceptsGzip(req) {
@@ -47,7 +59,7 @@ function gzipCompress(data) {
 
 // Serve static file with gzip and caching
 async function serveStatic(req, res) {
-  let filePath = path.join(DIST, req.url === '/' ? 'index.html' : req.url.split('?')[0]);
+  let filePath = path.join(DIST, req.url === '/' ? 'index.html' : decodeURIComponent(req.url.split('?')[0]));
 
   if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
     filePath = path.join(DIST, 'index.html');
@@ -114,7 +126,7 @@ async function proxyAudio(req, res) {
   if (fs.existsSync(cacheFile)) {
     const data = fs.readFileSync(cacheFile);
     const contentType = MIME[path.extname(urlPath)] || 'audio/wav';
-    audioCache.set(urlPath, { data, contentType });
+    cacheAudio(urlPath, { data, contentType });
     res.writeHead(200, {
       'Content-Type': contentType,
       'Cache-Control': 'public, max-age=604800',
@@ -126,7 +138,7 @@ async function proxyAudio(req, res) {
   }
 
   // Fetch from CDN
-  const cdnUrl = `https://torappu.prts.wiki/assets/audio${urlPath}`;
+  const cdnUrl = `https://torappu.prts.wiki/assets/audio${urlPath.replace(/^\/audio/, '')}`;
 
   https.get(cdnUrl, {
     headers: { 'User-Agent': 'Mozilla/5.0' }
@@ -144,7 +156,7 @@ async function proxyAudio(req, res) {
       const contentType = proxyRes.headers['content-type'] || 'audio/wav';
 
       // Cache
-      audioCache.set(urlPath, { data, contentType });
+      cacheAudio(urlPath, { data, contentType });
       fs.writeFileSync(cacheFile, data);
 
       res.writeHead(200, {

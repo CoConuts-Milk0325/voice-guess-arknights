@@ -12,7 +12,7 @@
         <button class="back-btn" @click="showChallengeSetup = false">← 返回</button>
         <div class="setup-card">
           <h2 class="setup-title">🏆 挑战模式</h2>
-          <p class="setup-desc">20道题，看看你能拿多少分</p>
+          <p class="setup-desc">{{ settings.questionCount }}道题，看看你能拿多少分</p>
 
           <div class="setting-group">
             <div class="setting-label">输入模式</div>
@@ -43,6 +43,18 @@
                 <div class="check-box">{{ settings.selectedStars.includes(star) ? '✓' : '' }}</div>
                 {{ '★'.repeat(star) }}
               </div>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-label">题目数量</div>
+            <div class="slider-container">
+              <div class="slider-header">
+                <span class="slider-desc">题数</span>
+                <span class="slider-value">{{ settings.questionCount }}</span>
+              </div>
+              <input type="range" class="slider" min="3" max="20" v-model.number="settings.questionCount" />
+              <div class="slider-labels"><span>3</span><span>11</span><span>20</span></div>
             </div>
           </div>
 
@@ -118,7 +130,6 @@
               :guessesLeft="idx === displayedClips.length - 1 ? guessesLeftForClip : 0"
               :text="showText ? (clip.text || '') : ''"
               :active="idx === displayedClips.length - 1"
-              @loaded="onAudioLoaded"
               @skip="onAudioSkip"
             />
           </div>
@@ -150,9 +161,9 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, watch, nextTick } from 'vue'
-import { loadOperators } from '../logic/operatorSearch.js'
+import { loadOperators, searchOperators } from '../logic/operatorSearch.js'
 import { getCached, setCache } from '../cache.js'
-import { selectRandomOperator, getVoiceClips, generateChoices } from '../logic/gameEngine.js'
+import { selectRandomOperator, getVoiceClips, generateChoices, getAvatarUrl } from '../logic/gameEngine.js'
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
 import { VOICE_TYPES } from '../utils/constants.js'
 
@@ -166,7 +177,6 @@ import SummaryReport from './SummaryReport.vue'
 
 const loading = ref(true)
 const operators = ref([])
-const voiceMapping = ref({})
 const showSettings = ref(false)
 const showText = ref(false)
 const showChallengeSetup = ref(false)
@@ -174,6 +184,7 @@ const guessText = ref('')
 const guessInputRef = ref(null)
 const inChallenge = ref(false)
 const lastOperatorName = ref(null)
+const targetOperator = ref(null)
 const audioKey = ref(0)
 
 const voiceTypesList = VOICE_TYPES
@@ -184,6 +195,7 @@ const settings = reactive({
   selectedStars: [1, 2, 3, 4, 5, 6],
   maxGuesses: 10,
   guessesPerClip: 3,
+  questionCount: 10,
   voiceTypes: [...VOICE_TYPES]
 })
 
@@ -223,9 +235,22 @@ onMounted(async () => {
     console.error('Failed to load data:', e)
   } finally {
     loading.value = false
+    resolveTargetOperator()
     startNewQuestion()
   }
 })
+
+// Parse ?target=xxx from URL and resolve to an operator
+function resolveTargetOperator() {
+  const params = new URLSearchParams(window.location.search)
+  const target = params.get('target')
+  if (!target) return
+  const matches = searchOperators(target, operators.value)
+  if (matches.length) {
+    targetOperator.value = matches[0]
+    console.log('Target operator:', targetOperator.value.name)
+  }
+}
 
 // Load voice data for a specific operator (on-demand)
 async function loadOperatorVoices(operatorName) {
@@ -271,7 +296,7 @@ function toggleStar(star) {
 function startChallenge() {
   inChallenge.value = true
   showChallengeSetup.value = false
-  challenge.value = createChallenge()
+  challenge.value = createChallenge(settings.questionCount)
   startNewQuestion()
 }
 
@@ -281,14 +306,24 @@ function onSettingsConfirm() {
   startNewQuestion()
 }
 
-async function startNewQuestion() {
-  // Filter operators by star rating
-  const filteredOperators = operators.value.filter(op => {
+// Filter operators by star rating
+function getFilteredOperators() {
+  return operators.value.filter(op => {
     const rarity = parseInt(op.rarity) || 0
     return settings.selectedStars.includes(rarity + 1)
   })
+}
 
-  const op = selectRandomOperator(filteredOperators, lastOperatorName.value)
+async function startNewQuestion() {
+  const filteredOperators = getFilteredOperators()
+
+  // Use target operator from URL if set (and it passes star filter), otherwise random
+  let op = null
+  if (targetOperator.value && filteredOperators.some(o => o.name === targetOperator.value.name)) {
+    op = targetOperator.value
+  } else {
+    op = selectRandomOperator(filteredOperators, lastOperatorName.value)
+  }
   if (!op) return
 
   lastOperatorName.value = op.name
@@ -296,7 +331,8 @@ async function startNewQuestion() {
   // Load voice data on-demand
   const voiceData = await loadOperatorVoices(op.name)
   if (!voiceData) {
-    // Skip this operator if no voice data
+    // Skip this operator if no voice data (drop target to avoid infinite loop)
+    targetOperator.value = null
     startNewQuestion()
     return
   }
@@ -343,7 +379,8 @@ function onGuess(name) {
         clipsUsed: currentClipIndex.value,
         language: currentClip.value?.language || '中文',
         timeUsed: `${timeUsed}s`,
-        isChoiceMode: settings.inputMode === 'choice'
+        isChoiceMode: settings.inputMode === 'choice',
+        avatarUrl: getAvatarUrl(currentQuestion.value.operator)
       })
     }
   } else {
@@ -366,7 +403,8 @@ function onGuess(name) {
           clipsUsed: currentClipIndex.value,
           language: currentClip.value?.language || '中文',
           timeUsed: `${timeUsed}s`,
-          isChoiceMode: settings.inputMode === 'choice'
+          isChoiceMode: settings.inputMode === 'choice',
+          avatarUrl: getAvatarUrl(currentQuestion.value.operator)
         })
       }
     }
@@ -380,7 +418,6 @@ function nextQuestion() {
   startNewQuestion()
 }
 
-function onAudioLoaded() {}
 function onAudioSkip() {
   // 语音加载失败，自动跳到下一条
   if (currentClipIndex.value < currentClips.value.length) {
@@ -392,8 +429,9 @@ function onAudioSkip() {
 // 切换输入模式时重新生成选项
 watch(() => settings.inputMode, () => {
   if (currentQuestion.value && !showResult.value) {
+    const filteredOperators = getFilteredOperators()
     const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
-    currentChoices.value = generateChoices(currentQuestion.value.operator, operators.value, numChoices)
+    currentChoices.value = generateChoices(currentQuestion.value.operator, filteredOperators, numChoices)
   }
 })
 </script>

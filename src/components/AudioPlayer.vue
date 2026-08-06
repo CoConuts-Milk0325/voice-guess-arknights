@@ -92,7 +92,7 @@ watch(() => props.url, async (newUrl) => {
     myAudio = new Audio()
     myAudio.preload = 'auto'
 
-    // 监听 duration 变化
+    // 监听 duration 变化（用于进度条，不参与加载成败判定）
     const onDurationChange = () => {
       const dur = myAudio.duration
       if (Number.isFinite(dur) && dur > 0) duration.value = dur
@@ -100,35 +100,24 @@ watch(() => props.url, async (newUrl) => {
     myAudio.addEventListener('durationchange', onDurationChange)
     myAudio.addEventListener('loadedmetadata', onDurationChange)
 
-    // 超时兜底，error 事件不用于判定（302 跳转会误触）
-    await new Promise((resolve, reject) => {
-      const timeoutTimer = setTimeout(() => reject(new Error('timeout')), 15000)
-
-      myAudio.addEventListener('canplaythrough', () => {
-        clearTimeout(timeoutTimer)
-        resolve()
-      }, { once: true })
-
-      // error 事件：仅 MEDIA_ERR_SRC_NOT_SUPPORTED 才判定失败
-      myAudio.addEventListener('error', () => {
-        const code = myAudio?.error?.code
-        if (code === 4) { // MEDIA_ERR_SRC_NOT_SUPPORTED
-          clearTimeout(timeoutTimer)
-          reject(new Error('unsupported'))
-        }
-        // 其他错误（1=ABORTED 重定向误报, 2=NETWORK 可能恢复, 3=DECODE WAV 常见）
-        // 不 reject，让超时兜底
-      })
-
-      myAudio.src = fullUrl
+    // 不阻塞等待任何加载事件：302/206 流式加载下
+    // canplay/canplaythrough/loadedmetadata 都可能延迟或不触发，
+    // 浏览器会在用户点击播放时自行处理缓冲。真正失败由 error 事件兜底。
+    myAudio.addEventListener('error', () => {
+      const code = myAudio?.error?.code
+      if (code === 4) { // MEDIA_ERR_SRC_NOT_SUPPORTED：资源确实不可播放
+        loadError.value = '加载失败，跳过...'
+        emit('skip')
+      }
+      // 其他错误（1=ABORTED 重定向误报, 2=NETWORK 可能恢复, 3=DECODE WAV 常见）
+      // 忽略，不打断播放流程
     })
 
+    myAudio.src = fullUrl
+
     isLoaded.value = true
-    const dur = myAudio.duration
-    if (Number.isFinite(dur) && dur > 0) duration.value = dur
     emit('loaded')
   } catch (e) {
-    // 只有超时或真正的加载失败才到这里
     loadError.value = '加载失败，跳过...'
     emit('skip')
   }
@@ -179,7 +168,8 @@ function stopMyAudio() {
   if (myAudio) {
     myAudio.pause()
     myAudio.currentTime = 0
-    myAudio.src = ''
+    myAudio.removeAttribute('src')
+    myAudio.load()
     myAudio = null
   }
 }

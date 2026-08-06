@@ -38,8 +38,8 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import MD5 from 'md5'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { getAvatarUrl } from '../logic/gameEngine.js'
 
 const props = defineProps({
   operator: { type: Object, required: true },
@@ -48,9 +48,26 @@ const props = defineProps({
   isLast: { type: Boolean, default: false }
 })
 
-defineEmits(['next'])
+const emit = defineEmits(['next'])
 
 const avatarError = ref(false)
+const mountedAt = ref(0)
+
+function onEnterKey(e) {
+  if (e.key !== 'Enter' || e.repeat) return
+  // 焦点在输入框时的回车是提交答案，不触发下一题
+  const t = e.target
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+  // 忽略挂载初期（<500ms）的 Enter，避免提交答案后快速连按误触发下一题
+  if (Date.now() - mountedAt.value < 500) return
+  emit('next')
+}
+
+onMounted(() => {
+  mountedAt.value = Date.now()
+  window.addEventListener('keydown', onEnterKey)
+})
+onUnmounted(() => window.removeEventListener('keydown', onEnterKey))
 
 const subTitle = computed(() => {
   if (props.correct) {
@@ -61,12 +78,7 @@ const subTitle = computed(() => {
 
 const avatarUrl = computed(() => {
   if (avatarError.value) return null
-  const name = props.operator.name
-  const filename = parseInt(props.operator.rarity) >= 3
-    ? `头像_${name}_2.png`
-    : `头像_${name}.png`
-  const md5 = MD5(filename)
-  return `https://media.prts.wiki/${md5[0]}/${md5.slice(0, 2)}/${filename}`
+  return getAvatarUrl(props.operator)
 })
 </script>
 

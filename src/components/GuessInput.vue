@@ -14,10 +14,12 @@
 
     <div v-if="showDropdown && results.length" class="search-dropdown">
       <div
-        v-for="op in results"
+        v-for="(op, i) in results"
         :key="op.name"
         class="search-item"
+        :class="{ highlighted: i === 0 }"
         @click="onSelect(op)"
+        @mousemove="highlightedIndex = i"
       >
         <span class="search-name">{{ op.name }}</span>
         <span class="search-sub">{{ op.profession }} · {{ op.nameEn }}</span>
@@ -57,10 +59,12 @@ const emit = defineEmits(['update:modelValue', 'submit'])
 const inputEl = ref(null)
 const results = ref([])
 const showDropdown = ref(false)
+const highlightedIndex = ref(0)
 
 function onInput(e) {
   const value = e.target.value
   emit('update:modelValue', value)
+  highlightedIndex.value = 0
 
   if (value.trim()) {
     results.value = searchOperators(value, props.operators)
@@ -79,10 +83,11 @@ function onSelect(op) {
 }
 
 function onSubmit() {
-  if (props.modelValue.trim()) {
-    showDropdown.value = false
-    emit('submit', props.modelValue.trim())
-  }
+  // 无匹配候选时无法提交
+  if (!results.value.length) return
+  // 自动匹配第一个候选
+  const op = results.value[highlightedIndex.value] || results.value[0]
+  onSelect(op)
 }
 
 function focus() {
@@ -183,8 +188,13 @@ defineExpose({ focus })
   transition: background 0.15s;
 }
 
-.search-item:hover {
+.search-item:hover,
+.search-item.highlighted {
   background: var(--bg-warm);
+}
+
+.search-item.highlighted {
+  background: var(--accent-light);
 }
 
 .search-item:first-child {

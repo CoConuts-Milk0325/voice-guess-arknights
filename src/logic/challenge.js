@@ -1,10 +1,10 @@
 import { MAX_QUESTIONS, GRADE_THRESHOLDS } from '../utils/constants.js'
 import { calculateScore } from './gameEngine.js'
 
-export function createChallenge() {
+export function createChallenge(totalQuestions = MAX_QUESTIONS) {
   return {
     currentQuestion: 0,
-    totalQuestions: MAX_QUESTIONS,
+    totalQuestions,
     score: 0,
     streak: 0,
     maxStreak: 0,
@@ -28,7 +28,7 @@ export function recordQuestion(challenge, record) {
       ? Math.max(challenge.maxStreak, challenge.streak + 1)
       : challenge.maxStreak,
     history: [...challenge.history, { ...record, score }],
-    isComplete: challenge.currentQuestion + 1 >= MAX_QUESTIONS
+    isComplete: challenge.currentQuestion + 1 >= challenge.totalQuestions
   }
 
   return updated
@@ -46,7 +46,7 @@ export function generateSummary(challenge) {
   const minutes = Math.floor(elapsed / 60000)
   const seconds = Math.floor((elapsed % 60000) / 1000)
 
-  const maxPossible = MAX_QUESTIONS * 150
+  const maxPossible = challenge.totalQuestions * 150
   const grade = getGrade(challenge.score)
 
   const chineseCorrect = challenge.history.filter(
@@ -60,8 +60,8 @@ export function generateSummary(challenge) {
     score: challenge.score,
     maxPossible,
     correctCount: challenge.correctCount,
-    totalQuestions: MAX_QUESTIONS,
-    accuracy: Math.round((challenge.correctCount / MAX_QUESTIONS) * 100),
+    totalQuestions: challenge.totalQuestions,
+    accuracy: Math.round((challenge.correctCount / challenge.totalQuestions) * 100),
     maxStreak: challenge.maxStreak,
     timeUsed: `${minutes}:${String(seconds).padStart(2, '0')}`,
     grade,
