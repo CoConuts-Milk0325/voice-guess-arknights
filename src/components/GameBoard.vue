@@ -165,6 +165,7 @@ import { loadOperators, searchOperators } from '../logic/operatorSearch.js'
 import { getCached, setCache } from '../cache.js'
 import { selectRandomOperator, getVoiceClips, generateChoices, getAvatarUrl } from '../logic/gameEngine.js'
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
+import { buildVoiceUrl, preloadAudio } from '../logic/audioLoader.js'
 import { VOICE_TYPES } from '../utils/constants.js'
 
 import AudioPlayer from './AudioPlayer.vue'
@@ -210,6 +211,10 @@ const showResult = ref(false)
 const lastGuessCorrect = ref(false)
 const questionGuessCount = ref(0)
 const questionStartTime = ref(0)
+
+const preloadedQuestion = ref(null)
+const preloadSettingsSnapshot = ref('')
+let preloadEpoch = 0
 
 const currentClip = computed(() => {
   return currentClips.value[currentClipIndex.value - 1] || null
@@ -315,12 +320,23 @@ function getFilteredOperators() {
 }
 
 async function startNewQuestion() {
+  preloadEpoch++
   const filteredOperators = getFilteredOperators()
 
-  // Use target operator from URL if set (and it passes star filter), otherwise random
+  // Try to reuse the preloaded next question (discard if settings changed meanwhile)
+  const snapshot = settingsSnapshot()
+  const candidate = preloadedQuestion.value && preloadSettingsSnapshot.value === snapshot
+    ? preloadedQuestion.value
+    : null
+  preloadedQuestion.value = null
+  preloadSettingsSnapshot.value = ''
+
+  // Use target operator from URL if set (and it passes star filter), otherwise reuse preload or pick random
   let op = null
   if (targetOperator.value && filteredOperators.some(o => o.name === targetOperator.value.name)) {
     op = targetOperator.value
+  } else if (candidate) {
+    op = candidate.operator
   } else {
     op = selectRandomOperator(filteredOperators, lastOperatorName.value)
   }
@@ -328,23 +344,53 @@ async function startNewQuestion() {
 
   lastOperatorName.value = op.name
 
-  // Load voice data on-demand
-  const voiceData = await loadOperatorVoices(op.name)
-  if (!voiceData) {
+  let question = candidate && candidate.operator.name === op.name ? candidate : null
+  if (!question) {
+    question = await prepareQuestion(op)
+  }
+  if (!question) {
     // Skip this operator if no voice data (drop target to avoid infinite loop)
     targetOperator.value = null
     startNewQuestion()
     return
   }
 
+  applyQuestion(question)
+
+  // Preload the next question in the background
+  preloadNextQuestion()
+}
+
+function settingsSnapshot() {
+  return JSON.stringify({
+    inputMode: settings.inputMode,
+    maxGuesses: settings.maxGuesses,
+    languages: [...settings.languages].sort(),
+    stars: [...settings.selectedStars].sort(),
+    voiceTypes: [...settings.voiceTypes].sort()
+  })
+}
+
+async function prepareQuestion(op) {
+  const voiceData = await loadOperatorVoices(op.name)
+  if (!voiceData) return null
+
   const clips = getVoiceClips(op.name, { [op.name]: voiceData }, settings)
   const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
-  const choices = generateChoices(op, filteredOperators, numChoices)
+  const choices = generateChoices(op, getFilteredOperators(), numChoices)
 
-  currentQuestion.value = { operator: op }
-  currentClips.value = clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }]
+  return {
+    operator: op,
+    clips: clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }],
+    choices
+  }
+}
+
+function applyQuestion(question) {
+  currentQuestion.value = { operator: question.operator }
+  currentClips.value = question.clips
   currentClipIndex.value = 1
-  currentChoices.value = choices
+  currentChoices.value = question.choices
   currentHistory.value = []
   showResult.value = false
   lastGuessCorrect.value = false
@@ -356,6 +402,32 @@ async function startNewQuestion() {
   nextTick(() => {
     guessInputRef.value?.focus()
   })
+}
+
+// Pre-generate the next question and preload its first clip while guessing the current one
+async function preloadNextQuestion() {
+  if (targetOperator.value) return
+  if (inChallenge.value && challenge.value.currentQuestion >= challenge.value.totalQuestions - 1) return
+  if (!currentQuestion.value) return
+
+  const filteredOperators = getFilteredOperators()
+  const op = selectRandomOperator(filteredOperators, currentQuestion.value.operator.name)
+  if (!op) return
+
+  const epoch = preloadEpoch
+  const snapshot = settingsSnapshot()
+  const question = await prepareQuestion(op)
+
+  // Discard if a new question started or settings changed while we were preparing
+  if (epoch !== preloadEpoch) return
+  if (snapshot !== settingsSnapshot()) return
+  if (!question) return
+
+  preloadedQuestion.value = question
+  preloadSettingsSnapshot.value = snapshot
+
+  const firstClip = question.clips[0]
+  if (firstClip?.url) preloadAudio(buildVoiceUrl(firstClip.url))
 }
 
 function onGuess(name) {

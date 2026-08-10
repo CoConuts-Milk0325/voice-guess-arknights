@@ -1,14 +1,9 @@
 // 音频配置
-// 通过 Cloudflare Worker 代理（缓存后不再访问 prts.wiki）
+// 直接访问 prts.wiki 的音频资源（不再经 Cloudflare Worker 代理）
 
-const CONFIG = {
-  // Cloudflare Worker 代理地址
-  proxyBase: 'https://voice-guess.coconutsmilk.top/audio',
-};
+import { CDN_BASE } from './utils/constants.js';
 
 // 获取音频 URL
 export function getAudioUrl(relativePath) {
-  return `${CONFIG.proxyBase}/${relativePath}`;
+  return `${CDN_BASE}${relativePath}`;
 }
-
-export default CONFIG;

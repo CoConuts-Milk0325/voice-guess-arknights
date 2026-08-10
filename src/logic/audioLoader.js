@@ -1,6 +1,7 @@
 import { getAudioUrl } from '../config.js'
 
 const cache = new Map()
+const MAX_CACHE_SIZE = 8
 let currentAudio = null
 
 /**
@@ -74,7 +75,14 @@ export function preloadAudio(url) {
   if (cache.has(url)) return
 
   const audio = new Audio()
-  audio.preload = 'metadata'
+  audio.preload = 'auto'
   audio.src = url
   cache.set(url, audio)
+  console.log('[preload]', url)
+
+  // Bounded cache: evict oldest entries to avoid unbounded memory growth
+  if (cache.size > MAX_CACHE_SIZE) {
+    const oldest = cache.keys().next().value
+    if (oldest !== url) cache.delete(oldest)
+  }
 }
