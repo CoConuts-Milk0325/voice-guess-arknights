@@ -117,7 +117,7 @@
       <template v-else>
         <ChallengeBar v-if="inChallenge" :streak="challenge.streak" :score="challenge.score" :current="challenge.currentQuestion" :total="challenge.totalQuestions" />
 
-        <SummaryReport v-if="inChallenge && challenge.isComplete" v-bind="summaryData" @restart="startChallenge" />
+        <SummaryReport v-if="inChallenge && challenge.isComplete" v-bind="summaryData" @restart="showChallengeSetup = true" />
 
         <template v-else-if="currentQuestion">
           <!-- 显示所有已加载的语音 -->
