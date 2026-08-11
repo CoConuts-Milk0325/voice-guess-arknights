@@ -93,6 +93,7 @@
           </div>
 
           <button class="start-btn" @click="startChallenge">开始挑战</button>
+          <div v-if="setupError" class="setup-error">⚠️ {{ setupError }}</div>
         </div>
       </div>
     </template>
@@ -117,7 +118,7 @@
       <template v-else>
         <ChallengeBar v-if="inChallenge" :streak="challenge.streak" :score="challenge.score" :current="challenge.currentQuestion" :total="challenge.totalQuestions" />
 
-        <SummaryReport v-if="inChallenge && challenge.isComplete" v-bind="summaryData" @restart="showChallengeSetup = true" />
+        <SummaryReport v-if="inChallenge && challenge.isComplete && showSummary" v-bind="summaryData" @restart="showChallengeSetup = true" />
 
         <template v-else-if="currentQuestion">
           <!-- 显示所有已加载的语音 -->
@@ -135,7 +136,7 @@
           </div>
 
           <!-- 猜对时卡片显示在语音和选项中间 -->
-          <ResultCard v-if="showResult" :operator="currentQuestion.operator" :correct="lastGuessCorrect" :clipsUsed="currentClipIndex" :isLast="inChallenge && challenge.currentQuestion >= challenge.totalQuestions - 1" @next="nextQuestion" />
+          <ResultCard v-if="showResult" :operator="currentQuestion.operator" :correct="lastGuessCorrect" :clipsUsed="currentClipIndex" :isLast="inChallenge && challenge.isComplete" @next="nextQuestion" />
 
           <!-- 未猜对时显示输入 -->
           <template v-if="!showResult">
@@ -201,6 +202,15 @@ const settings = reactive({
 })
 
 const challenge = ref(createChallenge())
+const showSummary = ref(false)
+
+const setupError = computed(() => {
+  const available = getFilteredOperators().length
+  if (available < settings.questionCount) {
+    return `可用干员不足：当前筛选后仅 ${available} 个干员，需要 ${settings.questionCount} 个`
+  }
+  return ''
+})
 
 const currentQuestion = ref(null)
 const currentClipIndex = ref(1)
@@ -299,8 +309,10 @@ function toggleStar(star) {
 }
 
 function startChallenge() {
+  if (setupError.value) return
   inChallenge.value = true
   showChallengeSetup.value = false
+  showSummary.value = false
   challenge.value = createChallenge(settings.questionCount)
   startNewQuestion()
 }
@@ -333,12 +345,13 @@ async function startNewQuestion() {
 
   // Use target operator from URL if set (and it passes star filter), otherwise reuse preload or pick random
   let op = null
+  const exclude = inChallenge.value ? challenge.value.usedOperators : []
   if (targetOperator.value && filteredOperators.some(o => o.name === targetOperator.value.name)) {
     op = targetOperator.value
   } else if (candidate) {
     op = candidate.operator
   } else {
-    op = selectRandomOperator(filteredOperators, lastOperatorName.value)
+    op = selectRandomOperator(filteredOperators, lastOperatorName.value, exclude)
   }
   if (!op) return
 
@@ -387,6 +400,9 @@ async function prepareQuestion(op) {
 }
 
 function applyQuestion(question) {
+  if (inChallenge.value && !challenge.value.usedOperators.includes(question.operator.name)) {
+    challenge.value.usedOperators.push(question.operator.name)
+  }
   currentQuestion.value = { operator: question.operator }
   currentClips.value = question.clips
   currentClipIndex.value = 1
@@ -411,7 +427,8 @@ async function preloadNextQuestion() {
   if (!currentQuestion.value) return
 
   const filteredOperators = getFilteredOperators()
-  const op = selectRandomOperator(filteredOperators, currentQuestion.value.operator.name)
+  const exclude = inChallenge.value ? challenge.value.usedOperators : []
+  const op = selectRandomOperator(filteredOperators, currentQuestion.value.operator.name, exclude)
   if (!op) return
 
   const epoch = preloadEpoch
@@ -486,7 +503,10 @@ function onGuess(name) {
 }
 
 function nextQuestion() {
-  if (inChallenge.value && challenge.value.isComplete) return
+  if (inChallenge.value && challenge.value.isComplete) {
+    showSummary.value = true
+    return
+  }
   startNewQuestion()
 }
 
@@ -554,4 +574,5 @@ watch(() => settings.inputMode, () => {
 .slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
 .start-btn { width: 100%; margin-top: 8px; padding: 14px; background: var(--accent); color: white; border: none; border-radius: var(--r-md); font-family: var(--font-body); font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(232,101,42,0.2); }
 .start-btn:hover { background: var(--accent-hover); box-shadow: 0 6px 20px rgba(232,101,42,0.3); transform: translateY(-1px); }
+.setup-error { margin-top: 12px; padding: 10px 14px; background: #fef2f2; border: 1px solid #fecaca; color: var(--red); border-radius: var(--r-md); font-size: 13px; font-weight: 500; text-align: center; }
 </style>

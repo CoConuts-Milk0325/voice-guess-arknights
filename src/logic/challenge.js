@@ -11,6 +11,7 @@ export function createChallenge(totalQuestions = MAX_QUESTIONS) {
     correctCount: 0,
     startTime: Date.now(),
     history: [],
+    usedOperators: [],
     isComplete: false
   }
 }

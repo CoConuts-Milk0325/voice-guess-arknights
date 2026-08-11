@@ -11,18 +11,25 @@ export function getAvatarUrl(operator) {
   return `https://media.prts.wiki/${md5[0]}/${md5.slice(0, 2)}/${filename}`
 }
 
-export function selectRandomOperator(operators, lastName = null) {
+export function selectRandomOperator(operators, lastName = null, exclude = []) {
   if (!operators.length) return null
 
+  let pool = operators
+  if (exclude.length) {
+    const excluded = new Set(exclude)
+    const filtered = operators.filter(op => !excluded.has(op.name))
+    if (filtered.length) pool = filtered
+  }
+
   // Try to avoid consecutive same operator
-  if (lastName && operators.length > 1) {
-    const filtered = operators.filter(op => op.name !== lastName)
+  if (lastName && pool.length > 1) {
+    const filtered = pool.filter(op => op.name !== lastName)
     if (filtered.length > 0) {
       return filtered[Math.floor(Math.random() * filtered.length)]
     }
   }
 
-  return operators[Math.floor(Math.random() * operators.length)]
+  return pool[Math.floor(Math.random() * pool.length)]
 }
 
 export function getVoiceClips(operatorName, voiceMapping, settings) {
