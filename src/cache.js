@@ -1,8 +1,23 @@
 // 本地缓存管理
 // 使用 localStorage 缓存 JSON 数据，避免重复下载
 
-const CACHE_PREFIX = 'voice-guess-';
+const CACHE_VERSION = 'v2';
+const CACHE_PREFIX = `voice-guess-${CACHE_VERSION}-`;
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+
+// 清理旧版本缓存（清理 voice-guess- 开头但非当前前缀的项）
+function cleanupLegacyCache() {
+  try {
+    const keys = Object.keys(localStorage);
+    for (const key of keys) {
+      if (key.startsWith('voice-guess-') && !key.startsWith(CACHE_PREFIX)) {
+        localStorage.removeItem(key);
+      }
+    }
+  } catch (e) {}
+}
+
+cleanupLegacyCache();
 
 /**
  * 从缓存获取数据
@@ -73,3 +88,4 @@ export function clearCache() {
     }
   }
 }
+

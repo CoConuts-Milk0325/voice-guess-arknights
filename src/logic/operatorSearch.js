@@ -10,7 +10,7 @@ function normalize(s) {
 export async function loadOperators() {
   if (operatorsCache) return operatorsCache
 
-  const response = await fetch('./data/operators.json')
+  const response = await fetch('./data/operators.json?v=20260904_2')
   const data = await response.json()
   operatorsCache = data.map(op => {
     const name = op['干员']

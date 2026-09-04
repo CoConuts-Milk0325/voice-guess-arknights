@@ -80,8 +80,8 @@ async function serveStatic(req, res) {
     if (ext === '.html') {
       headers['Cache-Control'] = 'no-cache';
     } else if (ext === '.json') {
-      // JSON files: cache for 1 hour
-      headers['Cache-Control'] = 'public, max-age=3600';
+      // JSON files: no-cache to avoid serving stale data during development/updates
+      headers['Cache-Control'] = 'no-cache';
     } else {
       // JS, CSS, images: cache for 7 days
       headers['Cache-Control'] = 'public, max-age=604800, immutable';

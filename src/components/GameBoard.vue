@@ -267,14 +267,37 @@ function resolveTargetOperator() {
   }
 }
 
+// 校验缓存语音数据是否完整（防止因缓存了旧版缺失文本的数据而无法展示）
+function isValidVoiceData(data) {
+  if (!data || typeof data !== 'object') return false
+  if (data['日文']) {
+    let hasClips = false
+    let hasAnyText = false
+    for (const type in data['日文']) {
+      const list = data['日文'][type]
+      if (Array.isArray(list) && list.length > 0) {
+        hasClips = true
+        if (list.some(clip => clip && typeof clip.text === 'string' && clip.text.trim().length > 0)) {
+          hasAnyText = true
+          break
+        }
+      }
+    }
+    if (hasClips && !hasAnyText) {
+      return false
+    }
+  }
+  return true
+}
+
 // Load voice data for a specific operator (on-demand)
 async function loadOperatorVoices(operatorName) {
   const cacheKey = `voice-${operatorName}`
   const cached = getCached(cacheKey)
-  if (cached) return cached
+  if (cached && isValidVoiceData(cached)) return cached
 
   try {
-    const resp = await fetch(`./data/voices/${operatorName}.json`)
+    const resp = await fetch(`./data/voices/${encodeURIComponent(operatorName)}.json?v=20260904_2`)
     const data = await resp.json()
     setCache(cacheKey, data)
     return data
