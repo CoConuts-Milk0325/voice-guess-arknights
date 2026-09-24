@@ -1,79 +1,46 @@
-// Cloudflare Workers 代理 + 缓存
-// 缓存命中 → Worker 直接返回（无延迟）
-// 缓存未命中 → 302 跳转到 prts.wiki 直链（无中转延迟），同时在后台缓存
-
+// Proxy audio on cache misses; cache only complete successful responses.
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+  'Access-Control-Allow-Headers': 'Range, Content-Type',
+  'Access-Control-Expose-Headers': 'Content-Length, Content-Range, Accept-Ranges',
 };
-
-async function cacheAudio(ctx, cacheKey, targetUrl) {
-  try {
-    const response = await fetch(targetUrl, {
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
-    if (!response.ok) return;
-
-    const headers = new Headers(CORS_HEADERS);
-    headers.set('Content-Type', response.headers.get('Content-Type') || 'audio/wav');
-    headers.set('Cache-Control', 'public, max-age=604800');
-
-    const cached = new Response(response.body, { status: 200, headers });
-    ctx.waitUntil(cache.put(cacheKey, cached.clone()));
-  } catch (e) {
-    // 静默失败，下次请求重试
-  }
-}
 
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-
-    // OPTIONS 预检
-    if (request.method === 'OPTIONS') {
-      const reqHeaders = request.headers.get('Access-Control-Request-Headers') || '';
-      const reqMethod = request.headers.get('Access-Control-Request-Method') || 'GET';
-      return new Response(null, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': reqMethod,
-          'Access-Control-Allow-Headers': reqHeaders || '*',
-          'Access-Control-Max-Age': '86400',
-        },
-      });
-    }
-
-    if (!url.pathname.startsWith('/audio/')) {
-      return new Response('Not Found', { status: 404 });
-    }
-
-    // 去除 query 参数
-    const cleanUrl = new URL(url.toString());
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS_HEADERS });
+    if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method Not Allowed', { status: 405, headers: CORS_HEADERS });
+    if (!url.pathname.startsWith('/audio/')) return new Response('Not Found', { status: 404, headers: CORS_HEADERS });
+    const cleanUrl = new URL(url);
     cleanUrl.search = '';
-
-    const audioPath = url.pathname.replace('/audio/', '');
-    const targetUrl = `https://torappu.prts.wiki/assets/audio/${audioPath}`;
-
     const cache = caches.default;
-    const cacheKey = new Request(cleanUrl.toString(), request);
-    const cachedResponse = await cache.match(cacheKey);
-
-    if (cachedResponse) {
-      // 命中缓存 → 加 CORS 后直接返回
-      const headers = new Headers(cachedResponse.headers);
-      headers.set('Access-Control-Allow-Origin', '*');
-      headers.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
-      return new Response(cachedResponse.body, {
-        status: cachedResponse.status,
-        headers,
-      });
+    const cacheKey = new Request(cleanUrl, { method: 'GET' });
+    const range = request.headers.get('Range');
+    const cached = range ? null : await cache.match(cacheKey);
+    if (cached) {
+      const headers = new Headers(cached.headers);
+      for (const [key, value] of Object.entries(CORS_HEADERS)) headers.set(key, value);
+      return new Response(request.method === 'HEAD' ? null : cached.body, { status: cached.status, headers });
     }
-
-    // 未命中 → 跳转到 prts.wiki 直链（浏览器直连，无中转延迟）
-    // 同时在后台拉取并缓存，下次就走缓存了
-    const prtsUrl = targetUrl;
-    cacheAudio(ctx, cacheKey, prtsUrl);
-
-    return Response.redirect(prtsUrl, 302);
+    const targetUrl = `https://torappu.prts.wiki/assets/audio/${url.pathname.slice('/audio/'.length)}`;
+    try {
+      const headers = { 'User-Agent': 'Mozilla/5.0' };
+      if (range) headers.Range = range;
+      const upstream = await fetch(targetUrl, { method: request.method, headers });
+      const responseHeaders = new Headers(CORS_HEADERS);
+      for (const key of ['Content-Type', 'Content-Length', 'Content-Range', 'Accept-Ranges', 'ETag', 'Last-Modified']) {
+        const value = upstream.headers.get(key);
+        if (value) responseHeaders.set(key, value);
+      }
+      responseHeaders.set('Cache-Control', upstream.ok ? 'public, max-age=604800' : 'no-store');
+      const response = new Response(request.method === 'HEAD' ? null : upstream.body, { status: upstream.status, headers: responseHeaders });
+      if (request.method === 'GET' && upstream.status === 200 && !range) {
+        ctx.waitUntil(cache.put(cacheKey, response.clone()).catch(error => console.error('Audio cache write failed', error)));
+      }
+      return response;
+    } catch {
+      return new Response('Bad Gateway', { status: 502, headers: { ...CORS_HEADERS, 'Cache-Control': 'no-store' } });
+    }
   },
 };

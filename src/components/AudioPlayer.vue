@@ -35,9 +35,11 @@
 <script setup>
 import { ref, watch, onUnmounted } from 'vue'
 import { buildVoiceUrl } from '../logic/audioLoader.js'
+import { getFallbackUrl } from '../config.js'
 
 const props = defineProps({
   url: { type: String, required: true },
+  alt: { type: String, default: '' },
   language: { type: String, default: '中文' },
   voiceType: { type: String, default: '' },
   clipIndex: { type: Number, default: 1 },
@@ -58,6 +60,8 @@ const isLoaded = ref(false)
 
 let myAudio = null
 let progressInterval = null
+let playRequested = false
+let playGeneration = 0
 
 watch(() => props.language, (lang) => {
   languageClass.value = lang === '中文' ? 'lang-zh' : 'lang-jp'
@@ -65,7 +69,9 @@ watch(() => props.language, (lang) => {
 
 // When this clip becomes inactive, pause audio
 watch(() => props.active, (isActive) => {
-  if (!isActive && isPlaying.value && myAudio) {
+  if (!isActive && playRequested && myAudio) {
+    playRequested = false
+    playGeneration++
     myAudio.pause()
     isPlaying.value = false
     stopProgress()
@@ -87,24 +93,39 @@ watch(() => props.url, async (newUrl) => {
   isLoaded.value = false
 
   const fullUrl = buildVoiceUrl(newUrl)
+  const fallbackUrl = getFallbackUrl({ alt: props.alt })
+  let usedFallback = false
 
   try {
-    myAudio = new Audio()
-    myAudio.preload = 'auto'
+    const audio = new Audio()
+    myAudio = audio
+    audio.preload = 'auto'
 
     // 监听 duration 变化（用于进度条，不参与加载成败判定）
     const onDurationChange = () => {
-      const dur = myAudio.duration
+      if (audio !== myAudio) return
+      const dur = audio.duration
       if (Number.isFinite(dur) && dur > 0) duration.value = dur
     }
-    myAudio.addEventListener('durationchange', onDurationChange)
-    myAudio.addEventListener('loadedmetadata', onDurationChange)
+    audio.addEventListener('durationchange', onDurationChange)
+    audio.addEventListener('loadedmetadata', onDurationChange)
 
     // 不阻塞等待任何加载事件：302/206 流式加载下
     // canplay/canplaythrough/loadedmetadata 都可能延迟或不触发，
     // 浏览器会在用户点击播放时自行处理缓冲。真正失败由 error 事件兜底。
-    myAudio.addEventListener('error', () => {
-      const code = myAudio?.error?.code
+    audio.addEventListener('error', () => {
+      if (audio !== myAudio) return
+      const code = audio.error?.code
+      // 主源网络或解码失败时回退到 PRTS 备用直链。
+      if (!usedFallback && fallbackUrl && (code === 2 || code === 3 || code === 4)) {
+        usedFallback = true
+        isPlaying.value = false
+        stopProgress()
+        audio.src = fallbackUrl
+        audio.load()
+        if (playRequested) playCurrentAudio()
+        return
+      }
       if (code === 4) { // MEDIA_ERR_SRC_NOT_SUPPORTED：资源确实不可播放
         loadError.value = '加载失败，跳过...'
         emit('skip')
@@ -113,7 +134,7 @@ watch(() => props.url, async (newUrl) => {
       // 忽略，不打断播放流程
     })
 
-    myAudio.src = fullUrl
+    audio.src = fullUrl
 
     isLoaded.value = true
     emit('loaded')
@@ -126,18 +147,33 @@ watch(() => props.url, async (newUrl) => {
 function togglePlay() {
   if (!myAudio) return
 
-  if (isPlaying.value) {
+  if (playRequested && !loadError.value) {
+    playRequested = false
+    playGeneration++
     myAudio.pause()
     isPlaying.value = false
     stopProgress()
   } else {
-    myAudio.play().then(() => {
-      isPlaying.value = true
-      startProgress()
-    }).catch(() => {
-      loadError.value = '播放失败，请点击页面后重试'
-    })
+    playRequested = true
+    loadError.value = ''
+    playCurrentAudio()
   }
+}
+
+function playCurrentAudio() {
+  const audio = myAudio
+  const generation = ++playGeneration
+  audio.play().then(() => {
+    if (audio !== myAudio || generation !== playGeneration) return
+    loadError.value = ''
+    isPlaying.value = true
+    startProgress()
+  }).catch(() => {
+    if (audio !== myAudio || generation !== playGeneration) return
+    isPlaying.value = false
+    stopProgress()
+    loadError.value = '播放失败，请点击页面后重试'
+  })
 }
 
 function startProgress() {
@@ -150,6 +186,7 @@ function startProgress() {
     progressPercent.value = duration.value > 0 ? (currentTime.value / duration.value) * 100 : 0
 
     if (myAudio.ended) {
+      playRequested = false
       isPlaying.value = false
       stopProgress()
     }
@@ -165,6 +202,8 @@ function stopProgress() {
 
 function stopMyAudio() {
   stopProgress()
+  playRequested = false
+  playGeneration++
   if (myAudio) {
     myAudio.pause()
     myAudio.currentTime = 0

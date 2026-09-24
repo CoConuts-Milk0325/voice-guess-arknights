@@ -59,7 +59,21 @@ function gzipCompress(data) {
 
 // Serve static file with gzip and caching
 async function serveStatic(req, res) {
-  let filePath = path.join(DIST, req.url === '/' ? 'index.html' : decodeURIComponent(req.url.split('?')[0]));
+  let pathname;
+  try {
+    pathname = decodeURIComponent(req.url.split('?')[0]);
+  } catch {
+    res.writeHead(400);
+    res.end('Bad Request');
+    return;
+  }
+  let filePath = path.resolve(DIST, pathname === '/' ? 'index.html' : pathname.replace(/^[/\\]+/, ''));
+  const relative = path.relative(DIST, filePath);
+  if (relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) {
+    res.writeHead(403);
+    res.end('Forbidden');
+    return;
+  }
 
   if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
     filePath = path.join(DIST, 'index.html');
@@ -207,7 +221,7 @@ function startServer(port) {
     }
   });
 
-  server.listen(port, () => {
+  server.listen(port, '127.0.0.1', () => {
     console.log(`Server: http://localhost:${port}`);
     console.log('Gzip compression: enabled');
     console.log('JSON cache: 1 hour');

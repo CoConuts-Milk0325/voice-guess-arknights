@@ -1,7 +1,9 @@
 // 本地缓存管理
 // 使用 localStorage 缓存 JSON 数据，避免重复下载
 
-const CACHE_VERSION = 'v2';
+import { DATA_VERSION } from './dataVersion.js';
+
+const CACHE_VERSION = `v2-${DATA_VERSION}`;
 const CACHE_PREFIX = `voice-guess-${CACHE_VERSION}-`;
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
@@ -88,4 +90,3 @@ export function clearCache() {
     }
   }
 }
-

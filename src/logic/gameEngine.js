@@ -18,7 +18,8 @@ export function selectRandomOperator(operators, lastName = null, exclude = []) {
   if (exclude.length) {
     const excluded = new Set(exclude)
     const filtered = operators.filter(op => !excluded.has(op.name))
-    if (filtered.length) pool = filtered
+    if (!filtered.length) return null
+    pool = filtered
   }
 
   // Try to avoid consecutive same operator
@@ -55,7 +56,8 @@ export function getVoiceClips(operatorName, voiceMapping, settings) {
         // Support both old format (string) and new format (object with url and text)
         const url = typeof entry === 'string' ? entry : entry.url
         const text = typeof entry === 'string' ? '' : (entry.text || '')
-        clips.push({ language: lang, type, url, text })
+        const alt = typeof entry === 'string' ? '' : (entry.alt || '')
+        clips.push({ language: lang, type, url, text, alt })
       }
     }
   }

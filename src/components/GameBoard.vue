@@ -3,7 +3,7 @@
     <div class="header">
       <div class="logo">🎧 语音猜干员</div>
       <div class="header-sub">听声音，猜干员</div>
-      <div class="credit">数据、音频来源<a href="https://prts.wiki" target="_blank">prts.wiki</a>，感谢伟大的wiki及工作人员</div>
+      <div class="credit">数据来源<a href="https://prts.wiki" target="_blank">prts.wiki</a>，音频主要来自<a href="https://wiki.biligame.com/arknights" target="_blank">明日方舟BWiki</a>，感谢伟大的wiki及工作人员</div>
     </div>
 
     <!-- 挑战设置页面 -->
@@ -92,7 +92,7 @@
             </div>
           </div>
 
-          <button class="start-btn" @click="startChallenge">开始挑战</button>
+          <button class="start-btn" :disabled="checkingChallenge" @click="startChallenge">{{ checkingChallenge ? '检查题目中...' : '开始挑战' }}</button>
           <div v-if="setupError" class="setup-error">⚠️ {{ setupError }}</div>
         </div>
       </div>
@@ -114,6 +114,10 @@
       <div v-if="loading" class="loading-state">
         <div class="loading-text">加载中...</div>
       </div>
+      <div v-else-if="questionError" class="setup-error" role="alert">
+        {{ questionError }}
+        <button class="ctrl-btn" @click="startNewQuestion">重试</button>
+      </div>
 
       <template v-else>
         <ChallengeBar v-if="inChallenge" :streak="challenge.streak" :score="challenge.score" :current="challenge.currentQuestion" :total="challenge.totalQuestions" />
@@ -125,6 +129,7 @@
           <div v-for="(clip, idx) in displayedClips" :key="'clip-' + idx" class="clip-wrapper">
             <AudioPlayer
               :url="clip.url"
+              :alt="clip.alt || ''"
               :language="clip.language"
               :voiceType="clip.type"
               :clipIndex="idx + 1"
@@ -168,6 +173,7 @@ import { selectRandomOperator, getVoiceClips, generateChoices, getAvatarUrl } fr
 import { createChallenge, recordQuestion, generateSummary } from '../logic/challenge.js'
 import { buildVoiceUrl, preloadAudio } from '../logic/audioLoader.js'
 import { VOICE_TYPES } from '../utils/constants.js'
+import { DATA_VERSION } from '../dataVersion.js'
 
 import AudioPlayer from './AudioPlayer.vue'
 import GuessInput from './GuessInput.vue'
@@ -178,6 +184,7 @@ import ChallengeBar from './ChallengeBar.vue'
 import SummaryReport from './SummaryReport.vue'
 
 const loading = ref(true)
+const questionError = ref('')
 const operators = ref([])
 const showSettings = ref(false)
 const showText = ref(false)
@@ -203,13 +210,16 @@ const settings = reactive({
 
 const challenge = ref(createChallenge())
 const showSummary = ref(false)
+const checkingChallenge = ref(false)
+const availabilityError = ref('')
+const availabilityErrorSnapshot = ref('')
 
 const setupError = computed(() => {
   const available = getFilteredOperators().length
   if (available < settings.questionCount) {
     return `可用干员不足：当前筛选后仅 ${available} 个干员，需要 ${settings.questionCount} 个`
   }
-  return ''
+  return availabilityErrorSnapshot.value === challengeAvailabilitySnapshot() ? availabilityError.value : ''
 })
 
 const currentQuestion = ref(null)
@@ -297,7 +307,8 @@ async function loadOperatorVoices(operatorName) {
   if (cached && isValidVoiceData(cached)) return cached
 
   try {
-    const resp = await fetch(`./data/voices/${encodeURIComponent(operatorName)}.json?v=20260904_2`)
+    const resp = await fetch(`./data/voices/${encodeURIComponent(operatorName)}.json?v=${DATA_VERSION}`)
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
     const data = await resp.json()
     setCache(cacheKey, data)
     return data
@@ -331,19 +342,49 @@ function toggleStar(star) {
   }
 }
 
-function startChallenge() {
-  if (setupError.value) return
-  inChallenge.value = true
-  showChallengeSetup.value = false
-  showSummary.value = false
-  challenge.value = createChallenge(settings.questionCount)
-  startNewQuestion()
+function challengeAvailabilitySnapshot() {
+  return `${settingsSnapshot()}|${settings.questionCount}`
+}
+
+async function startChallenge() {
+  if (checkingChallenge.value || getFilteredOperators().length < settings.questionCount) return
+  checkingChallenge.value = true
+  availabilityError.value = ''
+  availabilityErrorSnapshot.value = ''
+  const snapshot = challengeAvailabilitySnapshot()
+  let available = 0
+  try {
+    const candidates = getFilteredOperators()
+    // Check only as many shards as needed, in small batches to limit concurrent requests.
+    for (let i = 0; i < candidates.length && available < settings.questionCount; i += 8) {
+      const playable = await Promise.all(candidates.slice(i, i + 8).map(async op => {
+        const voiceData = await loadOperatorVoices(op.name)
+        if (!voiceData) return false
+        return getVoiceClips(op.name, { [op.name]: voiceData }, settings)
+          .some(clip => typeof clip.url === 'string' && clip.url.trim())
+      }))
+      if (snapshot !== challengeAvailabilitySnapshot() || !showChallengeSetup.value) return
+      available += playable.filter(Boolean).length
+    }
+    if (available < settings.questionCount) {
+      availabilityErrorSnapshot.value = snapshot
+      availabilityError.value = `可用干员不足：当前语音筛选后仅 ${available} 个干员有可播放语音，需要 ${settings.questionCount} 个；也请检查网络后重试。`
+      return
+    }
+    inChallenge.value = true
+    showChallengeSetup.value = false
+    showSummary.value = false
+    challenge.value = createChallenge(settings.questionCount)
+    startNewQuestion()
+  } finally {
+    checkingChallenge.value = false
+  }
 }
 
 function onSettingsConfirm() {
-  console.log('Settings confirmed, starting new question...')
   showSettings.value = false
-  startNewQuestion()
+  // Keep the current challenge question; a fresh question would consume an operator without recording a result.
+  if (!inChallenge.value || questionError.value || !currentQuestion.value) startNewQuestion()
 }
 
 // Filter operators by star rating
@@ -355,7 +396,23 @@ function getFilteredOperators() {
 }
 
 async function startNewQuestion() {
-  preloadEpoch++
+  const epoch = ++preloadEpoch
+  loading.value = true
+  questionError.value = ''
+  if (!operators.value.length) {
+    try {
+      const data = await loadOperators()
+      if (epoch !== preloadEpoch) return
+      operators.value = data
+      resolveTargetOperator()
+    } catch {
+      if (epoch === preloadEpoch) {
+        questionError.value = '干员数据加载失败，请检查网络后重试。'
+        loading.value = false
+      }
+      return
+    }
+  }
   const filteredOperators = getFilteredOperators()
 
   // Try to reuse the preloaded next question (discard if settings changed meanwhile)
@@ -367,34 +424,33 @@ async function startNewQuestion() {
   preloadSettingsSnapshot.value = ''
 
   // Use target operator from URL if set (and it passes star filter), otherwise reuse preload or pick random
-  let op = null
-  const exclude = inChallenge.value ? challenge.value.usedOperators : []
-  if (targetOperator.value && filteredOperators.some(o => o.name === targetOperator.value.name)) {
-    op = targetOperator.value
-  } else if (candidate) {
-    op = candidate.operator
-  } else {
-    op = selectRandomOperator(filteredOperators, lastOperatorName.value, exclude)
+  const exclude = new Set(inChallenge.value ? challenge.value.usedOperators : [])
+  try {
+    // Each candidate is attempted at most once. Empty selections cannot recurse forever.
+    while (true) {
+      const eligible = filteredOperators.filter(op => !exclude.has(op.name))
+      const target = targetOperator.value
+      const op = target && eligible.some(o => o.name === target.name)
+        ? target
+        : candidate && eligible.some(o => o.name === candidate.operator.name)
+          ? candidate.operator
+          : selectRandomOperator(eligible, lastOperatorName.value)
+      if (!op) break
+      exclude.add(op.name)
+      const question = candidate?.operator.name === op.name ? candidate : await prepareQuestion(op)
+      if (epoch !== preloadEpoch) return
+      if (snapshot !== settingsSnapshot()) return startNewQuestion()
+      if (!question) continue
+      lastOperatorName.value = op.name
+      applyQuestion(question)
+      preloadNextQuestion()
+      return
+    }
+    currentQuestion.value = null
+    questionError.value = '当前筛选下没有可用的新题目，请调整语音类型或星级；若加载失败，请重试。'
+  } finally {
+    if (epoch === preloadEpoch) loading.value = false
   }
-  if (!op) return
-
-  lastOperatorName.value = op.name
-
-  let question = candidate && candidate.operator.name === op.name ? candidate : null
-  if (!question) {
-    question = await prepareQuestion(op)
-  }
-  if (!question) {
-    // Skip this operator if no voice data (drop target to avoid infinite loop)
-    targetOperator.value = null
-    startNewQuestion()
-    return
-  }
-
-  applyQuestion(question)
-
-  // Preload the next question in the background
-  preloadNextQuestion()
 }
 
 function settingsSnapshot() {
@@ -412,12 +468,14 @@ async function prepareQuestion(op) {
   if (!voiceData) return null
 
   const clips = getVoiceClips(op.name, { [op.name]: voiceData }, settings)
+    .filter(clip => typeof clip.url === 'string' && clip.url.trim())
+  if (!clips.length) return null
   const numChoices = settings.inputMode === 'choice' ? settings.maxGuesses : 4
   const choices = generateChoices(op, getFilteredOperators(), numChoices)
 
   return {
     operator: op,
-    clips: clips.length ? clips : [{ language: '中文', type: '未知', url: '', text: '' }],
+    clips,
     choices
   }
 }

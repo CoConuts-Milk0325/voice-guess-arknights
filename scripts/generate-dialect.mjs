@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { syncVoiceTexts } from './sync-voice-texts.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const VOICES_DIR = path.join(__dirname, '..', 'public', 'data', 'voices')
@@ -88,6 +89,7 @@ function main() {
     totalAdded += added
     console.log(`${name} (+${added})`)
   }
+  syncVoiceTexts(path.join(__dirname, '..'))
   console.log(`\ndone, total dialect entries added: ${totalAdded}`)
 }
 

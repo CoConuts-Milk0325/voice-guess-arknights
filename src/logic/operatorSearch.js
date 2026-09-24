@@ -1,4 +1,5 @@
 import { pinyin } from 'pinyin-pro'
+import { DATA_VERSION } from '../dataVersion.js'
 
 let operatorsCache = null
 
@@ -10,7 +11,8 @@ function normalize(s) {
 export async function loadOperators() {
   if (operatorsCache) return operatorsCache
 
-  const response = await fetch('./data/operators.json?v=20260904_2')
+  const response = await fetch(`./data/operators.json?v=${DATA_VERSION}`)
+  if (!response.ok) throw new Error(`Unable to load operators: ${response.status}`)
   const data = await response.json()
   operatorsCache = data.map(op => {
     const name = op['干员']

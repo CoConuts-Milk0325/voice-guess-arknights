@@ -18,4 +18,10 @@ export const MAX_QUESTIONS = 20
 
 export const MAX_SCORE_PER_QUESTION = 150
 
-export const CDN_BASE = 'https://torappu.prts.wiki/assets/audio/'
+// 音频源：bwiki 是 B 站自有 CDN，prts 是粉丝镜像，仅用于 bwiki 没有的条目
+export const AUDIO_BASES = {
+  bwiki: 'https://patchwiki.biligame.com/images/arknights/',
+  prts: 'https://torappu.prts.wiki/assets/audio/'
+}
+
+export const DEFAULT_AUDIO_SOURCE = 'prts'

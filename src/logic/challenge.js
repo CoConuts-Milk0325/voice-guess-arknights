@@ -35,9 +35,10 @@ export function recordQuestion(challenge, record) {
   return updated
 }
 
-export function getGrade(score) {
+export function getGrade(score, maxPossible = 3000) {
+  const normalized = maxPossible > 0 ? score / maxPossible * 3000 : 0
   for (const { grade, minScore } of GRADE_THRESHOLDS) {
-    if (score >= minScore) return grade
+    if (normalized >= minScore) return grade
   }
   return 'D'
 }
@@ -47,8 +48,8 @@ export function generateSummary(challenge) {
   const minutes = Math.floor(elapsed / 60000)
   const seconds = Math.floor((elapsed % 60000) / 1000)
 
-  const maxPossible = challenge.totalQuestions * 150
-  const grade = getGrade(challenge.score)
+  const maxPossible = challenge.history.reduce((sum, h) => sum + (h.isChoiceMode ? 100 : 150), 0)
+  const grade = getGrade(challenge.score, maxPossible)
 
   const chineseCorrect = challenge.history.filter(
     h => h.correct && h.language === '中文'
